@@ -10,15 +10,18 @@ s.bind((HOST, PORT))
 # conn, addr = s.accept()
 # print 'Connected by', addr
 
-def f(x):
-    return {
-        'a':1,
-        'b':2
-    }[x]
+# def f(x):
+#     return {
+#         'a':1,
+#         'b':2
+#     }[x]
+
+s.listen(1)
+conn, addr = s.accept()
 
 while 1:
-    s.listen(1)
-    conn, addr = s.accept()
+    # s.listen(1)
+    # conn, addr = s.accept()
     print 'Connected by', addr
     data = conn.recv(1024)
     # if not data:
@@ -29,6 +32,5 @@ while 1:
         break
     else:
         conn.sendall(data + ' add server part')
-        print data
-
+        # print data
 conn.close()

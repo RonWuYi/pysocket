@@ -14,10 +14,12 @@ while True:
     s.sendall(str(time.localtime()[3]) + str(time.localtime()[4]))
     data = s.recv(1024)
     # s.close()
-    print data
+    # print data
     time.sleep(2)
-    if data[:3] == '444':
+    if data[:3] == '76':
         break
+    else:
+        print data
 s.close()
 time.sleep(2)
 # print 'Received', repr(data)

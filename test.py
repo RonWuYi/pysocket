@@ -1,7 +1,11 @@
-import socket
+import datetime
+import time
 
-hh = socket.gethostname()
 
-h = socket.gethostbyname(hh)
+print time.localtime()
+# while True:
+#     time.sleep(2)
+#     print time.time()
+#     print datetime.date.fromtimestamp(time.time())
 
-print h
+# print datetime.date.fromtimestamp()

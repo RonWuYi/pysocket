@@ -16,21 +16,54 @@ s.bind((HOST, PORT))
 #         'b':2
 #     }[x]
 
-s.listen(1)
+s.listen(5)
 conn, addr = s.accept()
 
 while 1:
     # s.listen(1)
     # conn, addr = s.accept()
-    print 'Connected by', addr
-    data = conn.recv(1024)
-    # if not data:
-    #     break
-    # elif data == 'close':
-    #     break
-    if data == 'close':
-        break
-    else:
-        conn.sendall(data + ' add server part')
-        # print data
+    try:
+        print 'Connected by', addr
+        data = conn.recv(1024)
+        # if not data:
+        #     break
+        # elif data == 'close':
+        #     break
+        if data == 'q' or data == 'quit':
+            break
+        else:
+            print 'received ' + data + ' from client'
+            conn.sendall(data + ' add server part')
+            # print data
+    except socket.error as ex:
+        print ex
+        # conn.shutdown()
+        conn.close()
+        s.listen(5)
+        conn, addr = s.accept()
+        print 'Connected by', addr
+        continue
+
+    except IOError as ex:
+        print ex
+        # conn.shutdown()
+        # conn.close()
+        # s.listen(5)
+        # conn, addr = s.accept()
+        conn.close()
+        s.listen(5)
+        conn, addr = s.accept()
+        print 'Connected by', addr
+        continue
+        # conn.close()
+        # s.listen(1)
+        # conn, addr = s.accept()
+        # while addr:
+        #     continue
+    # except IOError, e:
+    #     if e.errno == error.EPIPE:
+    #         pass
+    #     else:
+    #         pass
+# conn.shutdown()
 conn.close()

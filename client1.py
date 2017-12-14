@@ -11,15 +11,21 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 while True:
     # s.connect((HOST, PORT))
-    s.sendall(str(time.localtime()[3]) + str(time.localtime()[4]))
-    data = s.recv(1024)
-    # s.close()
-    # print data
-    time.sleep(2)
-    if data[:3] == '76':
+    Cdata = raw_input("please input a message: ")
+    # s.sendall(str(time.localtime()[3]) + str(time.localtime()[4]))
+    if Cdata == 'q' or Cdata == 'quit':
         break
     else:
-        print data
+        s.sendall(Cdata)
+        data = s.recv(1024)
+        # s.close()
+        # print data
+        # time.sleep(2)
+        # if data[:3] == '76':
+        #     break
+        # else:
+        print 'Received', repr(data)
+# s.shutdown()
 s.close()
-time.sleep(2)
+# time.sleep(2)
 # print 'Received', repr(data)

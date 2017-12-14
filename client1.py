@@ -1,5 +1,6 @@
 import socket
 import time
+import urllib2
 
 hh = socket.gethostname()
 
@@ -11,7 +12,11 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 while True:
     # s.connect((HOST, PORT))
-    Cdata = raw_input("please input a message: ")
+    # Cdata = raw_input("please input a message: ")
+    if time.localtime()[4] < 10:
+        Cdata = str(time.localtime()[3]) + '0' + str(time.localtime()[4])
+    else:
+        Cdata = str(time.localtime()[3]) + str(time.localtime()[4])
     # s.sendall(str(time.localtime()[3]) + str(time.localtime()[4]))
     if Cdata == 'q' or Cdata == 'quit':
         break

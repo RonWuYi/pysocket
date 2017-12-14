@@ -2,10 +2,4 @@ import datetime
 import time
 
 
-print time.localtime()
-# while True:
-#     time.sleep(2)
-#     print time.time()
-#     print datetime.date.fromtimestamp(time.time())
-
-# print datetime.date.fromtimestamp()
+print time.localtime()[3] + time.localtime()[4]

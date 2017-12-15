@@ -27,7 +27,7 @@ while True:
         time.sleep(5)
         s.sendall(Cdata)
     else:
-        time.sleep(3)
+        time.sleep(10)
         s.sendall('Continue gua ji')
         # data = s.recv(1024)
         # print 'Received', repr(data)

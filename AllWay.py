@@ -6,7 +6,7 @@ pyautogui.PAUSE = 1.5
 class AW():
     def __init__(self):
         self.GuaJiFlag = True
-        self.CurStatus = ''
+        self.CurStatus = 'null'
 
     def TabQieHuan(self):
         time.sleep(1)

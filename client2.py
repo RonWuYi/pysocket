@@ -26,8 +26,8 @@ while True:
     elif Cdata == '737':
         time.sleep(5)
         s.sendall(Cdata)
-    # else:
-        time.sleep(500)
+    else:
+        time.sleep(3)
         s.sendall('Continue gua ji')
         # data = s.recv(1024)
         # print 'Received', repr(data)

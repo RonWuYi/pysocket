@@ -1,5 +1,7 @@
 import sys
 import socket
+import random
+
 from AllWay import AW
 
 HOST = ''
@@ -30,21 +32,44 @@ while True:
     conn, addr = s.accept()
     print 'Connected by', repr(addr)
     while Running:
-        data = conn.recv(1024)
-        if data == 'q' or data == 'quit':
-            Running = False
-            break
-        elif data == 'GuaJiFlag':
-            conn.send(str(SPlay.GuaJiFlag))
-        elif data == 'CurStatus':
-            conn.send(SPlay.CurStatus)
-        elif data == '937':
-            print 'please do something'
-        else:
-            print 'received ', repr(data)
-            print ' from client', repr(addr)
-            conn.send('unuseness data')
+        try:
+            data = conn.recv(1024)
+            # if data == 'q' or data == 'quit':
+            #     Running = False
+            #     break
+            if data == 'GuaJiFlag':
+                conn.send(str(SPlay.GuaJiFlag))
+            elif data == 'CurStatus':
+                conn.send(SPlay.CurStatus)
+            elif data == '937':
+                print 'please do something'
+            else:
+                print 'received ', repr(data)
+                print ' from client', repr(addr)
+                conn.send('unuseness data')
+        except socket.error, msg:
+            print "Binding failure : " + str(msg[0]) + " message: " + msg[1]
+            for i in msg:
+                print i
+            s.close()
+
+            try:
+                s.bind((HOST, PORT))
+            except socket.error, msg:
+                print "Binding failure again: " + str(msg[0]) + " message: " + msg[1]
+                for i in msg:
+                    print i
+                sys.exit()
+            print "socket Bind!"
+
+            s.listen(5)
+            print "socket listening!"
+
+            conn, addr = s.accept()
+            print 'Connected by', repr(addr)
+            continue
     s.close()
+# exc
     # finally:
     #     time.sleep(5)
     #     SPlay.GuaJi()

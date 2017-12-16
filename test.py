@@ -1,5 +1,14 @@
 import datetime
 import time
+from AllWay import AW
+CT = str(time.localtime()[3]) + str(time.localtime()[4])
 
+s = AW()
 
-print time.localtime()[3] + time.localtime()[4]
+time.sleep(5)
+s.TabQieHuan()
+
+while True:
+    time.sleep(5)
+    s.GuaJi()
+    time.sleep(3600)

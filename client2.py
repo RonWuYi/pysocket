@@ -7,7 +7,7 @@ import sys
 #
 # HOST = socket.gethostbyname(hh)
 BUF_SIZE = 1024
-HOST = '192.168.0.77'
+HOST = '192.168.184.129'
 PORT = 50007
 try:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,9 +21,13 @@ while True:
         Cdata = str(time.localtime()[3]) + '0' + str(time.localtime()[4])
     else:
         Cdata = str(time.localtime()[3]) + str(time.localtime()[4])
-    if Cdata == 'q' or Cdata == 'quit':
-        break
-    elif Cdata == '737':
+    if int(Cdata) == 1720:
+        print 'start SBGJ'
+        s.send('SBGJ')
+    if int(Cdata) == 1705:
+        print 'start SJBS'
+        s.send('WorldBoss')
+    elif Cdata == '7371':
         time.sleep(5)
         s.sendall(Cdata)
     else:

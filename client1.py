@@ -5,7 +5,7 @@ import urllib2
 # hh = socket.gethostname()
 #
 # HOST = socket.gethostbyname(hh)
-HOST = '192.168.0.77'
+HOST = '192.168.184.129'
 PORT = 50007
 
 # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

@@ -17,8 +17,29 @@ while BoolFlag:
 
     if int(Cdata) > 101 and int(Cdata) < 121:
         # ri chang ren wu
-        print 'Client send ri chang ri wu'
-        s.send('RCRW')
+        print 'Client send TFFM'
+        s.send('TFFM')
+        time.sleep(1600)
+
+    if int(Cdata) > 151 and int(Cdata) < 215:
+        # ri chang ren wu
+        print 'Client send GXRW'
+        s.send('GXRW')
+        time.sleep(1280)
+
+    if int(Cdata) > 220 and int(Cdata) < 310:
+        # ri chang ren wu
+        print 'Client send JYRW'
+        s.send('JYRW')
+        time.sleep(2500)
+
+    if int(Cdata) > 345 and int(Cdata) < 430:
+        # ri chang ren wu
+        print 'Client send CLFB'
+        s.send('CLFB')
+        time.sleep(1800)
+
+
     elif int(Cdata) > 1001 and int(Cdata) < 1005:
         # jin zhu shong li
         print 'Client send jin zhu shong li'
@@ -73,6 +94,7 @@ while BoolFlag:
         # bi qi
         print 'Client send bi qi'
         s.send('BQ')
+        time.sleep(1200)
     else:
         print 'Client send gua ji'
         s.send('GJ')

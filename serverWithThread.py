@@ -25,26 +25,26 @@ def tcplink(sock, addr):
             sock.send('server start GXRW')
             time.sleep(1)
             SPlay.GongXunRenWu()
-        elif data == 'GXRW':
-            sock.send('server start GXRW')
+        elif data == 'JYRW':
+            sock.send('server start JYRW')
             time.sleep(1)
             SPlay.JingYingRenWu()
-        elif data == 'GXRW':
-            sock.send('server start GXRW')
+        elif data == 'CLFB':
+            sock.send('server start CLFB')
             time.sleep(1)
             SPlay.CaiLiaoFuBen()
-        elif data == 'GXRW':
-            sock.send('server start GXRW')
-            # time.sleep(1)
-            # SPlay.ChuMoRenWu()
-        elif data == 'GXRW':
-            sock.send('server start GXRW')
-            time.sleep(1)
-            SPlay.ChuangTianGuan()
-            while True:
-                 if SPlay.Complete == True:
-                     break
-            continue
+        # elif data == 'GXRW':
+        #     sock.send('server start GXRW')
+        #     # time.sleep(1)
+        #     # SPlay.ChuMoRenWu()
+        # elif data == 'GXRW':
+        #     sock.send('server start GXRW')
+        #     time.sleep(1)
+        #     SPlay.ChuangTianGuan()
+        #     while True:
+        #          if SPlay.Complete == True:
+        #              break
+        #     continue
         elif data == 'JZSL':
             sock.send('Start JinZhuSongLi')
             SPlay.JinZhuSongLi()

@@ -17,25 +17,34 @@ def tcplink(sock, addr):
         print 'received ' + repr(data) +  ' from client ' + repr(addr)
         if data == 'exit' or not data:
             break
-        elif data == 'RCRW':
-            sock.send('server start ri chang')
+        elif data == 'TFFM':
+            sock.send('server start TFFM')
             time.sleep(1)
             SPlay.TaFangFengMo()
+        elif data == 'GXRW':
+            sock.send('server start GXRW')
             time.sleep(1)
             SPlay.GongXunRenWu()
+        elif data == 'GXRW':
+            sock.send('server start GXRW')
             time.sleep(1)
             SPlay.JingYingRenWu()
+        elif data == 'GXRW':
+            sock.send('server start GXRW')
             time.sleep(1)
             SPlay.CaiLiaoFuBen()
+        elif data == 'GXRW':
+            sock.send('server start GXRW')
             # time.sleep(1)
             # SPlay.ChuMoRenWu()
+        elif data == 'GXRW':
+            sock.send('server start GXRW')
             time.sleep(1)
             SPlay.ChuangTianGuan()
             while True:
                  if SPlay.Complete == True:
                      break
             continue
-
         elif data == 'JZSL':
             sock.send('Start JinZhuSongLi')
             SPlay.JinZhuSongLi()
@@ -43,8 +52,6 @@ def tcplink(sock, addr):
                  if SPlay.Complete == True:
                      break
             continue
-
-
         elif data == 'SW':
             sock.send('Start shen wei')
             SPlay.ShenWei()
@@ -52,7 +59,6 @@ def tcplink(sock, addr):
                  if SPlay.Complete == True:
                      break
             continue
-
         elif data == 'SW':
             sock.send('Start shen wei')
             SPlay.ShenWei()
@@ -60,8 +66,6 @@ def tcplink(sock, addr):
                  if SPlay.Complete == True:
                      break
             continue
-
-
         elif data == 'SYT':
             sock.send('Start suo yao ta')
             SPlay.WorldBoss()
@@ -69,11 +73,10 @@ def tcplink(sock, addr):
                  if SPlay.Complete == True:
                      break
             continue
-
-
         elif data == 'BJ':
             sock.send('Start bi guan')
             SPlay.WorldBoss()
+            time.sleep(126)
             while True:
                  if SPlay.Complete == True:
                      break
@@ -109,6 +112,7 @@ def tcplink(sock, addr):
             if SPlay.GuaJiFlag == False:
                 sock.send('start gua ji')
                 SPlay.GuaJi()
+                time.sleep(240)
             else:
                 sock.send('keep the sam status')
                 time.sleep(240)

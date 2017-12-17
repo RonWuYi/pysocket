@@ -58,6 +58,7 @@ class AW():
         pyautogui.click(508, 585)
         time.sleep(1)
         pyautogui.click(508, 585)
+
         # deng dai ren wu wan cheng
         time.sleep(102)
 
@@ -85,6 +86,7 @@ class AW():
             pyautogui.click(508, 585)
             time.sleep(1)
             pyautogui.click(508, 585)
+
             # deng dai ren wu wan cheng
             time.sleep(102)
 
@@ -668,11 +670,6 @@ class AW():
         pyautogui.moveTo(316, 133,duration=1)
         time.sleep(1)
         pyautogui.click()
-        # pyautogui.click(button='right', clicks=1)
-        # time.sleep(1)
-        # pyautogui.click(button='right', clicks=1)
-        # time.sleep(1)
-        # pyautogui.click(button='right', clicks=1)
 
         # jin ru chuang tian guan
         pyautogui.moveTo(507, 618,duration=1)
@@ -708,18 +705,27 @@ class AW():
         time.sleep(1)
         pyautogui.click()
         time.sleep(2)
+
+        # hui shou kuang shi
         pyautogui.moveTo(602, 575)
         time.sleep(1)
         pyautogui.click()
         time.sleep(2)
-        # pyautogui.click()
-        # time.sleep(2)
+
+        # hui shou zhuang bei
         pyautogui.moveTo(804, 575)
         time.sleep(1)
         pyautogui.click()
         time.sleep(2)
-        # pyautogui.click()
-        # time.sleep(1)
+
+        for i in range(5):
+            time.sleep(0.5)
+            pyautogui.press('6')
+            time.sleep(0.5)
+            pyautogui.press('q')
+            time.sleep(0.5)
+            pyautogui.press('w')
+            # time.sleep(2)
 
     def GuaJi(self):
         self.GuaJiFlag = True

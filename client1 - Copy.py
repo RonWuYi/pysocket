@@ -17,67 +17,66 @@ while BoolFlag:
 
     if int(Cdata) > 101 and int(Cdata) < 121:
         # ri chang ren wu
-        print 'start ri chang ri wu'
+        print 'Client send ri chang ri wu'
         s.send('RCRW')
     elif int(Cdata) > 1001 and int(Cdata) < 1005:
         # jin zhu shong li
-        print 'jin zhu shong li'
+        print 'Client send jin zhu shong li'
         # pass
         s.send('JZSL')
 
     elif int(Cdata) > 1031 and int(Cdata) < 1040:
         # shen wei
-        print 'shen wei'
+        print 'Client send shen wei'
         s.send('SW')
+        time.sleep(100)
 
     elif int(Cdata) > 1101 and int(Cdata) < 1259:
         # gua ji
-        print 'gua ji'
+        print 'Client send gua ji'
         s.send('GJ')
 
     elif int(Cdata) > 1301 and int(Cdata) < 1310:
         # suo yao ta
-        print 'suo yao ta'
+        print 'Client send suo yao ta'
         s.send('SYT')
 
     elif int(Cdata) > 1401 and int(Cdata) < 1434:
         # gua ji
-        print 'gua ji'
+        print 'Client send gua ji'
         s.send('GJ')
 
     elif int(Cdata) > 1435 and int(Cdata) < 1440:
         # bi guan
-        print 'bi guan'
+        print 'Client send bi guan'
         s.send('BJ')
 
     elif int(Cdata) > 1455 and int(Cdata) < 1730:
         # gua ji
-        print 'gua ji'
+        print 'Client send gua ji'
         s.send('GJ')
+        time.sleep(600)
+        time.sleep(480)
 
     elif int(Cdata) > 1731 and int(Cdata) < 1740:
         # mo bai cheng zhu
-        print 'mo bai cheng zhu'
+        print 'Client send mo bai cheng zhu'
         s.send('MB')
 
     elif int(Cdata) > 1905 and int(Cdata) < 1910:
         # shi jie boss
-        print 'shi jie boss'
+        print 'Client send shi jie boss'
         s.send('SJBS')
+        time.sleep(120)
 
     elif int(Cdata) > 1930 and int(Cdata) < 1950:
         # bi qi
-        print 'bi qi'
+        print 'Client send bi qi'
         s.send('BQ')
-
-    # Cdata = raw_input('please in put data: ')
-    # if Cdata == 'q' or Cdata == 'quit':
-    #
-    #     BoolFlag = False
-    #     break
     else:
-        print 'gua ji'
+        print 'Client send gua ji'
         s.send('GJ')
         data = s.recv(1024)
         print 'Received', repr(data)
+        # time.sleep(3600)
 s.close()

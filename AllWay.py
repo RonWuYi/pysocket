@@ -544,7 +544,7 @@ class AW():
         pyautogui.click()
 
         for i in range(2):
-            for iii in range(1, 7):
+            for iii in range(0, 7):
                 moveValue = 30;
 
                 # xiao chu dui hua kuang
@@ -607,6 +607,7 @@ class AW():
         pyautogui.click()
         time.sleep(1)
         pyautogui.click()
+        self.Complete = False
 
         # jiao shu
         time.sleep(1)
@@ -748,7 +749,7 @@ class AW():
 
     def ShuangBeiGuaJi(self):
         self.GuaJiFlag = False
-        self.CurStatus = 'ChuangTianGuan'
+        self.CurStatus = 'ShuangBeiGuaJi'
         self.Complete = False
         self.EventTime += 1
         time.sleep(1)
@@ -778,6 +779,8 @@ class AW():
                 self.Complete = True
             break
 
+        self.Complete = True
+
     def MoBaiChengZhu(self):
         self.GuaJiFlag = False
         self.CurStatus = 'MoBaiChengZhu'
@@ -805,7 +808,7 @@ class AW():
 
     def YeZhanBiQi(self):
         self.GuaJiFlag = False
-        self.CurStatus = 'MoBaiChengZhu'
+        self.CurStatus = 'YeZhanBiQi'
         self.Complete = False
         self.EventTime += 1
         time.sleep(1)
@@ -814,11 +817,12 @@ class AW():
         pyautogui.click()
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(1)
+        time.sleep(1200)
+        self.Complete = True
 
     def ShenWei(self):
         self.GuaJiFlag = False
-        self.CurStatus = 'MoBaiChengZhu'
+        self.CurStatus = 'ShenWei'
         self.Complete = False
         self.EventTime += 1
         time.sleep(1)
@@ -827,11 +831,13 @@ class AW():
         pyautogui.click()
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(1)
+        time.sleep(3600)
+        time.sleep(3600)
+        self.Complete = True
 
     def WorldBoss(self):
         self.GuaJiFlag = False
-        self.CurStatus = 'MoBaiChengZhu'
+        self.CurStatus = 'WorldBoss'
         self.Complete = False
         self.EventTime += 1
         time.sleep(1)
@@ -841,6 +847,23 @@ class AW():
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1)
+        time.sleep(600)
+        self.Complete = True
+
+    def JinZhuSongLi(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'JinZhuSongLi'
+        self.Complete = False
+        self.EventTime += 1
+        time.sleep(1)
+        pyautogui.moveTo(669, 474,duration=1)
+        time.sleep(1)
+        pyautogui.click()
+        time.sleep(1)
+        pyautogui.press('z')
+        time.sleep(1)
+        time.sleep(600)
+        self.Complete = True
 
     def InIt(self):
         time.sleep(1)

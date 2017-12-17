@@ -39,7 +39,6 @@ while BoolFlag:
         s.send('CLFB')
         time.sleep(1800)
 
-
     elif int(Cdata) > 1001 and int(Cdata) < 1005:
         # jin zhu shong li
         print 'Client send jin zhu shong li'

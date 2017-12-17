@@ -156,22 +156,6 @@ class AW():
         time.sleep(1)
         pyautogui.click()
         time.sleep(140)
-        # pyautogui.PAUSE = 240
-
-        # # wei wan cheng "chuan"
-        # pyautogui.moveTo(943, 422, duration=1, tween=pyautogui.easeInOutQuad)
-        # pyautogui.click()
-        # time.sleep(20)
-        #
-        # # wei wan cheng "chuan"
-        # pyautogui.moveTo(943, 422, duration=1, tween=pyautogui.easeInOutQuad)
-        # pyautogui.click()
-        # time.sleep(20)
-        #
-        # # wei wan cheng "chuan"
-        # pyautogui.moveTo(943, 422, duration=1, tween=pyautogui.easeInOutQuad)
-        # pyautogui.click()
-        # time.sleep(20)
 
         # yi wan cheng "chuan"
         pyautogui.moveTo(901, 422)
@@ -687,6 +671,8 @@ class AW():
     def HuiShou(self):
         self.GuaJiFlag = False
         self.CurStatus = 'HuiShou'
+        self.Complete = False
+        self.EventTime += 1
         #################################################
         # hui shou
         #################################################
@@ -727,9 +713,12 @@ class AW():
             pyautogui.press('w')
             # time.sleep(2)
 
+        self.Complete = True
+
     def GuaJi(self):
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
+        self.EventTime += 1
         # move click gua ji
         pyautogui.moveTo(913, 576,duration=1)
         time.sleep(1)
@@ -746,6 +735,7 @@ class AW():
     def WaKuang(self):
         self.GuaJiFlag = True
         self.CurStatus = 'WaKuang'
+        self.EventTime += 1
         time.sleep(1)
         pyautogui.moveTo(1220, 611)
         time.sleep(1)
@@ -753,39 +743,36 @@ class AW():
         pyautogui.click()
         time.sleep(1)
 
-    def ShuangBeiGuaJi(self):
-        self.GuaJiFlag = True
-        self.CurStatus = 'ShuangBeiGuaJi'
-        self.Complete = False
-        self.EventTime += 1
-        time.sleep(1)
-        pyautogui.moveTo(662, 474,duration=1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
-        pyautogui.moveTo(594, 435,duration=1)
-        time.sleep(1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        pyautogui.click()
-        pyautogui.press('z')
-        time.sleep(3500)
-        while True:
-            if time.localtime()[4] < 10:
-                CT = str(time.localtime()[3]) + '0' + str(time.localtime()[4])
-            else:
-                CT = str(time.localtime()[3]) + str(time.localtime()[4])
-            if int(CT) - 1730 <= 0:
-                self.Complete = True
-            break
-
-        self.Complete = True
+    # def ShuangBeiGuaJi(self):
+    #     self.GuaJiFlag = True
+    #     self.CurStatus = 'ShuangBeiGuaJi'
+    #     self.Complete = False
+    #     self.EventTime += 1
+    #     time.sleep(1)
+    #     pyautogui.moveTo(662, 474,duration=1)
+    #     time.sleep(1)
+    #     pyautogui.click()
+    #     time.sleep(1)
+    #     pyautogui.moveTo(594, 435,duration=1)
+    #     time.sleep(1)
+    #     time.sleep(1)
+    #     pyautogui.click()
+    #     time.sleep(1)
+    #     pyautogui.click()
+    #     time.sleep(1)
+    #     pyautogui.click()
+    #     pyautogui.press('z')
+    #     time.sleep(3500)
+    #     while True:
+    #         if time.localtime()[4] < 10:
+    #             CT = str(time.localtime()[3]) + '0' + str(time.localtime()[4])
+    #         else:
+    #             CT = str(time.localtime()[3]) + str(time.localtime()[4])
+    #         if int(CT) - 1730 <= 0:
+    #             self.Complete = True
+    #         break
+    #
+    #     self.Complete = True
 
     def MoBaiChengZhu(self):
         self.GuaJiFlag = False
@@ -804,6 +791,10 @@ class AW():
             pyautogui.moveTo(587, 613,duration=1)
             time.sleep(1)
             for i in range(4):
+                pyautogui.click()
+                time.sleep(0.1)
+                pyautogui.click()
+                time.sleep(0.1)
                 pyautogui.click()
                 time.sleep(0.1)
                 pyautogui.click()

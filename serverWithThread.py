@@ -106,8 +106,12 @@ def tcplink(sock, addr):
             sock.send('start cai liao fb')
             SPlay.CaiLiaoFuBen()
         elif data == 'GJ':
-            sock.send('start gua ji')
-            SPlay.GuaJi()
+            if SPlay.GuaJiFlag == False:
+                sock.send('start gua ji')
+                SPlay.GuaJi()
+            else:
+                sock.send('keep the sam status')
+                time.sleep(240)
         elif data == 'SBGJ':
             sock.send('start SB gua ji')
             SPlay.ShuangBeiGuaJi()

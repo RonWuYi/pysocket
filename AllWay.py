@@ -722,7 +722,7 @@ class AW():
         # time.sleep(1)
 
     def GuaJi(self):
-        self.GuaJiFlag = False
+        self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
         # move click gua ji
         pyautogui.moveTo(913, 576,duration=1)
@@ -748,7 +748,7 @@ class AW():
         time.sleep(1)
 
     def ShuangBeiGuaJi(self):
-        self.GuaJiFlag = False
+        self.GuaJiFlag = True
         self.CurStatus = 'ShuangBeiGuaJi'
         self.Complete = False
         self.EventTime += 1
@@ -770,7 +770,7 @@ class AW():
         pyautogui.click()
         pyautogui.press('z')
         time.sleep(3500)
-        while self.Progress:
+        while True:
             if time.localtime()[4] < 10:
                 CT = str(time.localtime()[3]) + '0' + str(time.localtime()[4])
             else:

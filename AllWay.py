@@ -27,10 +27,10 @@ class AW():
         self.EventTime += 1
         time.sleep(1)
 
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x/2, y/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
 
         time.sleep(1)
         # da kai jie mian
@@ -111,10 +111,10 @@ class AW():
         self.Complete = False
         self.EventTime += 1
 
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x/2, y/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
 
         time.sleep(1)
         # da kai jie mian
@@ -427,10 +427,10 @@ class AW():
         self.Complete = False
         self.EventTime += 1
 
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x/2, y/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
 
         for jj in range(3):
             time.sleep(1)
@@ -508,10 +508,10 @@ class AW():
         self.EventTime += 1
         time.sleep(1)
 
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x / 2, y / 2, duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x / 2, y / 2, duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
 
         time.sleep(1)
         # da kai jie mian
@@ -623,10 +623,10 @@ class AW():
         self.Complete = False
         self.EventTime += 1
 
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x/2, y/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
 
         time.sleep(1)
         # da kai jie mian
@@ -676,11 +676,11 @@ class AW():
         #################################################
         # hui shou
         #################################################
-        x, y = pyautogui.size()
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click()
-        time.sleep(1)
+        # x, y = pyautogui.size()
+        # pyautogui.moveTo(x/2, y/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click()
+        # time.sleep(1)
         pyautogui.press('b')
         time.sleep(1)
         pyautogui.moveTo(627, 627)
@@ -864,11 +864,17 @@ class AW():
 
     def InIt(self):
         time.sleep(1)
-        pyautogui.moveTo(1016, 398,duration=1)
-        for i in range(13):
-            time.sleep(0.4)
-            pyautogui.click()
-            time.sleep(0.4)
+        x, y = pyautogui.size()
+        pyautogui.moveTo(x/2, y/2,duration=0.5)
+        time.sleep(0.5)
+        pyautogui.click(x/2, y/2)
+        time.sleep(0.5)
+        pyautogui.press('esc')
+        time.sleep(0.5)
+        pyautogui.click(x/2, y/2)
+        time.sleep(0.5)
+        pyautogui.press('esc')
+        time.sleep(0.5)
 
 
 

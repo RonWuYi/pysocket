@@ -549,13 +549,15 @@ class AW():
                 # 514, 413
                 pyautogui.moveTo(514, (413 + (iii * moveValue)),duration=0.5)
                 time.sleep(1)
-                pyautogui.click()
+                pyautogui.click(514, (413 + (iii * moveValue)))
+                time.sleep(1)
+                pyautogui.click(514, (413 + (iii * moveValue)))
 
                 # jin ru fu ben
                 time.sleep(1)
                 pyautogui.moveTo(498, 600,duration=0.5)
                 time.sleep(1)
-                pyautogui.click()
+                pyautogui.click(498, 600)
 
                 # zi dong zhan dou
                 time.sleep(1)
@@ -565,7 +567,7 @@ class AW():
                 elif iii == 3:
                     time.sleep(110)
                 elif iii == 4:
-                    time.sleep(300)
+                    time.sleep(210)
                 elif iii == 5:
                     time.sleep(75)
                 elif iii == 6:

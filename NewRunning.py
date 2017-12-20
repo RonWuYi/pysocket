@@ -68,8 +68,8 @@ while True:
     # elif CT > 131 and CT < 220:
     #     time.sleep(1)
     #     SPlay.GongXunRenWu()
-    else:
-        time.sleep(5)
+    while True:
+        SPlay.InIt()
         SPlay.GuaJi()
         time.sleep(3600)
         SPlay.HuiShou()

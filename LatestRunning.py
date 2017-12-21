@@ -21,65 +21,65 @@ while True:
         else:
             print "TaFangFengMo Complete, keep the same status"
     elif CT > 151 and CT < 240:
-        if SPlay.TaFangFengMoComplete == False:
+        if SPlay.JingYingRenWuComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.JingYingRenWu()
+        elif SPlay.JingYingRenWuComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
+            print "JingYingRenWu Complete, keep the same status"
     elif CT > 241 and CT < 330:
-        if SPlay.TaFangFengMoComplete == False:
+        if SPlay.GongXunRenWuComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.GongXunRenWu()
+        elif SPlay.GongXunRenWuComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
+            print "GongXunRenWu Complete, keep the same status"
     elif CT > 331 and CT < 420:
-        if SPlay.TaFangFengMoComplete == False:
+        if SPlay.CaiLiaoFuBenComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.CaiLiaoFuBen()
+        elif SPlay.CaiLiaoFuBenComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
+            print "CaiLiaoFuBen Complete, keep the same status"
     elif CT > 421 and CT < 510:
-        if SPlay.TaFangFengMoComplete == False:
+        if SPlay.ChuMoRenWuComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.ChuMoRenWu()
+        elif SPlay.ChuMoRenWuComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
+            print "ChuMoRenWu Complete, keep the same status"
     elif CT > 511 and CT < 600:
-        if SPlay.TaFangFengMoComplete == False:
+        if SPlay.WeiWangRenWuComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.WeiWangRenWu()
+        elif SPlay.WeiWangRenWuComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
+            print "WeiWangRenWu Complete, keep the same status"
     elif CT > 601 and CT < 650:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)

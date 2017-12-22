@@ -929,6 +929,28 @@ class AW():
         time.sleep(1)
         pyautogui.click(1020, 833)
 
+    def GoFengMoNPC(self):
+        time.sleep(1)
+        # da kai jie mian
+        pyautogui.press('j')
+
+        # ri chang ren wu
+        time.sleep(1)
+        pyautogui.moveTo(285, 225, duration=1)
+        time.sleep(1)
+        pyautogui.click()
+
+        # jie qu ren wu
+        time.sleep(1)
+        pyautogui.moveTo(518, 636, duration=1)
+        time.sleep(1)
+        pyautogui.click()
+
+        time.sleep(1)
+        # da kai jie mian
+        pyautogui.press('esc')
+
+
 
 
 

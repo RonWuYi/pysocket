@@ -8,7 +8,9 @@ SPlay.TabQieHuan()
 
 while True:
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
-    if CT > 100 and CT < 150:
+
+
+    if CT > 1200 and CT < 1250:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
             SPlay.InIt()
@@ -16,6 +18,19 @@ while True:
             SPlay.InIt()
             SPlay.TaFangFengMo()
         elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.InIt()
+            SPlay.GuaJi()
+        else:
+            print "TaFangFengMo Complete, keep the same status"
+
+    if CT > 100 and CT < 150:
+        if SPlay.GeRenBossiComplete == False:
+            time.sleep(1)
+            SPlay.InIt()
+            SPlay.HuiShou()
+            SPlay.InIt()
+            SPlay.GeRenBoss()
+        elif SPlay.GeRenBossiComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:

@@ -2,25 +2,13 @@ import time
 
 # CT = (time.localtime()[3]*100) + (time.localtime()[4])
 # print CT
-from AllWay import AW
+from NewAllWay import AW
 SPlay = AW()
 
-time.sleep(2)
+# time.sleep(2)z
 SPlay.TabQieHuan()
 SPlay.InIt()
-SPlay.CaiLiaoFuBen()
-SPlay.HuiShou()
-SPlay.InIt()
-SPlay.TaFangFengMo()
-SPlay.HuiShou()
-SPlay.InIt()
-SPlay.JingYingRenWu()
-SPlay.HuiShou()
-SPlay.InIt()
-SPlay.GongXunRenWu()
-SPlay.HuiShou()
-SPlay.InIt()
-SPlay.ChuMoRenWu()
+SPlay.GeRenBoss()
 while True:
     SPlay.InIt()
     SPlay.GuaJi()

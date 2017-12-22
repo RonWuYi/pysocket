@@ -22,6 +22,7 @@ class AW():
         self.WorldBossComplete = False
         self.JinZhuSongLiComplete = False
         self.YeZhanBiQiComplete = False
+        self.GeRenBossiComplete = False
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -655,6 +656,7 @@ class AW():
         self.EventTime += 1
 
         # da kai bei bao jie mian
+        time.sleep(1)
         pyautogui.press('b')
         time.sleep(1)
         pyautogui.moveTo(627, 627)
@@ -685,6 +687,35 @@ class AW():
             pyautogui.press('q')
             time.sleep(0.5)
             pyautogui.press('w')
+            time.sleep(0.5)
+            pyautogui.press('f')
+
+        self._WoYaoBianQaing()
+
+        # wo yao zhuang bei
+        time.sleep(1)
+        pyautogui.moveTo(1043, 493, duration=0.5)
+        time.sleep(1)
+        pyautogui.click(1043, 493)
+
+        # tiao zhan boss
+        time.sleep(1)
+        pyautogui.moveTo(1521, 516, duration=0.5)
+        time.sleep(1)
+        pyautogui.click(1521, 516)
+
+        # lie mo ji fen
+        time.sleep(1)
+        pyautogui.moveTo(1041, 426, duration=0.5)
+        time.sleep(1)
+        pyautogui.click(1041, 426)
+
+        # yi jian hui shou
+        time.sleep(1)
+        pyautogui.moveTo(1168, 848, duration=0.5)
+        time.sleep(1)
+        pyautogui.click(1168, 848)
+
 
     def GuaJi(self):
         self.GuaJiFlag = True
@@ -807,6 +838,72 @@ class AW():
 
         self.JingYingRenWuComplete = True
 
+    def GeRenBoss(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'GeRenBoss'
+        self.EventTime += 1
+
+        for i in range(3,5):
+            # time.sleep(1)
+            # # da kai jie mian
+            # pyautogui.press('c')
+            #
+            # # wo yao bian qiang
+            # time.sleep(1)
+            # pyautogui.moveTo(1020, 833, duration=0.5)
+            # time.sleep(1)
+            # pyautogui.click(1020, 833)
+
+            self._WoYaoBianQaing()
+
+            # wo yao zhuang bei
+            time.sleep(1)
+            pyautogui.moveTo(1043, 493, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(1043, 493)
+
+            # tiao zhan boss
+            time.sleep(1)
+            pyautogui.moveTo(1521, 516, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(1521, 516)
+
+            # ge ren boss
+            time.sleep(1)
+            pyautogui.moveTo(798, 428, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(798, 428)
+
+            # boss ming zi
+            time.sleep(1)
+            pyautogui.moveTo(703, (470+(i*32)), duration=0.5)
+            time.sleep(1)
+            pyautogui.click(703, (470+(i*32)))
+
+            # qian wang tiao zhan
+            pyautogui.moveTo(1232, 848, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(1232, 848)
+
+            # wo yao bian qiang
+            time.sleep(1)
+            self.InIt()
+            time.sleep(1)
+            pyautogui.press('z')
+            time.sleep(1)
+
+            time.sleep(30 + (i*20))
+
+            # wan cheng ren wu
+            time.sleep(1)
+            pyautogui.moveTo(1759, 602, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(1759, 602)
+
+            self.HuiShou()
+
+        self.GeRenBossiComplete = False
+
     def InIt(self):
         time.sleep(1)
         x, y = pyautogui.size()
@@ -820,6 +917,17 @@ class AW():
         time.sleep(0.5)
         pyautogui.press('esc')
         time.sleep(0.5)
+
+    def _WoYaoBianQaing(self):
+        time.sleep(1)
+        # da kai jie mian
+        pyautogui.press('c')
+
+        # wo yao bian qiang
+        time.sleep(1)
+        pyautogui.moveTo(1020, 833, duration=0.5)
+        time.sleep(1)
+        pyautogui.click(1020, 833)
 
 
 

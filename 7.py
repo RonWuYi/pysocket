@@ -6,4 +6,4 @@ while True:
       print pos
       time.sleep(0.3)
       os.system('cls')
-print 'ending....'
+# print 'ending....'

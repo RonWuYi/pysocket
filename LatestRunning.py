@@ -9,8 +9,7 @@ SPlay.TabQieHuan()
 while True:
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
 
-
-    if CT > 1200 and CT < 1250:
+    if CT > 1 and CT < 59:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
             SPlay.InIt()
@@ -22,7 +21,6 @@ while True:
             SPlay.GuaJi()
         else:
             print "TaFangFengMo Complete, keep the same status"
-
     if CT > 100 and CT < 150:
         if SPlay.GeRenBossiComplete == False:
             time.sleep(1)
@@ -267,37 +265,23 @@ while True:
             SPlay.HuiShou()
             SPlay.InIt()
             SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-            if SPlay.TaFangFengMoComplete == False:
-                time.sleep(1)
-                SPlay.InIt()
-                SPlay.HuiShou()
-                SPlay.InIt()
-                SPlay.TaFangFengMo()
-            elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-                SPlay.InIt()
-                SPlay.GuaJi()
-            else:
-                print "TaFangFengMo Complete, keep the same status"
-    elif CT > 1651 and CT < 1740:
-        if SPlay.TaFangFengMoComplete == False:
+        elif SPlay.MoBaiChengZhuComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.InIt()
+            SPlay.GuaJi()
+        else:
+            print "TaFangFengMo Complete, keep the same status"
+    elif CT > 1730 and CT < 1750:
+        if SPlay.MoBaiChengZhuComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
+            # SPlay.InIt()
+            SPlay.MoBaiChengZhu()
+        elif SPlay.MoBaiChengZhuComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-            if SPlay.TaFangFengMoComplete == False:
-                time.sleep(1)
-                SPlay.InIt()
-                SPlay.HuiShou()
-                SPlay.InIt()
-                SPlay.TaFangFengMo()
-            elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-                SPlay.InIt()
-                SPlay.GuaJi()
-            else:
-                print "TaFangFengMo Complete, keep the same status"
+            SPlay.GuaJi()
+        else:
+            print "MoBaiChengZhu Complete, keep the same status"
     elif CT > 1741 and CT < 1830:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
@@ -317,44 +301,30 @@ while True:
                 SPlay.GuaJi()
             else:
                 print "TaFangFengMo Complete, keep the same status"
-    elif CT > 1831 and CT < 1920:
-        if SPlay.TaFangFengMoComplete == False:
+    elif CT > 1905 and CT < 1920:
+        if SPlay.WorldBossComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-            if SPlay.TaFangFengMoComplete == False:
-                time.sleep(1)
-                SPlay.InIt()
-                SPlay.HuiShou()
-                SPlay.InIt()
-                SPlay.TaFangFengMo()
-            elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-                SPlay.InIt()
-                SPlay.GuaJi()
-            else:
-                print "TaFangFengMo Complete, keep the same status"
-    elif CT > 1921 and CT < 2010:
-        if SPlay.TaFangFengMoComplete == False:
+            SPlay.WorldBoss()
+        elif SPlay.WorldBossComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.InIt()
+            SPlay.GuaJi()
+        else:
+            print "WorldBoss Complete, keep the same status"
+    elif CT > 1930 and CT < 1950:
+        if SPlay.YeZhanBiQiComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
             SPlay.InIt()
-            SPlay.TaFangFengMo()
-        elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-            if SPlay.TaFangFengMoComplete == False:
-                time.sleep(1)
-                SPlay.InIt()
-                SPlay.HuiShou()
-                SPlay.InIt()
-                SPlay.TaFangFengMo()
-            elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
-                SPlay.InIt()
-                SPlay.GuaJi()
-            else:
-                print "TaFangFengMo Complete, keep the same status"
+            SPlay.YeZhanBiQi()
+        elif SPlay.YeZhanBiQiComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.InIt()
+            SPlay.GuaJi()
+        else:
+            print "YeZhanBiQi Complete, keep the same status"
     elif CT > 2011 and CT < 2100:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)

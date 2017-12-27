@@ -2,13 +2,11 @@ import time
 from NewAllWay import AW
 
 SPlay = AW()
-
 time.sleep(2)
 SPlay.TabQieHuan()
 
 while True:
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
-
     if CT > 1 and CT < 59:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
@@ -344,7 +342,6 @@ while True:
                 SPlay.GuaJi()
             else:
                 print "TaFangFengMo Complete, keep the same status"
-
     elif CT > 2135 and CT < 2151:
         if SPlay.JinZhuSongLiComplete == False:
             time.sleep(1)
@@ -364,7 +361,6 @@ while True:
             SPlay.GuaJi()
         else:
             print "TaFangFengMo Complete, keep the same status"
-
     else:
         SPlay.InIt()
         SPlay.GuaJi()

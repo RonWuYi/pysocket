@@ -7,41 +7,30 @@ SPlay.TabQieHuan()
 
 while True:
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
-    if CT > 1 and CT < 330:
+    if CT > 1 and CT < 530:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
             SPlay.InIt()
             SPlay.HuiShou()
-            SPlay.InIt()
             SPlay.TaFangFengMo()
+            SPlay.HuiShouLess()
+            SPlay.JingYingRenWu()
+            SPlay.HuiShouLess()
+            SPlay.GongXunRenWu()
+            SPlay.HuiShouLess()
+            SPlay.CaiLiaoFuBen()
+            SPlay.HuiShou()
+            SPlay.ChuangTianGuan()
+            SPlay.HuiShouLess()
+            SPlay.ChuMoRenWu()
+            SPlay.GeRenBoss()
+            SPlay.WeiWangRenWu()
+            SPlay.HuiShouLess()
         elif SPlay.TaFangFengMoComplete == True and SPlay.GuaJiFlag == False:
             SPlay.InIt()
             SPlay.GuaJi()
         else:
-            print "TaFangFengMo Complete, keep the same status"
-            if SPlay.CaiLiaoFuBenComplete == False:
-                time.sleep(1)
-                SPlay.InIt()
-                SPlay.HuiShou()
-                SPlay.TaFangFengMo()
-                SPlay.HuiShouLess()
-                SPlay.JingYingRenWu()
-                SPlay.HuiShouLess()
-                SPlay.GongXunRenWu()
-                SPlay.HuiShouLess()
-                SPlay.CaiLiaoFuBen()
-                SPlay.HuiShou()
-                SPlay.ChuangTianGuan()
-                SPlay.HuiShouLess()
-                SPlay.ChuMoRenWu()
-                SPlay.GeRenBoss()
-                SPlay.WeiWangRenWu()
-                SPlay.HuiShouLess()
-            elif SPlay.CaiLiaoFuBenComplete == True and SPlay.GuaJiFlag == False:
-                SPlay.InIt()
-                SPlay.GuaJi()
-            else:
-                print "CaiLiaoFuBen Complete, keep the same status"
+            print "CaiLiaoFuBen Complete, keep the same status"
     # if CT > 100 and CT < 150:
     #     if SPlay.GeRenBossiComplete == False:
     #         time.sleep(1)
@@ -78,7 +67,7 @@ while True:
     #         SPlay.GuaJi()
     #     else:
     #         print "GongXunRenWu Complete, keep the same status"
-    elif CT > 331 and CT < 1010:
+    elif CT > 531 and CT < 1010:
         SPlay.InIt()
         SPlay.GuaJi()
         # if SPlay.CaiLiaoFuBenComplete == False:

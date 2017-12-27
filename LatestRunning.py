@@ -79,17 +79,19 @@ while True:
     #     else:
     #         print "GongXunRenWu Complete, keep the same status"
     elif CT > 331 and CT < 1010:
-        if SPlay.CaiLiaoFuBenComplete == False:
-            time.sleep(1)
-            SPlay.InIt()
-            SPlay.HuiShou()
-            SPlay.InIt()
-            SPlay.CaiLiaoFuBen()
-        elif SPlay.CaiLiaoFuBenComplete == True and SPlay.GuaJiFlag == False:
-            SPlay.InIt()
-            SPlay.GuaJi()
-        else:
-            print "CaiLiaoFuBen Complete, keep the same status"
+        SPlay.InIt()
+        SPlay.GuaJi()
+        # if SPlay.CaiLiaoFuBenComplete == False:
+        #     time.sleep(1)
+        #     SPlay.InIt()
+        #     SPlay.HuiShou()
+        #     SPlay.InIt()
+        #     SPlay.CaiLiaoFuBen()
+        # elif SPlay.CaiLiaoFuBenComplete == True and SPlay.GuaJiFlag == False:
+        #     SPlay.InIt()
+        #     SPlay.GuaJi()
+        # else:
+        #     print "CaiLiaoFuBen Complete, keep the same status"
     # elif CT > 421 and CT < 510:
     #     if SPlay.ChuMoRenWuComplete == False:
     #         time.sleep(1)

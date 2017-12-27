@@ -325,7 +325,7 @@ while True:
             SPlay.GuaJi()
         else:
             print "YeZhanBiQi Complete, keep the same status"
-    elif CT > 2011 and CT < 2100:
+    elif CT > 2011 and CT < 2130:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
             SPlay.InIt()
@@ -344,6 +344,27 @@ while True:
                 SPlay.GuaJi()
             else:
                 print "TaFangFengMo Complete, keep the same status"
+
+    elif CT > 2135 and CT < 2151:
+        if SPlay.JinZhuSongLiComplete == False:
+            time.sleep(1)
+            SPlay.InIt()
+            SPlay.HuiShou()
+            SPlay.InIt()
+            SPlay.JinZhuSongLi()
+        # elif SPlay.JinZhuSongLiComplete == True and SPlay.GuaJiFlag == False:
+        #     if SPlay.TaFangFengMoComplete == False:
+        #         time.sleep(1)
+        #         SPlay.InIt()
+        #         SPlay.HuiShou()
+        #         SPlay.InIt()
+        #         SPlay.TaFangFengMo()
+        elif SPlay.JinZhuSongLiComplete == True and SPlay.GuaJiFlag == False:
+            SPlay.InIt()
+            SPlay.GuaJi()
+        else:
+            print "TaFangFengMo Complete, keep the same status"
+
     else:
         SPlay.InIt()
         SPlay.GuaJi()

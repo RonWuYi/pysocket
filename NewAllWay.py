@@ -1036,6 +1036,58 @@ class AW():
         time.sleep(1)
         pyautogui.click(751, 633)
 
+    def BiGuan(self):
+        time.sleep(1)
+        # da kai jie mian
+        self.InIt()
+        pyautogui.press('j')
+
+        # ri chang ren wu
+        time.sleep(1)
+        pyautogui.moveTo(751, 633, duration=1)
+        time.sleep(1)
+        pyautogui.click(751, 633)
+
+        # jin ru huo dong
+        time.sleep(1)
+        pyautogui.moveTo(511, 627, duration=1)
+        time.sleep(1)
+        pyautogui.click(511, 627)
+
+        # xiao chu jie mian
+        time.sleep(1)
+        pyautogui.press('esc')
+
+        # di tu
+        time.sleep(1)
+        pyautogui.press('m')
+
+        # zuo biao x
+        time.sleep(1)
+        pyautogui.moveTo(613, 210, duration=1)
+        time.sleep(1)
+        pyautogui.click(613, 210)
+        time.sleep(1)
+        pyautogui.typewrite('31')
+
+        # zuo biao y
+        time.sleep(1)
+        pyautogui.moveTo(713, 209, duration=1)
+        time.sleep(1)
+        pyautogui.click(713, 209)
+        time.sleep(1)
+        pyautogui.typewrite('26')
+
+        # qian wang
+        time.sleep(1)
+        pyautogui.moveTo(770, 209, duration=1)
+        time.sleep(1)
+        pyautogui.click(770, 209)
+
+
+
+
+
 
 
 

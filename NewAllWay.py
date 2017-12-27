@@ -23,6 +23,8 @@ class AW():
         self.JinZhuSongLiComplete = False
         self.YeZhanBiQiComplete = False
         self.GeRenBossiComplete = False
+        self.GuaiWuGongChengComplete = False
+
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -1085,6 +1087,9 @@ class AW():
         pyautogui.click(770, 209)
 
     def GuaiWuGongCheng(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'GuaiWuGongCheng'
+        self.EventTime += 1
         time.sleep(1)
         # da kai jie mian
         self.InIt()
@@ -1105,6 +1110,7 @@ class AW():
         # gua ji
         time.sleep(1)
         pyautogui.press('z')
+        self.GuaiWuGongChengComplete = False
 
 
 

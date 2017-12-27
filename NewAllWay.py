@@ -25,6 +25,7 @@ class AW():
         self.GeRenBossiComplete = False
         self.GuaiWuGongChengComplete = False
         self.BiGuanComplete = False
+        self.RiSuoYaoTaComplete = False
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -875,7 +876,7 @@ class AW():
         pyautogui.click()
         time.sleep(1)
 
-    def MoBaiChengZhu(self):
+    def RiMoBaiChengZhu(self):
         self.GuaJiFlag = False
         self.CurStatus = 'MoBaiChengZhu'
         self.EventTime += 1
@@ -885,7 +886,7 @@ class AW():
         # time.sleep(1)
         # pyautogui.click()
         # time.sleep(1)
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
 
         for i in range(9):
             time.sleep(1)
@@ -905,36 +906,36 @@ class AW():
 
         self.MoBaiChengZhuComplete =True
 
-    def YeZhanBiQi(self):
+    def RiYeZhanBiQi(self):
         self.GuaJiFlag = False
         self.CurStatus = 'YeZhanBiQi'
         self.EventTime += 1
 
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
         pyautogui.press('z')
         time.sleep(1200)
 
         self.YeZhanBiQiComplete = True
 
-    def ShenWei(self):
+    def RiShenWei(self):
         self.GuaJiFlag = False
         self.CurStatus = 'ShenWei'
         self.EventTime += 1
 
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
         pyautogui.press('z')
         time.sleep(3600)
         time.sleep(3600)
 
         self.ShenWeiComplete = True
 
-    def WorldBoss(self):
+    def RiWorldBoss(self):
         self.GuaJiFlag = False
         self.CurStatus = 'WorldBoss'
         self.EventTime += 1
 
         time.sleep(1)
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1)
@@ -942,12 +943,12 @@ class AW():
 
         self.WorldBossComplete = True
 
-    def JinZhuSongLi(self):
+    def RiJinZhuSongLi(self):
         self.GuaJiFlag = False
         self.CurStatus = 'JinZhuSongLi'
         self.EventTime += 1
 
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
 
         pyautogui.press('z')
         time.sleep(1)
@@ -1019,7 +1020,7 @@ class AW():
 
             self.HuiShou()
 
-        self.GeRenBossiComplete = False
+        self.GeRenBossiComplete = True
 
     def InIt(self):
         time.sleep(1)
@@ -1067,7 +1068,7 @@ class AW():
         # da kai jie mian
         pyautogui.press('esc')
 
-    def RiChangHuoDong(self):
+    def HuoDongJieMian(self):
         time.sleep(1)
         # da kai jie mian
         self.InIt()
@@ -1089,7 +1090,7 @@ class AW():
         time.sleep(1)
         pyautogui.press('esc')
 
-    def BiGuan(self):
+    def RiBiGuan(self):
         # time.sleep(1)
         # # da kai jie mian
         # self.InIt()
@@ -1115,7 +1116,7 @@ class AW():
         # time.sleep(1)
         # pyautogui.press('m')
 
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
 
         # di tu
         time.sleep(1)
@@ -1146,13 +1147,13 @@ class AW():
         # flag
         self.BiGuanComplete = False
 
-    def GuaiWuGongCheng(self):
+    def RiGuaiWuGongCheng(self):
         self.GuaJiFlag = False
         self.CurStatus = 'GuaiWuGongCheng'
         self.EventTime += 1
         time.sleep(1)
 
-        self.RiChangHuoDong()
+        self.HuoDongJieMian()
 
         # gua ji ban ge xiao shi
         time.sleep(1)
@@ -1160,6 +1161,21 @@ class AW():
         time.sleep(1750)
 
         self.GuaiWuGongChengComplete = False
+
+    def RiSuoYaoTa(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'RiSuoYaoTa'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # gua ji ban ge xiao shi
+        time.sleep(1)
+        pyautogui.press('z')
+        time.sleep(1750)
+
+        self.RiSuoYaoTaComplete = True
 
 
 

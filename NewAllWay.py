@@ -25,7 +25,11 @@ class AW():
         self.GeRenBossiComplete = False
         self.GuaiWuGongChengComplete = False
         self.BiGuanComplete = False
-        self.RiSuoYaoTaComplete = False
+        self.SuoYaoTaComplete = False
+        self.DuoBeiYaSongComplete = False
+        self.HaiTianShengYanComplete = False
+        self.JiaLanShenDianComplete = False
+        self.SanBeiLianGongComplete = False
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -1175,7 +1179,62 @@ class AW():
         pyautogui.press('z')
         time.sleep(1750)
 
-        self.RiSuoYaoTaComplete = True
+        self.SuoYaoTaComplete = True
+
+    def RiDuoBeiYaSong(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'RiDuoBeiYaSong'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # ToDo
+        # NPC part and delay part
+
+        self.DuoBeiYaSongComplete = True
+
+    def RiSanBeiLianGong(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'SanBeiLianGong'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # ToDo
+        # NPC part and delay part
+
+        self.SanBeiLianGongComplete = True
+
+    def RiJiaLanShenDian(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'JiaLanShenDian'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # ToDo
+        # NPC part and delay part
+
+        self.JiaLanShenDianComplete = True
+
+    def RiHaiTianShengYan(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'HaiTianShengYan'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # ToDo
+        # NPC part and delay part
+
+        self.HaiTianShengYanComplete = True
+
+
+
 
 
 

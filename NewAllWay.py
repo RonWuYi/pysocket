@@ -1084,8 +1084,27 @@ class AW():
         time.sleep(1)
         pyautogui.click(770, 209)
 
+    def GuaiWuGongCheng(self):
+        time.sleep(1)
+        # da kai jie mian
+        self.InIt()
+        pyautogui.press('j')
 
+        # ri chang ren wu
+        time.sleep(1)
+        pyautogui.moveTo(751, 633, duration=1)
+        time.sleep(1)
+        pyautogui.click(751, 633)
 
+        # jin ru huo dong
+        time.sleep(1)
+        pyautogui.moveTo(511, 627, duration=1)
+        time.sleep(1)
+        pyautogui.click(511, 627)
+
+        # gua ji
+        time.sleep(1)
+        pyautogui.press('z')
 
 
 

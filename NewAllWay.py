@@ -30,6 +30,7 @@ class AW():
         self.HaiTianShengYanComplete = False
         self.JiaLanShenDianComplete = False
         self.SanBeiLianGongComplete = False
+        self.ShiMuMiZhenComplete = False
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -163,7 +164,7 @@ class AW():
         pyautogui.click()
         time.sleep(1)
         pyautogui.click()
-        time.sleep(110)
+        time.sleep(160)
 
         time.sleep(1)
         # da kai jie mian
@@ -1147,9 +1148,12 @@ class AW():
         pyautogui.moveTo(770, 209, duration=1)
         time.sleep(1)
         pyautogui.click(770, 209)
+        time.sleep(1200)
 
+        time.sleep(1)
+        pyautogui.press('esc')
         # flag
-        self.BiGuanComplete = False
+        self.BiGuanComplete = True
 
     def RiGuaiWuGongCheng(self):
         self.GuaJiFlag = False
@@ -1232,6 +1236,19 @@ class AW():
         # NPC part and delay part
 
         self.HaiTianShengYanComplete = True
+
+    def RiShiMuMiZhen(self):
+        self.GuaJiFlag = False
+        self.CurStatus = 'RiShiMuMiZhen'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self.HuoDongJieMian()
+
+        # ToDo
+        # NPC part and delay part
+
+        self.ShiMuMiZhenComplete = True
 
 
 

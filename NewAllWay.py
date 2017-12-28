@@ -552,8 +552,8 @@ class AW():
                 pyautogui.moveTo(754, 349)
                 pyautogui.click(button='right', clicks=1)
 
-                # deng dai jie shu
-            time.sleep(500)
+            # deng dai jie shu
+            time.sleep(450)
 
             # lin qu jiang li
             pyautogui.moveTo(604, 398,duration=1)

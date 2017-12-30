@@ -11,9 +11,9 @@ while True:
         if SPlay.TaFangFengMoComplete == False:
             time.sleep(1)
             SPlay.InIt()
-            # SPlay.HuiShou()
-            # SPlay.TaFangFengMo()
-            # SPlay.HuiShouLess()
+            SPlay.HuiShou()
+            SPlay.TaFangFengMo()
+            SPlay.HuiShouLess()
             SPlay.JingYingRenWu()
             SPlay.HuiShouLess()
             SPlay.GongXunRenWu()

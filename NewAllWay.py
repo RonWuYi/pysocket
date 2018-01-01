@@ -167,8 +167,6 @@ class AW():
         pyautogui.click(508, 585)
         time.sleep(1)
         pyautogui.click(508, 585)
-        time.sleep(1)
-        pyautogui.click(508, 585)
         time.sleep(JinYinTime)
 
         time.sleep(1)
@@ -589,7 +587,7 @@ class AW():
         pyautogui.click()
 
         for i in range(2):
-            for iii in range(0, 7):
+            for iii in range(1, 7):
                 moveValue = 30;
 
                 # xiao chu dui hua kuang
@@ -958,6 +956,7 @@ class AW():
         self.CurStatus = 'GeRenBoss'
         self.EventTime += 1
 
+        self.InIt()
         for i in range(0,5):
             self._WoYaoBianQaing()
 

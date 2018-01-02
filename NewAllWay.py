@@ -1013,9 +1013,9 @@ class AW():
 
     def InIt(self):
         time.sleep(1)
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
+        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
-        pyautogui.click(x/2, y/2)
+        pyautogui.click(self.x/2, self.y/2)
         time.sleep(0.5)
         pyautogui.press('esc')
 
@@ -1392,16 +1392,16 @@ class AW():
 
     def ClickCenter(self):
         time.sleep(0.5)
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
+        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
-        pyautogui.click(x/2, y/2)
+        pyautogui.click(self.x/2, self.y/2)
         time.sleep(0.5)
 
     def GoTo(xx, yy, self):
         time.sleep(0.5)
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
+        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
-        pyautogui.click(x/2, y/2)
+        pyautogui.click(self.x/2, self.y/2)
         time.sleep(0.5)
         # di tu
         time.sleep(1)
@@ -1423,13 +1423,13 @@ class AW():
         time.sleep(1)
         pyautogui.typewrite(yy)
 
-    def ManyNPC(self):
+    def ManyNPC(Coox, Cooy, self):
         time.sleep(0.5)
         pyautogui.press('esc')
         time.sleep(0.5)
-        pyautogui.moveTo(x/2, y/2,duration=0.5)
+        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
-        pyautogui.click(x/2, y/2)
+        pyautogui.click(self.x/2, self.y/2)
         time.sleep(0.5)
         # di tu
         time.sleep(1)
@@ -1452,9 +1452,9 @@ class AW():
         time.sleep(1)
         pyautogui.scroll(-100)
         time.sleep(1)
-        pyautogui.scroll(100, x = 817, y = 438)
+        pyautogui.scroll(100, Coox = 817, Cooy = 438)
         time.sleep(1)
-        pyautogui.scroll(-100, x = 817, y = 438)
+        pyautogui.scroll(-100, Coox = 817, Cooy = 438)
 
 
 

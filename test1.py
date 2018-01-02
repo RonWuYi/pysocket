@@ -1,5 +1,12 @@
 import time
+# import pyautogui
 
-CT = (time.localtime()[3] * 100) + (time.localtime()[4])
+from NewAllWay import AW
 
-print CT
+x = AW()
+
+time.sleep(5)
+
+x._GoTo('100', '200')
+
+x._TestScorll('eeeeeeeeeeeeeeeee')

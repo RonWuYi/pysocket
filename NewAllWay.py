@@ -1011,7 +1011,7 @@ class AW:
 
         self.GeRenBossiComplete = True
 
-    def InIt(self):
+    def _InIt(self):
         time.sleep(1)
         pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
@@ -1036,7 +1036,7 @@ class AW:
         time.sleep(1)
         pyautogui.click(573, 580)
 
-    def GoFengMoNPC(self):
+    def _GoFengMoNPC(self):
         time.sleep(1)
         # da kai jie mian
         pyautogui.press('j')
@@ -1057,7 +1057,7 @@ class AW:
         # da kai jie mian
         pyautogui.press('esc')
 
-    def HuoDongJieMian(self):
+    def _HuoDongJieMian(self):
         time.sleep(1)
         # da kai jie mian
         self.InIt()
@@ -1295,7 +1295,6 @@ class AW:
         pyautogui.click(792, 591)
         time.sleep(1)
 
-
     # def BossJieMian(self):
     #     # da kai boss jie mian
     #     time.sleep(1)
@@ -1397,12 +1396,14 @@ class AW:
         pyautogui.click(self.x/2, self.y/2)
         time.sleep(0.5)
 
-    def GoTo(xx, yy, self):
-        time.sleep(0.5)
-        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click(self.x/2, self.y/2)
-        time.sleep(0.5)
+    def _GoTo(self, xx, yy):
+        # time.sleep(0.5)
+        # pyautogui.moveTo((self.x)/2, (self.y)/2,duration=0.5)
+        # time.sleep(0.5)
+        # pyautogui.click(self.x/2, self.y/2)
+        # time.sleep(0.5)
+
+        self._ClickCenter
         # di tu
         time.sleep(1)
         pyautogui.press('m')
@@ -1423,7 +1424,7 @@ class AW:
         time.sleep(1)
         pyautogui.typewrite(yy)
 
-    def ManyNPC(Coox, Cooy, self):
+    def _ManyNPC(Coox, Cooy, self):
         time.sleep(0.5)
         pyautogui.press('esc')
         time.sleep(0.5)
@@ -1455,6 +1456,36 @@ class AW:
         pyautogui.scroll(100, Coox = 817, Cooy = 438)
         time.sleep(1)
         pyautogui.scroll(-100, Coox = 817, Cooy = 438)
+
+    def _TestScorll(self, ScorValue):
+        print ScorValue
+        time.sleep(5)
+        pyautogui.scroll(100)
+        time.sleep(0.5)
+        pyautogui.scroll(100)
+        time.sleep(0.5)
+        pyautogui.scroll(100)
+        time.sleep(0.5)
+        pyautogui.scroll(100)
+        time.sleep(0.5)
+        pyautogui.scroll(100)
+        time.sleep(0.5)
+        pyautogui.scroll(100)
+
+
+        time.sleep(5)
+        pyautogui.scroll(-100)
+        time.sleep(0.5)
+        pyautogui.scroll(-100)
+        time.sleep(0.5)
+        pyautogui.scroll(-100)
+        time.sleep(0.5)
+        pyautogui.scroll(-100)
+        time.sleep(0.5)
+        pyautogui.scroll(-100)
+        time.sleep(0.5)
+        pyautogui.scroll(-100)
+
 
 
 

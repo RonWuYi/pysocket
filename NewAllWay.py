@@ -1424,7 +1424,7 @@ class AW:
         time.sleep(1)
         pyautogui.typewrite(yy)
 
-    def _ManyNPC(Coox, Cooy, self):
+    def _ManyNPC(self, Coox, Cooy):
         time.sleep(0.5)
         pyautogui.press('esc')
         time.sleep(0.5)

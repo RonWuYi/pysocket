@@ -590,7 +590,7 @@ class AW:
 
         for i in range(2):
             for iii in range(0, 7):
-                moveValue = 30;
+                moveValue = 30
 
                 # xiao chu dui hua kuang
                 time.sleep(1)
@@ -836,7 +836,7 @@ class AW:
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
 
-        self._BaoWuJieMian()
+        self._BaoWuXueYuJieMian()
         # da kai bao wu jie mian
         # pyautogui.moveTo(572, 636, duration=0.5)
         # time.sleep(1)
@@ -878,7 +878,7 @@ class AW:
         self.EventTime += 1
 
         time.sleep(1)
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         for i in range(9):
             time.sleep(1)
@@ -903,7 +903,7 @@ class AW:
         self.CurStatus = 'YeZhanBiQi'
         self.EventTime += 1
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
         pyautogui.press('z')
         time.sleep(1200)
 
@@ -914,7 +914,7 @@ class AW:
         self.CurStatus = 'ShenWei'
         self.EventTime += 1
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
         pyautogui.press('z')
         time.sleep(3600)
         time.sleep(3600)
@@ -927,7 +927,7 @@ class AW:
         self.EventTime += 1
 
         time.sleep(1)
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1)
@@ -940,7 +940,7 @@ class AW:
         self.CurStatus = 'JinZhuSongLi'
         self.EventTime += 1
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         pyautogui.press('z')
         time.sleep(1)
@@ -1011,7 +1011,7 @@ class AW:
 
         self.GeRenBossiComplete = True
 
-    def _InIt(self):
+    def InIt(self):
         time.sleep(1)
         pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)
@@ -1080,7 +1080,7 @@ class AW:
         pyautogui.press('esc')
 
     def RiBiGuan(self):
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # di tu
         time.sleep(1)
@@ -1122,7 +1122,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # gua ji ban ge xiao shi
         time.sleep(1)
@@ -1137,7 +1137,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # gua ji ban ge xiao shi
         time.sleep(1)
@@ -1153,7 +1153,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # ToDo
         # NPC part and delay part
@@ -1166,7 +1166,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # ToDo
         # NPC part and delay part
@@ -1179,7 +1179,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # ToDo
         # NPC part and delay part
@@ -1192,7 +1192,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # ToDo
         # NPC part and delay part
@@ -1205,7 +1205,7 @@ class AW:
         self.EventTime += 1
         time.sleep(1)
 
-        self.HuoDongJieMian()
+        self._HuoDongJieMian()
 
         # ToDo
         # NPC part and delay part
@@ -1403,7 +1403,7 @@ class AW:
         # pyautogui.click(self.x/2, self.y/2)
         # time.sleep(0.5)
 
-        self._ClickCenter
+        self._ClickCenter()
         # di tu
         time.sleep(1)
         pyautogui.press('m')
@@ -1453,9 +1453,9 @@ class AW:
         time.sleep(1)
         pyautogui.scroll(-100)
         time.sleep(1)
-        pyautogui.scroll(100, Coox = 817, Cooy = 438)
+        pyautogui.scroll(100, Coox, Cooy)
         time.sleep(1)
-        pyautogui.scroll(-100, Coox = 817, Cooy = 438)
+        pyautogui.scroll(-100, Coox, Cooy)
 
     def _TestScorll(self, ScorValue):
         print ScorValue

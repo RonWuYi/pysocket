@@ -3,7 +3,7 @@ import time
 
 pyautogui.PAUSE = 1.5
 
-class AW():
+class AW:
     def __init__(self):
         self.GongXunTime = 120
         self.JinYinTime = 240
@@ -1390,7 +1390,7 @@ class AW():
         time.sleep(1)
         pyautogui.press('esc')
 
-    def ClickCenter(self):
+    def _ClickCenter(self):
         time.sleep(0.5)
         pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
         time.sleep(0.5)

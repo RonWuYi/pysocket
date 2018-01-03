@@ -1438,9 +1438,24 @@ class AW:
 
         # 817, 438
 
+        # time.sleep(0.5)
+        # pyautogui.moveTo(817, 438,duration=0.5)
+        # time.sleep(0.5)
+        #
+        # 844, 564
+
+
         time.sleep(0.5)
         pyautogui.moveTo(817, 438,duration=0.5)
-        time.sleep(0.5)
+        time.sleep(0.1)
+        pyautogui.doubleClick(844, 564)
+        time.sleep(0.1)
+        pyautogui.doubleClick(844, 564)
+        time.sleep(0.1)
+        pyautogui.doubleClick(844, 564)
+        time.sleep(0.1)
+        pyautogui.doubleClick(844, 564)
+
         # pyautogui.click(817, 438)
         # time.sleep(0.5)
         #
@@ -1449,11 +1464,15 @@ class AW:
         #     time.sleep(0.5)
         #     pyautogui.click(844, 563)
         #     time.sleep(0.5)
-        pyautogui.scroll(100)
+        pyautogui.scroll(-100)
         time.sleep(1)
         pyautogui.scroll(-100)
         time.sleep(1)
-        pyautogui.scroll(100, Coox, Cooy)
+        pyautogui.scroll(-100, Coox, Cooy)
+        time.sleep(1)
+        pyautogui.scroll(-100, Coox, Cooy)
+        time.sleep(1)
+        pyautogui.scroll(-100, Coox, Cooy)
         time.sleep(1)
         pyautogui.scroll(-100, Coox, Cooy)
 

@@ -1,5 +1,5 @@
 import time
-from AllWay import AW
+from NewAllWay import AW
 
 
 CT = (time.localtime()[3]*100) + (time.localtime()[4])

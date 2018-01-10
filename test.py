@@ -34,6 +34,7 @@ class AW():
         self.JiaLanShenDianComplete = False
         self.SanBeiLianGongComplete = False
         self.ShiMuMiZhenComplete = False
+        self.x, self.y = pyautogui.size()
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -230,7 +231,7 @@ class AW():
 
         for i in range(2):
             for iii in range(0, 7):
-                moveValue = 30;
+                moveValue = 30
 
                 # xiao chu dui hua kuang
                 time.sleep(1)

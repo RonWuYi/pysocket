@@ -15,7 +15,7 @@ SPlay.InIt()
 #     SPlay.GeRenBoss(5)
 #     SPlay.HuiShou()
 SPlay.ChuMoRenWu()
-SPlay.TaFangFengMo()
+SPlay.TaFangFengMo(3)
 # while True:
 #     if CT > 100 and CT < 130:
 #         time.sleep(1)

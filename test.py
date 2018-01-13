@@ -199,7 +199,7 @@ class AW():
 
             # lin qu jiang li
             # pyautogui.moveTo(604, 398, duration=0.5)
-            pyautogui.click(604, 398)
+            pyautogui.click(606, 381)
 
         self.TaFangFengMoComplete = True
 
@@ -467,7 +467,7 @@ class AW():
         # pyautogui.moveTo(932, 462, duration=0.5)
         time.sleep(1)
         pyautogui.click(931, 425)
-        for i in range(5):
+        for i in range(6):
             time.sleep(1)
             pyautogui.click(551, 571)
 

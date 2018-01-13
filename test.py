@@ -130,82 +130,78 @@ class AW():
 
         self.JingYingRenWuComplete = True
 
-    def TaFangFengMo(self):
-        pass
-    #     self.GuaJiFlag = False
-    #     self.CurStatus = 'TaFangFengMo'
-    #     self.EventTime += 1
-    #
-    #     # self._BaoWuShenDunJieMian()
-    #
-    #     for jj in range(3):
-    #         time.sleep(1)
-    #         # da kai jie mian
-    #         # pyautogui.press('j')
-    #
-    #         # ri chang ren wu
-    #         # time.sleep(1)
-    #         # pyautogui.moveTo(281, 227, duration=0.5)
-    #         time.sleep(1)
-    #         pyautogui.click(931, 385)
-    #
-    #         # jie qu ren wu
-    #         time.sleep(1)
-    #         pyautogui.moveTo(278, 635, duration=0.5)
-    #         time.sleep(1)
-    #         pyautogui.click()
-    #
-    #         # jin ru feng mo gu
-    #         pyautogui.moveTo(505, 611, duration=0.5)
-    #         pyautogui.click()
-    #
-    #         # kai shi shua guai
-    #         pyautogui.moveTo(700, 414)
-    #         pyautogui.click()
-    #
-    #         for ii in range(2):
-    #             # dian
-    #             pyautogui.moveTo(320, 415)
-    #             pyautogui.click()
-    #
-    #             # dao lu dian ji dian, ren wu qian jin
-    #             pyautogui.moveTo(754, 349)
-    #             # pyautogui.rightClick(clicks=3, interval=0.5)
-    #             pyautogui.click(button='right', clicks=1)
-    #
-    #             # du
-    #             pyautogui.moveTo(415, 416)
-    #             pyautogui.click()
-    #
-    #
-    #             # dao lu dian ji dian, ren wu qian jin
-    #             pyautogui.moveTo(754, 349)
-    #             pyautogui.click(button='right', clicks=1)
-    #
-    #             # bin
-    #             pyautogui.moveTo(509, 413)
-    #             pyautogui.click()
-    #
-    #             # dao lu dian ji dian, ren wu qian jin
-    #             pyautogui.moveTo(754, 349)
-    #             pyautogui.click(button='right', clicks=1)
-    #
-    #             # bao
-    #             pyautogui.moveTo(606, 415)
-    #             pyautogui.click()
-    #
-    #             # dao lu dian ji dian, ren wu qian jin
-    #             pyautogui.moveTo(754, 349)
-    #             pyautogui.click(button='right', clicks=1)
-    #
-    #         # deng dai jie shu
-    #         time.sleep(420)
-    #
-    #         # lin qu jiang li
-    #         pyautogui.moveTo(604, 398, duration=0.5)
-    #         pyautogui.click()
-    #
-    #     self.TaFangFengMoComplete = True
+    def TaFangFengMo(self, FengMoTime):
+        self.GuaJiFlag = False
+        self.CurStatus = 'TaFangFengMo'
+        self.EventTime += 1
+
+        # self._BaoWuShenDunJieMian()
+
+        for jj in range(FengMoTime):
+            time.sleep(1)
+            # da kai jie mian
+            # pyautogui.press('j')
+
+            # ri chang ren wu
+            # time.sleep(1)
+            # pyautogui.moveTo(281, 227, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(931, 387)
+
+            # jie qu ren wu
+            # time.sleep(1)
+            # pyautogui.moveTo(278, 635, duration=0.5)
+            time.sleep(1)
+            pyautogui.click(504, 591)
+
+            # # jin ru feng mo gu
+            # pyautogui.moveTo(505, 611, duration=0.5)
+            # pyautogui.click()
+            #
+            # kai shi shua guai
+            # pyautogui.moveTo(700, 414)
+            pyautogui.click(701, 458)
+
+            for ii in range(2):
+                # dian
+                # pyautogui.moveTo(320, 415)
+                pyautogui.click(322, 456)
+
+                # dao lu dian ji dian, ren wu qian jin
+                # pyautogui.moveTo(754, 349)
+                # pyautogui.rightClick(clicks=3, interval=0.5)
+                pyautogui.click(765, 359, button='right', clicks=1)
+
+                # du
+                # pyautogui.moveTo(415, 416)
+                pyautogui.click(414, 456)
+
+
+                # dao lu dian ji dian, ren wu qian jin
+                pyautogui.click(765, 359, button='right', clicks=1)
+
+                # bin
+                # pyautogui.moveTo(509, 413)
+                pyautogui.click(509, 456)
+
+                # dao lu dian ji dian, ren wu qian jin
+                pyautogui.click(765, 359, button='right', clicks=1)
+
+                # bao
+                # pyautogui.moveTo(606, 415)
+                pyautogui.click(605, 456)
+
+                # dao lu dian ji dian, ren wu qian jin
+                pyautogui.click(765, 359, button='right', clicks=1)
+
+            # deng dai jie shu
+            time.sleep(420)
+
+            # lin qu jiang li
+            # pyautogui.moveTo(604, 398, duration=0.5)
+            pyautogui.click(604, 398)
+
+        self.TaFangFengMoComplete = True
 
 
     # Todo
@@ -467,31 +463,34 @@ class AW():
         self.EventTime += 1
 
         # chuan dao Zhang TianShi
+        # time.sleep(1)
+        # pyautogui.moveTo(932, 462, duration=0.5)
         time.sleep(1)
-        pyautogui.moveTo(932, 462, duration=0.5)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        pyautogui.click()
+        pyautogui.click(931, 425)
+        for i in range(5):
+            time.sleep(1)
+            pyautogui.click(551, 571)
 
-        # jiao shu
         time.sleep(1)
-        pyautogui.moveTo(545, 588, duration=0.5)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
-        time.sleep(1)
-        pyautogui.click()
-        time.sleep(1)
+        pyautogui.press('esc')
+        # # jiao shu
+        # time.sleep(1)
+        # pyautogui.moveTo(545, 588, duration=0.5)
+        # time.sleep(1)
+        # pyautogui.click()
+        # time.sleep(1)
+        # time.sleep(1)
+        # pyautogui.click()
+        # time.sleep(1)
+        # time.sleep(1)
+        # pyautogui.click()
+        # time.sleep(1)
+        # time.sleep(1)
+        # pyautogui.click()
+        # time.sleep(1)
+        # time.sleep(1)
+        # pyautogui.click()
+        # time.sleep(1)
 
         self.ChuMoRenWuComplete = True
 

@@ -255,7 +255,7 @@ class AW():
                 elif iii == 3:
                     time.sleep(110)
                 elif iii == 4:
-                    time.sleep(300)
+                    time.sleep(270)
                 elif iii == 5:
                     time.sleep(75)
                 elif iii == 6:
@@ -658,21 +658,24 @@ class AW():
         self._HuoDongJieMian()
 
         for i in range(9):
-            time.sleep(1)
-            pyautogui.moveTo(587, 613, duration=0.5)
+            # time.sleep(1)
+            # pyautogui.moveTo(587, 613, duration=0.5)
             time.sleep(1)
             for i in range(3):
-                pyautogui.click()
+                time.sleep(0.5)
+                pyautogui.click(582, 598)
                 time.sleep(0.1)
-                pyautogui.click()
+                pyautogui.click(582, 598)
                 time.sleep(0.1)
-                pyautogui.click()
+                pyautogui.click(582, 598)
                 time.sleep(0.1)
-                pyautogui.click()
-                time.sleep(0.1)
-            pyautogui.moveTo(799, 535, duration=0.5)
-            pyautogui.click()
-
+            # pyautogui.moveTo(799, 535, duration=0.5)
+            time.sleep(0.5)
+            pyautogui.click(797, 520)
+        time.sleep(0.5)
+        pyautogui.press('esc')
+        time.sleep(0.5)
+        pyautogui.press('r')
         self.MoBaiChengZhuComplete = True
 
     def RiYeZhanBiQi(self):
@@ -838,24 +841,25 @@ class AW():
     def _HuoDongJieMian(self):
         time.sleep(1)
         # da kai jie mian
-        self.InIt()
+        # self.InIt()
         pyautogui.press('j')
 
         # ri chang ren wu
-        time.sleep(1)
-        pyautogui.moveTo(751, 633, duration=0.5)
-        time.sleep(1)
-        pyautogui.click(751, 633)
-
+        # time.sleep(1)
+        # pyautogui.moveTo(751, 633, duration=0.5)
         # jin ru huo dong
         time.sleep(1)
-        pyautogui.moveTo(511, 627, duration=0.5)
-        time.sleep(1)
-        pyautogui.click(511, 627)
+        pyautogui.click(751, 614)
 
-        # xiao chu jie mian
-        time.sleep(1)
-        pyautogui.press('esc')
+        # jin ru huo dong
+        # time.sleep(1)
+        # pyautogui.moveTo(511, 627, duration=0.5)
+        # time.sleep(1)
+        # pyautogui.click(511, 627)
+        #
+        # # xiao chu jie mian
+        # time.sleep(1)
+        # pyautogui.press('esc')
 
     def RiBiGuan(self):
         self._HuoDongJieMian()

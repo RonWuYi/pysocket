@@ -7,16 +7,25 @@ SPlay = AW()
 SPlay.TabQieHuan()
 SPlay.InIt()
 
-# while True:
-#     SPlay.GongXunRenWu(9, 120)
-#     SPlay.JingYingRenWu(9, 160)
-#     SPlay.ChuangTianGuan(850)
-#     SPlay.CaiLiaoFuBen()
-#     SPlay.GeRenBoss(5)
-#     SPlay.HuiShou()
-SPlay.ChuMoRenWu()
-SPlay.TaFangFengMo(3)
-# while True:
+while True:
+    if CT > 100 and CT < 130:
+        SPlay.GongXunRenWu(9, 120)
+        SPlay.JingYingRenWu(9, 160)
+        SPlay.ChuangTianGuan(850)
+        SPlay.CaiLiaoFuBen()
+        SPlay.HuiShou()
+        SPlay.GeRenBoss(5)
+        SPlay.HuiShou()
+        SPlay.ChuMoRenWu()
+        SPlay.TaFangFengMo(3)
+    else:
+        time.sleep(1)
+        SPlay.GuaJi()
+        time.sleep(3600)
+        SPlay.HuiShouLess()
+        # SPlay.TaFangFengMo()
+        # SPlay.HuiShou()
+        #
 #     if CT > 100 and CT < 130:
 #         time.sleep(1)
 #         SPlay.InIt()

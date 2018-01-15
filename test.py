@@ -262,6 +262,7 @@ class AW():
                 # li kai fu ben / mian fei lin qu jiang li
                 time.sleep(1)
                 pyautogui.click(860, 528)
+            self.HuiShouLess()
 
         self.CaiLiaoFuBenComplete = True
         

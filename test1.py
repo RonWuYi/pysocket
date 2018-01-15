@@ -1,4 +1,5 @@
 import time
+
 from test import AW
 
 CT = (time.localtime()[3]*100) + (time.localtime()[4])
@@ -8,7 +9,7 @@ SPlay.TabQieHuan()
 SPlay.InIt()
 
 while True:
-    if CT > 100 and CT < 130:
+    if CT > 1 and CT < 230:
         SPlay.GongXunRenWu(9, 120)
         SPlay.JingYingRenWu(9, 160)
         SPlay.ChuangTianGuan(850)
@@ -18,8 +19,22 @@ while True:
         SPlay.HuiShou()
         SPlay.ChuMoRenWu()
         SPlay.TaFangFengMo(3)
+    elif CT > 2100 and CT < 2135:
+        SPlay.TaFangFengMo(1)
+    elif CT > 2135 and CT < 2150:
+        SPlay.RiJinZhuSongLi()
+    elif CT > 2200 and CT < 2230:
+        # SPlay.RiShenWei()
+        SPlay.GuaJi()
+        time.sleep(3600)
+    elif CT > 2230 and CT < 2300:
+        # SPlay.RiShenWei()
+        SPlay.RiDuoBeiYaSong()
+
+        # time.sleep(3600)
     else:
         time.sleep(1)
+        SPlay.GeRenBoss(2)
         SPlay.GuaJi()
         time.sleep(3600)
         SPlay.HuiShouLess()

@@ -30,7 +30,6 @@ while True:
     elif CT > 2230 and CT < 2300:
         # SPlay.RiShenWei()
         SPlay.RiDuoBeiYaSong()
-
         # time.sleep(3600)
     else:
         time.sleep(1)

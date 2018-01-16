@@ -51,8 +51,6 @@ class AW():
         self.CurStatus = 'JinYanGongXun'
         self.EventTime += 1
         time.sleep(1)
-
-        time.sleep(1)
         pyautogui.click(943, 347)
 
         time.sleep(1)
@@ -136,60 +134,38 @@ class AW():
         self.EventTime += 1
 
         # self._BaoWuShenDunJieMian()
-
         for jj in range(FengMoTime):
             self._GoFengMoNPC()
-            time.sleep(1)
-            # da kai jie mian
-            # pyautogui.press('j')
-
-            # ri chang ren wu
-            # time.sleep(1)
-            # pyautogui.moveTo(281, 227, duration=0.5)
             time.sleep(1)
             pyautogui.click(931, 387)
 
             # jie qu ren wu
-            # time.sleep(1)
-            # pyautogui.moveTo(278, 635, duration=0.5)
             time.sleep(1)
             pyautogui.click(505, 593)
 
-            # # jin ru feng mo gu
-            # pyautogui.moveTo(505, 611, duration=0.5)
-            # pyautogui.click()
-            #
-            # kai shi shua guai
-            # pyautogui.moveTo(700, 414)
+            # jin ru feng mo gu
             pyautogui.click(701, 458)
 
             for ii in range(2):
                 # dian
-                # pyautogui.moveTo(320, 415)
                 pyautogui.click(322, 456)
 
                 # dao lu dian ji dian, ren wu qian jin
-                # pyautogui.moveTo(754, 349)
-                # pyautogui.rightClick(clicks=3, interval=0.5)
                 pyautogui.click(765, 359, button='right', clicks=1)
 
                 # du
-                # pyautogui.moveTo(415, 416)
                 pyautogui.click(414, 456)
-
 
                 # dao lu dian ji dian, ren wu qian jin
                 pyautogui.click(765, 359, button='right', clicks=1)
 
                 # bin
-                # pyautogui.moveTo(509, 413)
                 pyautogui.click(509, 456)
 
                 # dao lu dian ji dian, ren wu qian jin
                 pyautogui.click(765, 359, button='right', clicks=1)
 
                 # bao
-                # pyautogui.moveTo(606, 415)
                 pyautogui.click(605, 456)
 
                 # dao lu dian ji dian, ren wu qian jin
@@ -199,13 +175,11 @@ class AW():
             time.sleep(420)
 
             # lin qu jiang li
-            # pyautogui.moveTo(604, 398, duration=0.5)
             pyautogui.click(606, 381)
 
         self.TaFangFengMoComplete = True
 
 
-    # Todo
     def ChuangTianGuan(self, TianGuanTime):
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
@@ -420,25 +394,17 @@ class AW():
         pyautogui.click(285, 225)
 
         # jie qu ren wu
-        # time.sleep(1)
-        # pyautogui.moveTo(750, 633, duration=0.5)
         time.sleep(1)
         pyautogui.click(750, 633)
-
-        # pyautogui.moveTo(315, 424, duration=0.5)
-        # time.sleep(1)
+        time.sleep(1)
         pyautogui.click(315, 424)
         time.sleep(1)
 
         # jie shou xuan shang
-        # pyautogui.moveTo(647, 546, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(647, 546)
         time.sleep(1)
 
         # chuan
-        # pyautogui.moveTo(684, 506, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(684, 506)
         time.sleep(1)
 
@@ -446,14 +412,10 @@ class AW():
         time.sleep(30)
 
         # chuan
-        # pyautogui.moveTo(1466, 503, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(1466, 503)
         time.sleep(1)
 
         # wan cheng ren wu
-        # pyautogui.moveTo(929, 605, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(929, 605,)
         time.sleep(1)
 
@@ -465,8 +427,6 @@ class AW():
         self.EventTime += 1
 
         # chuan dao Zhang TianShi
-        # time.sleep(1)
-        # pyautogui.moveTo(932, 462, duration=0.5)
         time.sleep(1)
         pyautogui.click(931, 425)
         for i in range(6):
@@ -475,28 +435,8 @@ class AW():
 
         time.sleep(1)
         pyautogui.press('esc')
-        # # jiao shu
-        # time.sleep(1)
-        # pyautogui.moveTo(545, 588, duration=0.5)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
-        # time.sleep(1)
-        # pyautogui.click()
-        # time.sleep(1)
 
         self.ChuMoRenWuComplete = True
-
-        # Todo
 
     def HuiShou(self):
         self.GuaJiFlag = False
@@ -504,33 +444,22 @@ class AW():
         self.EventTime += 1
 
         # da kai bei bao jie mian
-        # time.sleep(1)
-        # pyautogui.press('b')
-        # time.sleep(1)
-        # pyautogui.moveTo(627, 627, duration=0.5)
         time.sleep(1)
         pyautogui.click(883, 578)
-        # time.sleep(1)
-        # pyautogui.moveTo(521, 427, duration=0.5)
         time.sleep(1)
         pyautogui.click(522, 413)
         time.sleep(2)
 
         # hui shou kuang shi
-        # pyautogui.moveTo(602, 575, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(598, 556)
         time.sleep(2)
 
         # hui shou zhuang bei
-        # pyautogui.moveTo(804, 575, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(799, 556)
         time.sleep(2)
 
         pyautogui.press('esc')
         time.sleep(0.5)
-        # self.InIt()
 
         for i in range(2):
             time.sleep(0.5)
@@ -542,11 +471,7 @@ class AW():
             time.sleep(0.5)
             pyautogui.press('w')
 
-        # self._BossJieMian()
-
         # lie mo ji fen
-        # time.sleep(1)
-        # pyautogui.moveTo(594, 214, duration=0.5)
         time.sleep(1)
         pyautogui.click(713, 116)
         time.sleep(1)
@@ -555,7 +480,6 @@ class AW():
         pyautogui.click(716, 617)
         time.sleep(1)
         pyautogui.press('esc')
-        # self.InIt()
 
     def HuiShouLess(self):
         self.GuaJiFlag = False
@@ -566,46 +490,21 @@ class AW():
         time.sleep(1)
         pyautogui.press('b')
         time.sleep(1)
-        # pyautogui.moveTo(627, 627, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(627, 627)
         time.sleep(1)
-        # pyautogui.moveTo(521, 427, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(521, 427)
         time.sleep(2)
 
-        # hui shou kuang shi
-        # pyautogui.moveTo(602, 575, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(602, 575)
         time.sleep(2)
 
         # hui shou zhuang bei
-        # pyautogui.moveTo(804, 575, duration=0.5)
-        # time.sleep(1)
         pyautogui.click(804, 575)
         time.sleep(2)
 
         pyautogui.press('esc')
         time.sleep(0.5)
-        # self.InIt()
-        # # time.sleep(0.5)
-        # #
-        # # self.InIt()
-        #
-        # # for i in range(2):
-        # #     time.sleep(0.5)
-        # #     pyautogui.press('q')
-        # #     time.sleep(0.5)
-        # #     pyautogui.press('q')
-        # #     time.sleep(0.5)
-        # #     pyautogui.press('w')
-        # #     time.sleep(0.5)
-        # #     pyautogui.press('w')
-        # pyautogui.press('esc')
 
-        # ToDo imporve it
     def GuaJi(self):
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
@@ -613,22 +512,7 @@ class AW():
 
         self.InIt()
         self._GuJiNPC()
-        # da kai bao wu jie mian
-        # pyautogui.moveTo(572, 636, duration=0.5)
-        # time.sleep(1)
-        # pyautogui.click(572, 636)
-        # time.sleep(1)
-        # pyautogui.moveTo(195, 234,duration=0.5)
-        # time.sleep(1)
-        # pyautogui.click(195, 234)
-        # time.sleep(1)
-        # pyautogui.moveTo(792, 629,duration=0.5)
-        # time.sleep(1)
-        # pyautogui.click(792, 629)
-        # time.sleep(1)
 
-
-        # pyautogui.moveTo(596, 397, duration=0.5)
         time.sleep(1)
         pyautogui.click(595, 418)
         time.sleep(1)
@@ -636,14 +520,12 @@ class AW():
         time.sleep(1)
         pyautogui.press('z')
 
-        # ToDo imporve it
+    # ToDo imporve it
     def WaKuang(self):
         self.GuaJiFlag = True
         self.CurStatus = 'WaKuang'
         self.EventTime += 1
-        # time.sleep(1)
-        # pyautogui.moveTo(1220, 611, duration=0.5)
-        # time.sleep(1)
+
         time.sleep(100)
         pyautogui.click(1220, 611)
         time.sleep(1)
@@ -657,8 +539,6 @@ class AW():
         self._HuoDongJieMian()
 
         for i in range(9):
-            # time.sleep(1)
-            # pyautogui.moveTo(587, 613, duration=0.5)
             time.sleep(1)
             for i in range(3):
                 time.sleep(0.5)
@@ -668,7 +548,6 @@ class AW():
                 time.sleep(0.1)
                 pyautogui.click(582, 598)
                 time.sleep(0.1)
-            # pyautogui.moveTo(799, 535, duration=0.5)
             time.sleep(0.5)
             pyautogui.click(797, 520)
         time.sleep(0.5)
@@ -747,24 +626,7 @@ class AW():
         self.CurStatus = 'GeRenBoss'
         self.EventTime += 1
 
-        # self.InIt()
         for i in range(GeRenBossTime):
-            # self._WoYaoBianQaing()
-            #
-            # # wo yao zhuang bei
-            # time.sleep(1)
-            # pyautogui.moveTo(408, 279, duration=0.5)
-            # time.sleep(1)
-            # pyautogui.click(408, 279,)
-            #
-            # # tiao zhan boss
-            # time.sleep(1)
-            # pyautogui.moveTo(891, 301, duration=0.5)
-            # time.sleep(1)
-            # pyautogui.click(891, 301)
-
-            # self._BossJieMian()
-
             # ge ren boss
             time.sleep(1)
             pyautogui.click(713, 116)
@@ -772,46 +634,24 @@ class AW():
             pyautogui.click(346, 196)
 
             # boss ming zi
-            # time.sleep(1)
-            # pyautogui.moveTo(261, (255 + (i * 41)), duration=0.5)
             time.sleep(1)
-            pyautogui.click(261, (255 + (i * 41)))
-
-            # qian wang tiao zhan
-            # pyautogui.moveTo(783, 634, duration=0.5)
+            pyautogui.click(261, (255 + (i * 40)))
             time.sleep(1)
             pyautogui.click(785, 617)
-
-            # wo yao bian qiang
-            # time.sleep(1)
-            # pyautogui.press('esc')
-            # x, y = pyautogui.size()
-            # pyautogui.moveTo(x / 2, y / 2, duration=0.5)
             time.sleep(0.5)
-            # pyautogui.click(x / 2, y / 2)
             pyautogui.press('z')
             time.sleep(1)
-
             time.sleep(30 + (i * 18))
-
-            # wan cheng ren wu
-            # time.sleep(1)
-            # pyautogui.moveTo(860, 608, duration=0.5)
             time.sleep(1)
             pyautogui.click(859, 533)
-
-            # self.HuiShou()
 
         self.GeRenBossiComplete = True
 
     def InIt(self):
-        # x, y = pyautogui.size()
         time.sleep(0.5)
         pyautogui.click(951, 714)
         time.sleep(1)
         pyautogui.press('esc')
-        time.sleep(0.5)
-        # pyautogui.click(x, y)
         time.sleep(0.5)
         pyautogui.press('b')
         time.sleep(0.5)
@@ -826,26 +666,10 @@ class AW():
         # da kai jie mian
         pyautogui.press('c')
 
-        # # wo yao bian qiang Web
-        # time.sleep(1)
-        # pyautogui.moveTo(577, 616, duration=0.5)
-        # time.sleep(1)
-        # pyautogui.click(577, 616)
-
-        # wo yao bian qiang UI
-        # time.sleep(1)
-        # pyautogui.moveTo(573, 580, duration=0.5)
         time.sleep(1)
         pyautogui.click(573, 580)
 
     def _GoFengMoNPC(self):
-        # time.sleep(1)
-        # # da kai jie mian
-        # pyautogui.press('j')
-
-        # ri chang ren wu
-        # time.sleep(1)
-        # pyautogui.moveTo(285, 225, duration=0.5)
         time.sleep(1)
         pyautogui.click(337, 674)
         time.sleep(1)
@@ -859,9 +683,6 @@ class AW():
         time.sleep(1)
         pyautogui.click(614, 339)
 
-        # jie qu ren wu
-        # time.sleep(1)
-        # pyautogui.moveTo(518, 636, duration=0.5)
         time.sleep(1)
         pyautogui.click(518, 636)
 
@@ -871,14 +692,6 @@ class AW():
 
     def _HuoDongJieMian(self):
         time.sleep(1)
-        # pyautogui.press('esc')
-        # time.sleep(1)
-        # pyautogui.press('esc')
-        # time.sleep(1)
-        # # da kai jie mian
-        # # self.InIt()
-        # pyautogui.press('esc')
-        # time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1)
         x, y = pyautogui.size()
@@ -899,8 +712,6 @@ class AW():
         pyautogui.press('m')
 
         # zuo biao x
-        # time.sleep(1)
-        # pyautogui.moveTo(613, 210, duration=0.5)
         time.sleep(1)
         pyautogui.click(613, 210)
         time.sleep(1)
@@ -1038,8 +849,6 @@ class AW():
 
     def _BossJieMian(self):
         # da kai boss jie mian
-        # time.sleep(1)
-        # pyautogui.moveTo(715, 188, duration=0.5)
         time.sleep(1)
         pyautogui.click(715, 188)
         time.sleep(1)
@@ -1065,60 +874,40 @@ class AW():
 
     def _BaoWuShenDunJieMian(self):
         # da kai bao wu jie mian
-        # pyautogui.moveTo(569, 636, duration=0.5)
         time.sleep(1)
         pyautogui.click(569, 636)
         time.sleep(1)
-        # pyautogui.moveTo(197, 250, duration=0.5)
-        time.sleep(1)
         pyautogui.click(197, 250)
-        time.sleep(1)
-        # pyautogui.moveTo(792, 591, duration=0.5)
         time.sleep(1)
         pyautogui.click(792, 591)
         time.sleep(1)
 
     def _BaoWuGuanZhiJieMian(self):
         # da kai bao wu jie mian
-        # pyautogui.moveTo(569, 636, duration=0.5)
         time.sleep(1)
         pyautogui.click(569, 636)
         time.sleep(1)
-        # pyautogui.moveTo(197, 304, duration=0.5)
-        time.sleep(1)
         pyautogui.click(197, 304)
-        time.sleep(1)
-        # pyautogui.moveTo(792, 591, duration=0.5)
         time.sleep(1)
         pyautogui.click(792, 591)
         time.sleep(1)
 
     def _BaoWuLongHunJieMian(self):
         # da kai bao wu jie mian
-        # pyautogui.moveTo(569, 636, duration=0.5)
         time.sleep(1)
         pyautogui.click(569, 636)
         time.sleep(1)
-        # pyautogui.moveTo(197, 359, duration=0.5)
-        time.sleep(1)
         pyautogui.click(197, 359)
-        time.sleep(1)
-        # pyautogui.moveTo(792, 591, duration=0.5)
         time.sleep(1)
         pyautogui.click(792, 591)
         time.sleep(1)
 
     def _BaoWuLongPoJieMian(self):
         # da kai bao wu jie mian
-        # pyautogui.moveTo(569, 636, duration=0.5)
         time.sleep(1)
         pyautogui.click(569, 636)
         time.sleep(1)
-        # pyautogui.moveTo(197, 410, duration=0.5)
-        time.sleep(1)
         pyautogui.click(197, 410)
-        time.sleep(1)
-        # pyautogui.moveTo(792, 591, duration=0.5)
         time.sleep(1)
         pyautogui.click(792, 591)
         time.sleep(1)

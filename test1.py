@@ -24,9 +24,7 @@ while True:
     elif CT > 2135 and CT < 2150:
         SPlay.RiJinZhuSongLi()
     elif CT > 2200 and CT < 2230:
-        # SPlay.RiShenWei()
-        SPlay.GuaJi()
-        time.sleep(3600)
+        SPlay.RiShenWei()
     elif CT > 2230 and CT < 2300:
         # SPlay.RiShenWei()
         SPlay.RiDuoBeiYaSong()

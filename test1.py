@@ -9,7 +9,7 @@ SPlay.TabQieHuan()
 SPlay.InIt()
 
 while True:
-    if CT > 1 and CT < 230:
+    if CT > 1 and CT < 930:
         SPlay.GongXunRenWu(9, 120)
         SPlay.JingYingRenWu(9, 160)
         SPlay.ChuangTianGuan(850)
@@ -35,7 +35,7 @@ while True:
         time.sleep(1)
         SPlay.GeRenBoss(2)
         SPlay.GuaJi()
-        time.sleep(3600)
+        time.sleep(1200)
         SPlay.HuiShouLess()
         # SPlay.TaFangFengMo()
         # SPlay.HuiShou()

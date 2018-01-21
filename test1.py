@@ -24,6 +24,8 @@ while True:
         time.sleep(2400)
     elif CT > 1730 and CT < 1800:
         SPlay.RiMoBaiChengZhu()
+    elif CT > 1905 and CT < 1930:
+        SPlay.RiWorldBoss()
     elif CT > 2100 and CT < 2135:
         SPlay.TaFangFengMo(1)
     elif CT > 2135 and CT < 2150:
@@ -34,7 +36,6 @@ while True:
         SPlay.RiDuoBeiYaSong()
     else:
         time.sleep(1)
-        SPlay.GeRenBoss(2)
         SPlay.GuaJi()
         time.sleep(1200)
         SPlay.HuiShouLess()

@@ -554,6 +554,10 @@ class AW():
         pyautogui.press('esc')
         time.sleep(0.5)
         pyautogui.press('r')
+        time.sleep(0.5)
+        pyautogui.press('esc')
+        time.sleep(0.5)
+        pyautogui.press('r')
         self.MoBaiChengZhuComplete = True
 
     def RiYeZhanBiQi(self):

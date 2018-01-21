@@ -1012,11 +1012,17 @@ class AW:
         self.GeRenBossiComplete = True
 
     def InIt(self):
+        time.sleep(0.5)
+        pyautogui.click(951, 714)
         time.sleep(1)
-        pyautogui.moveTo(self.x/2, self.y/2,duration=0.5)
+        pyautogui.press('esc')
         time.sleep(0.5)
-        pyautogui.click(self.x/2, self.y/2)
+        pyautogui.press('b')
         time.sleep(0.5)
+        pyautogui.click(625, 611)
+        time.sleep(0.5)
+        pyautogui.click(521, 410)
+        time.sleep(1)
         pyautogui.press('esc')
 
     def _WoYaoBianQaing(self):

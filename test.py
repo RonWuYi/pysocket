@@ -6,7 +6,7 @@ pyautogui.PAUSE = 1.5
 GongXunTime = 120
 JinYinTime = 160
 
-class AW():
+class AW1():
     def __init__(self):
         self.GuaJiFlag = True
         self.CurStatus = 'null'

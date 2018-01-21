@@ -566,7 +566,10 @@ class AW1():
         self.EventTime += 1
 
         self._HuoDongJieMian()
-        pyautogui.press('z')
+        time.sleep(1)
+        pyautogui.click(509, 606)
+        time.sleep(1)
+        pyautogui.press('esc')
         time.sleep(1200)
 
         self.YeZhanBiQiComplete = True
@@ -708,7 +711,6 @@ class AW1():
         pyautogui.click(x, y)
         time.sleep(1)
         pyautogui.press('j')
-
         time.sleep(1)
         pyautogui.click(750, 615)
 

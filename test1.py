@@ -1,9 +1,9 @@
 import time
 
-from test import AW
+from test import AW1
 
 CT = (time.localtime()[3]*100) + (time.localtime()[4])
-SPlay = AW()
+SPlay = AW1()
 
 SPlay.TabQieHuan()
 SPlay.InIt()
@@ -26,6 +26,8 @@ while True:
         SPlay.RiMoBaiChengZhu()
     elif CT > 1905 and CT < 1930:
         SPlay.RiWorldBoss()
+    elif CT > 1930 and CT < 1950:
+        SPlay.RiYeZhanBiQi()
     elif CT > 2100 and CT < 2135:
         SPlay.TaFangFengMo(1)
     elif CT > 2135 and CT < 2150:

@@ -19,6 +19,9 @@ while True:
         SPlay.HuiShou()
         SPlay.ChuMoRenWu()
         SPlay.TaFangFengMo(3)
+    elif CT > 1630 and CT < 1730:
+        SPlay.GuaJi()
+        time.sleep(2400)
     elif CT > 1730 and CT < 1800:
         SPlay.RiMoBaiChengZhu()
     elif CT > 2100 and CT < 2135:

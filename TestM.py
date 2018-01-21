@@ -9,3 +9,5 @@ SPlayN = AW1()
 
 time.sleep(5)
 SPlay.InIt()
+# SPlay.GongXunRenWu(9, 120)
+SPlay.JingYingRenWu()

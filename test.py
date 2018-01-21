@@ -603,9 +603,15 @@ class AW():
         time.sleep(1)
         self._HuoDongJieMian()
         time.sleep(1)
-        pyautogui.press('z')
+        pyautogui.click(509, 595)
         time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(1)
+        pyautogui.press('z')
         time.sleep(2000)
+        pyautogui.click(909, 685)
+        time.sleep(1)
+        pyautogui.press('e')
 
         self.WorldBossComplete = True
 
@@ -705,8 +711,6 @@ class AW():
 
         time.sleep(1)
         pyautogui.click(750, 615)
-        time.sleep(1)
-        pyautogui.click(508, 579)
 
     def RiBiGuan(self):
         self._HuoDongJieMian()

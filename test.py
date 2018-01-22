@@ -142,7 +142,7 @@ class AW1():
             # jie qu ren wu
             time.sleep(1)
             pyautogui.click(505, 593)
-            
+
             # jin ru feng mo gu
             time.sleep(1)
             pyautogui.click(701, 458)
@@ -630,7 +630,7 @@ class AW1():
         pyautogui.press('z')
         time.sleep(1)
         time.sleep(900)
-
+        self.InIt()
         self.JingYingRenWuComplete = True
 
         # ToDo imporve it
@@ -826,7 +826,7 @@ class AW1():
         time.sleep(1)
 
         self._HuoDongJieMian()
-
+        time.sleep(3600)
         # ToDo
         # NPC part and delay part
 
@@ -852,7 +852,7 @@ class AW1():
         time.sleep(1)
 
         self._HuoDongJieMian()
-
+        time.sleep(300)
         # ToDo
         # NPC part and delay part
 

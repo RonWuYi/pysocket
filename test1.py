@@ -9,12 +9,13 @@ SPlay.TabQieHuan()
 SPlay.InIt()
 
 while True:
-    if CT > 1 and CT < 400:
-        SPlay.GuaJi()
-        time.sleep(14350)
-    elif CT > 400 and CT < 710:
-        SPlay.GongXunRenWu(9, 120)
-        SPlay.JingYingRenWu(9, 160)
+    # if CT > 1 and CT < 400:
+    #     SPlay.GuaJi()
+    #     time.sleep(14350)
+    if CT > 1 and CT < 710:
+    # elif CT > 400 and CT < 710:
+        SPlay.GongXunRenWu(9, 115)
+        SPlay.JingYingRenWu(9, 150)
         SPlay.ChuangTianGuan(850)
         SPlay.CaiLiaoFuBen()
         SPlay.HuiShou()

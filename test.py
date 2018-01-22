@@ -142,8 +142,9 @@ class AW1():
             # jie qu ren wu
             time.sleep(1)
             pyautogui.click(505, 593)
-
+            
             # jin ru feng mo gu
+            time.sleep(1)
             pyautogui.click(701, 458)
 
             for ii in range(2):

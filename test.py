@@ -90,7 +90,7 @@ class AW1():
             time.sleep(1)
             pyautogui.click(613, 510)
             time.sleep(1)
-
+        self.InIt()
         self.GongXunRenWuComplete = True
 
     def JingYingRenWu(self, Rtimes, Wtimes):
@@ -125,7 +125,7 @@ class AW1():
             time.sleep(1)
             pyautogui.click(613, 510)
             time.sleep(1)
-
+        self.InIt()
         self.JingYingRenWuComplete = True
 
     def TaFangFengMo(self, FengMoTime):
@@ -177,9 +177,8 @@ class AW1():
 
             # lin qu jiang li
             pyautogui.click(606, 381)
-
+        self.InIt()
         self.TaFangFengMoComplete = True
-
 
     def ChuangTianGuan(self, TianGuanTime):
         self.GuaJiFlag = False
@@ -194,7 +193,7 @@ class AW1():
         time.sleep(TianGuanTime)
         time.sleep(1)
         pyautogui.click(511, 514)
-
+        self.InIt()
         self.ChuangTianGuanComplete = True
 
     def CaiLiaoFuBen(self):
@@ -239,7 +238,7 @@ class AW1():
                 time.sleep(1)
                 pyautogui.click(860, 528)
             self.HuiShouLess()
-
+        self.InIt()
         self.CaiLiaoFuBenComplete = True
         
     # Todo
@@ -419,7 +418,7 @@ class AW1():
         # wan cheng ren wu
         pyautogui.click(929, 605,)
         time.sleep(1)
-
+        self.InIt()
         self.WeiWangRenWuComplete = True
 
     def ChuMoRenWu(self):
@@ -436,7 +435,7 @@ class AW1():
 
         time.sleep(1)
         pyautogui.press('esc')
-
+        self.InIt()
         self.ChuMoRenWuComplete = True
 
     def HuiShou(self):
@@ -559,6 +558,8 @@ class AW1():
         pyautogui.press('esc')
         time.sleep(0.5)
         pyautogui.press('r')
+
+        self.InIt()
         self.MoBaiChengZhuComplete = True
 
     def RiYeZhanBiQi(self):
@@ -573,6 +574,7 @@ class AW1():
         pyautogui.press('esc')
         time.sleep(1200)
 
+        self.InIt()
         self.YeZhanBiQiComplete = True
 
     def RiShenWei(self):
@@ -597,6 +599,7 @@ class AW1():
             pyautogui.click(511, 600)
         time.sleep(3600)
 
+        self.InIt()
         self.ShenWeiComplete = True
 
     def RiWorldBoss(self):
@@ -617,6 +620,7 @@ class AW1():
         time.sleep(1)
         pyautogui.press('e')
 
+        self.InIt()
         self.WorldBossComplete = True
 
     def RiJinZhuSongLi(self):
@@ -630,6 +634,7 @@ class AW1():
         pyautogui.press('z')
         time.sleep(1)
         time.sleep(900)
+
         self.InIt()
         self.JingYingRenWuComplete = True
 
@@ -747,6 +752,8 @@ class AW1():
 
         time.sleep(1)
         pyautogui.press('esc')
+
+        self.InIt()
         # flag
         self.BiGuanComplete = True
 
@@ -763,6 +770,7 @@ class AW1():
         pyautogui.press('z')
         time.sleep(1750)
 
+        self.InIt()
         self.GuaiWuGongChengComplete = False
 
     def RiSuoYaoTa(self):
@@ -778,6 +786,7 @@ class AW1():
         pyautogui.press('z')
         time.sleep(1750)
 
+        self.InIt()
         self.SuoYaoTaComplete = True
 
         # ToDo
@@ -804,6 +813,8 @@ class AW1():
                 time.sleep(300)
             # pyautogui.press('esc')
             pyautogui.click(582, 499)
+
+        self.InIt()
         self.DuoBeiYaSongComplete = True
 
     def RiSanBeiLianGong(self):
@@ -816,7 +827,7 @@ class AW1():
 
         # ToDo
         # NPC part and delay part
-
+        self.InIt()
         self.SanBeiLianGongComplete = True
 
     def RiJiaLanShenDian(self):
@@ -830,6 +841,7 @@ class AW1():
         # ToDo
         # NPC part and delay part
 
+        self.InIt()
         self.JiaLanShenDianComplete = True
 
     def RiHaiTianShengYan(self):
@@ -842,7 +854,7 @@ class AW1():
 
         # ToDo
         # NPC part and delay part
-
+        self.InIt()
         self.HaiTianShengYanComplete = True
 
     def RiShiMuMiZhen(self):
@@ -855,7 +867,7 @@ class AW1():
         time.sleep(300)
         # ToDo
         # NPC part and delay part
-
+        self.InIt()
         self.ShiMuMiZhenComplete = True
 
     def _BossJieMian(self):

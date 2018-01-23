@@ -14,15 +14,17 @@ while True:
     #     time.sleep(14350)
     if CT > 1 and CT < 710:
     # elif CT > 400 and CT < 710:
-        SPlay.GongXunRenWu(9, 115)
+        SPlay.GongXunRenWu(9, 120)
         SPlay.JingYingRenWu(9, 150)
         SPlay.ChuangTianGuan(850)
         SPlay.CaiLiaoFuBen()
         SPlay.HuiShou()
         SPlay.GeRenBoss(5)
         SPlay.HuiShou()
-        SPlay.ChuMoRenWu()
+        # SPlay.ChuMoRenWu()
         SPlay.TaFangFengMo(3)
+        SPlay.WeiWangRenWu()
+        SPlay.LianGong()
     elif CT > 710 and CT < 1000:
         SPlay.GuaJi()
         time.sleep(13800)

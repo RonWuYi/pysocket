@@ -357,12 +357,10 @@ class AW1():
         self.EventTime += 1
 
         # chuan dao Zhang TianShi
-        time.sleep(1)
-        pyautogui.click(931, 425)
-        for i in range(6):
+        self.GoChuMoNPC()
+        for i in range(5):
             time.sleep(1)
             pyautogui.click(551, 571)
-
         time.sleep(1)
         pyautogui.press('esc')
         self.InIt()
@@ -640,11 +638,17 @@ class AW1():
 
     def _WoYaoBianQaing(self):
         time.sleep(1)
-        # da kai jie mian
-        pyautogui.press('c')
-
+        pyautogui.click(335, 673)
         time.sleep(1)
-        pyautogui.click(573, 580)
+        pyautogui.click(199, 212)
+        time.sleep(1)
+        pyautogui.click(576, 601)
+        time.sleep(1)
+        pyautogui.click(946, 413)
+        time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(1)
+        pyautogui.click(462, 352)
 
     def _GoFengMoNPC(self):
         time.sleep(1)
@@ -850,6 +854,10 @@ class AW1():
         time.sleep(1)
         pyautogui.click(793, 610)
         time.sleep(1)
+
+    def GoChuMoNPC(self):
+        # self.InIt()
+        self._WoYaoBianQaing()
 
     def _BaoWuShenDunJieMian(self):
         # da kai bao wu jie mian

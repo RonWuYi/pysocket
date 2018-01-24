@@ -8,6 +8,6 @@ SPlay = AW()
 SPlayN = AW1()
 
 time.sleep(5)
-SPlay.InIt()
+# SPlay.InIt()b
 # SPlay.GongXunRenWu(9, 120)
-SPlay.JingYingRenWu(9, 160)
+SPlayN.ChuMoRenWu()

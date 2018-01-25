@@ -195,7 +195,14 @@ class AW1():
 
         time.sleep(1)
         pyautogui.click(507, 600)
-        time.sleep(TianGuanTime)
+        if TianGuanTime == 0:
+            time.sleep(200)
+        elif TianGuanTime == 2:
+            time.sleep(450)
+        elif TianGuanTime == 4:
+            time.sleep(800)
+        else:
+            time.sleep(1200)
         time.sleep(1)
         pyautogui.click(511, 514)
         self.InIt()
@@ -468,13 +475,13 @@ class AW1():
 
         time.sleep(1)
         if level == 0:
-            pyautogui.click(595, 418)
+            pyautogui.click(394, 418)
         elif level == 2:
             pyautogui.click(595, 418)
         elif level == 4:
-            pyautogui.click(595, 418)
+            pyautogui.click(494, 446)
         else:
-            pyautogui.click(595, 418)
+            pyautogui.click(494, 446)
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1)

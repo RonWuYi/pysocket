@@ -13,6 +13,7 @@ while True:
         SPlay.GongXunRenWu(9, 120)
         SPlay.JingYingRenWu(9, 150)
         SPlay.ChuangTianGuan(800)
+        SPlay.HuiShou()
         SPlay.CaiLiaoFuBen()
         SPlay.HuiShou()
         SPlay.GeRenBoss(5)
@@ -59,7 +60,8 @@ while True:
         SPlay.RiDuoBeiYaSong()
     else:
         time.sleep(1)
+        SPlay.HuiShou()
         SPlay.GuaJi(23, 59, 4)
-        time.sleep(1200)
-        SPlay.HuiShouLess()
+        SPlay.D +=1
+        SPlay.HuiShou()
 

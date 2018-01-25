@@ -386,7 +386,10 @@ class AW1():
         pyautogui.click(596, 332)
         time.sleep(1)
         pyautogui.click(864, 580)
+        time.sleep(1)
+        pyautogui.press('esc')
         time.sleep(1200)
+        self.InIt()
 
     def HuiShou(self):
         self.GuaJiFlag = False
@@ -479,6 +482,7 @@ class AW1():
         CurrentyTime = sm.now()
         TargetTime = sm(self.Y, self.M, self.D, HH, MM)
         time.sleep((CurrentyTime - TargetTime).seconds)
+        self.InIt()
 
     # ToDo imporve it
     def WaKuang(self):
@@ -609,8 +613,6 @@ class AW1():
         self.InIt()
         # self.JingYingRenWuComplete = True
 
-        # ToDo imporve it
-
     def GeRenBoss(self, GeRenBossTime):
         self.GuaJiFlag = False
         self.CurStatus = 'GeRenBoss'
@@ -634,7 +636,7 @@ class AW1():
             time.sleep(30 + (i * 18))
             time.sleep(1)
             pyautogui.click(859, 533)
-
+        self.InIt()
         self.GeRenBossiComplete = True
 
     def InIt(self):
@@ -770,8 +772,6 @@ class AW1():
 
         self.InIt()
         self.SuoYaoTaComplete = True
-
-        # ToDo
 
     def RiDuoBeiYaSong(self):
         self.GuaJiFlag = False

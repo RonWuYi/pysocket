@@ -1,6 +1,8 @@
 import pyautogui
 import time
 
+from datetime import datetime as sm
+
 pyautogui.PAUSE = 1.5
 
 GongXunTime = 120
@@ -35,6 +37,9 @@ class AW1():
         self.SanBeiLianGongComplete = False
         self.ShiMuMiZhenComplete = False
         self.x, self.y = pyautogui.size()
+        self.Y = int(sm.strftime(sm.now(), "%Y%m%d")[0:4])
+        self.M = int(sm.strftime(sm.now(), "%Y%m%d")[4:6])
+        self.D = int(sm.strftime(sm.now(), "%Y%m%d")[6:8])
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -450,7 +455,7 @@ class AW1():
         pyautogui.press('esc')
         time.sleep(0.5)
 
-    def GuaJi(self):
+    def GuaJi(self, HH, MM, level=4):
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
@@ -459,11 +464,21 @@ class AW1():
         self.GoGuJiNPC()
 
         time.sleep(1)
-        pyautogui.click(595, 418)
+        if level == 0:
+            pyautogui.click(595, 418)
+        elif level == 2:
+            pyautogui.click(595, 418)
+        elif level == 4:
+            pyautogui.click(595, 418)
+        else:
+            pyautogui.click(595, 418)
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1)
         pyautogui.press('z')
+        CurrentyTime = sm.now()
+        TargetTime = sm(self.Y, self.M, self.D, HH, MM)
+        time.sleep((CurrentyTime - TargetTime).seconds)
 
     # ToDo imporve it
     def WaKuang(self):

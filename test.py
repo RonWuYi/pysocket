@@ -463,7 +463,7 @@ class AW1():
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
 
-        self.InIt()
+        # self.InIt()
         self.GoGuJiNPC()
 
         time.sleep(1)
@@ -582,15 +582,13 @@ class AW1():
         self._HuoDongJieMian()
         pyautogui.click(510, 598)
         time.sleep(1)
-        # pyautogui.click(509, 595)
-        # time.sleep(1)
-        # pyautogui.press('esc')
-        # time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(1)
         pyautogui.press('z')
         time.sleep(2000)
         # pyautogui.click(909, 685)
         # time.sleep(1)
-        pyautogui.press('e')
+        # pyautogui.press('e')
 
         self.InIt()
         self.WorldBossComplete = True
@@ -694,12 +692,6 @@ class AW1():
         time.sleep(2)
 
     def _HuoDongJieMian(self):
-        # time.sleep(1)
-        # pyautogui.press('esc')
-        # time.sleep(1)
-        # x, y = pyautogui.size()
-        # pyautogui.click(x, y)
-        # time.sleep(1)
         time.sleep(0.5)
         pyautogui.click(951, 714)
         time.sleep(0.5)

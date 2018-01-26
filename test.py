@@ -8,8 +8,9 @@ pyautogui.PAUSE = 1.5
 GongXunTime = 120
 JinYinTime = 160
 
-class AW1():
-    def __init__(self):
+class AW1(object):
+    def __init__(self, CurrentLevel):
+        self.CurrentLevel = CurrentLevel
         self.GuaJiFlag = True
         self.CurStatus = 'null'
         self.Complete = False
@@ -37,9 +38,18 @@ class AW1():
         self.SanBeiLianGongComplete = False
         self.ShiMuMiZhenComplete = False
         self.x, self.y = pyautogui.size()
-        self.Y = int(sm.strftime(sm.now(), "%Y%m%d")[0:4])
-        self.M = int(sm.strftime(sm.now(), "%Y%m%d")[4:6])
-        self.D = int(sm.strftime(sm.now(), "%Y%m%d")[6:8])
+        # self.Y = int(sm.strftime(sm.now(), "%Y%m%d")[0:4])
+        # self.M = int(sm.strftime(sm.now(), "%Y%m%d")[4:6])
+        # self.D = int(sm.strftime(sm.now(), "%Y%m%d")[6:8])
+        #
+        # self.Y = int(sm.strptime(str(sm.now()), "%Y%m%d")[0:4])
+        # self.M = int(sm.strptime(str(sm.now()), "%Y%m%d")[4:6])
+        # self.D = int(sm.strptime(str(sm.now()), "%Y%m%d")[6:8])
+
+
+        self.Y = str(sm.now())[0:4]
+        self.M = str(sm.now())[5:7]
+        self.D = str(sm.now())[8:10]
 
     def TabQieHuan(self):
         time.sleep(1)
@@ -185,7 +195,7 @@ class AW1():
         self.InIt()
         self.TaFangFengMoComplete = True
 
-    def ChuangTianGuan(self, TianGuanTime):
+    def ChuangTianGuan(self):
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
         self.EventTime += 1
@@ -195,14 +205,14 @@ class AW1():
 
         time.sleep(1)
         pyautogui.click(507, 600)
-        if TianGuanTime == 0:
-            time.sleep(200)
-        elif TianGuanTime == 2:
-            time.sleep(450)
-        elif TianGuanTime == 4:
-            time.sleep(800)
+        if self.CurrentLevel == 0:
+            time.sleep(190)
+        elif self.CurrentLevel == 2:
+            time.sleep(430)
+        elif self.CurrentLevel == 4:
+            time.sleep(790)
         else:
-            time.sleep(1200)
+            time.sleep(1300)
         time.sleep(1)
         pyautogui.click(511, 514)
         self.InIt()
@@ -216,39 +226,144 @@ class AW1():
         time.sleep(1)
 
         for i in range(2):
-            for iii in range(0, 7):
-                moveValue = 30
 
-                # xiao chu dui hua kuang
-                time.sleep(1)
-                pyautogui.press('esc')
-                time.sleep(1)
-                pyautogui.click(939, 425)
-                time.sleep(1)
-                pyautogui.click(514, (398 + (iii * moveValue)))
+            if self.CurrentLevel == 0:
+                for iii in range(1, 2):
+                    moveValue = 30
 
-                time.sleep(1)
-                pyautogui.click(499, 583)
+                    # xiao chu dui hua kuang
+                    time.sleep(1)
+                    pyautogui.press('esc')
+                    time.sleep(1)
+                    pyautogui.click(939, 425)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * moveValue)))
 
-                # zi dong zhan dou
-                time.sleep(1)
-                pyautogui.press('z')
-                if iii < 3:
-                    time.sleep(88)
-                elif iii == 3:
-                    time.sleep(110)
-                elif iii == 4:
-                    time.sleep(270)
-                elif iii == 5:
-                    time.sleep(75)
-                elif iii == 6:
-                    time.sleep(130)
-                else:
-                    time.sleep(130)
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
 
-                # li kai fu ben / mian fei lin qu jiang li
-                time.sleep(1)
-                pyautogui.click(860, 528)
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(88)
+                    elif iii == 3:
+                        time.sleep(110)
+                    elif iii == 4:
+                        time.sleep(270)
+                    elif iii == 5:
+                        time.sleep(75)
+                    elif iii == 6:
+                        time.sleep(130)
+                    else:
+                        time.sleep(130)
+
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            elif self.CurrentLevel == 2:
+                for iii in range(1, 5, 3):
+                    moveValue = 30
+
+                    # xiao chu dui hua kuang
+                    time.sleep(1)
+                    pyautogui.press('esc')
+                    time.sleep(1)
+                    pyautogui.click(939, 425)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * moveValue)))
+
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
+
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(88)
+                    elif iii == 3:
+                        time.sleep(110)
+                    elif iii == 4:
+                        time.sleep(270)
+                    elif iii == 5:
+                        time.sleep(75)
+                    elif iii == 6:
+                        time.sleep(130)
+                    else:
+                        time.sleep(130)
+
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            elif self.CurrentLevel == 4:
+                for iii in range(0, 7):
+                    moveValue = 30
+
+                    # xiao chu dui hua kuang
+                    time.sleep(1)
+                    pyautogui.press('esc')
+                    time.sleep(1)
+                    pyautogui.click(939, 425)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * moveValue)))
+
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
+
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(88)
+                    elif iii == 3:
+                        time.sleep(110)
+                    elif iii == 4:
+                        time.sleep(270)
+                    elif iii == 5:
+                        time.sleep(75)
+                    elif iii == 6:
+                        time.sleep(130)
+                    else:
+                        time.sleep(130)
+
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            else:
+                for iii in range(0, 7):
+                    moveValue = 30
+
+                    # xiao chu dui hua kuang
+                    time.sleep(1)
+                    pyautogui.press('esc')
+                    time.sleep(1)
+                    pyautogui.click(939, 425)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * moveValue)))
+
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
+
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(88)
+                    elif iii == 3:
+                        time.sleep(110)
+                    elif iii == 4:
+                        time.sleep(270)
+                    elif iii == 5:
+                        time.sleep(75)
+                    elif iii == 6:
+                        time.sleep(130)
+                    else:
+                        time.sleep(130)
+
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            time.sleep(1)
             self.HuiShouLess()
         self.InIt()
         self.CaiLiaoFuBenComplete = True
@@ -465,7 +580,7 @@ class AW1():
         pyautogui.press('esc')
         time.sleep(0.5)
 
-    def GuaJi(self, HH, MM, level=4):
+    def GuaJi(self, HH, MM, SS = 0):
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
@@ -474,11 +589,11 @@ class AW1():
         self.GoGuJiNPC()
 
         time.sleep(1)
-        if level == 0:
+        if self.CurrentLevel == 0:
             pyautogui.click(394, 418)
-        elif level == 2:
+        elif self.CurrentLevel == 2:
             pyautogui.click(595, 418)
-        elif level == 4:
+        elif self.CurrentLevel == 4:
             pyautogui.click(494, 446)
         else:
             pyautogui.click(494, 446)
@@ -486,9 +601,11 @@ class AW1():
         pyautogui.press('esc')
         time.sleep(1)
         pyautogui.press('z')
-        CurrentyTime = sm.now()
-        TargetTime = sm(self.Y, self.M, self.D, HH, MM)
-        time.sleep((CurrentyTime - TargetTime).seconds)
+        # CurrentTime = sm.now()
+        # TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
+        # TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
+        # self._TimeDiff(HH, MM, SS)
+        time.sleep(self._TimeDiff(HH, MM, SS))
         self.InIt()
 
     # ToDo imporve it
@@ -1031,3 +1148,26 @@ class AW1():
         pyautogui.scroll(-100)
         time.sleep(0.5)
         pyautogui.scroll(-100)
+
+    def _TimeDiff(self, HH, MM, SS):
+        CurrentTime = sm.now()
+        TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
+        TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
+
+        # print "time diff is ", (abs((TargetTime-CurrentTime).seconds-6))
+        return (abs((TargetTime-CurrentTime).seconds-10))
+
+    def CeShi(self, HH, MM, SS):
+        CurrentyTime = sm.now()
+        # ta = time.strptime(sm.now(), "%Y-%m-%d %H:%M:%S")
+        print "CurrentyTime = ", CurrentyTime
+
+        TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
+        # TargetTime = sm.strptime(self.Y, self.M, self.D, HH, MM, SS)
+
+        TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
+        # tb = time.strptime(TargetTime, "%Y-%m-%d %H:%M:%S")
+        print "TargetTime = ", TargetTime
+
+        print (TargetTime - CurrentyTime)
+        print (TargetTime - CurrentyTime).seconds

@@ -61,6 +61,6 @@ while True:
     else:
         time.sleep(1)
         SPlay.HuiShou()
-        SPlay.GuaJi(23, 59)
+        SPlay.GuaJi(23, 59, 59)
         SPlay.D +=1
         SPlay.HuiShou()

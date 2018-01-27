@@ -223,21 +223,20 @@ class AW1(object):
         print "Start CaiLiaoFuBen at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
         self.CurStatus = 'CaiLiaoFuBen'
-
         self.EventTime += 1
         time.sleep(1)
 
         for i in range(2):
-
             if self.CurrentLevel == 0:
                 for iii in range(1, 2):
                     moveValue = 30
 
                     # xiao chu dui hua kuang
+                    self.GoCaiLiaoNPC()
+
+                    # dian ji NPC
                     time.sleep(1)
-                    pyautogui.press('esc')
-                    time.sleep(1)
-                    pyautogui.click(939, 425)
+                    pyautogui.click(604, 359)
                     time.sleep(1)
                     pyautogui.click(514, (398 + (iii * moveValue)))
 
@@ -268,10 +267,11 @@ class AW1(object):
                     moveValue = 30
 
                     # xiao chu dui hua kuang
+                    self.GoCaiLiaoNPC()
+
+                    # dian ji NPC
                     time.sleep(1)
-                    pyautogui.press('esc')
-                    time.sleep(1)
-                    pyautogui.click(939, 425)
+                    pyautogui.click(604, 359)
                     time.sleep(1)
                     pyautogui.click(514, (398 + (iii * moveValue)))
 
@@ -302,10 +302,11 @@ class AW1(object):
                     moveValue = 30
 
                     # xiao chu dui hua kuang
+                    self.GoCaiLiaoNPC()
+
+                    # dian ji NPC
                     time.sleep(1)
-                    pyautogui.press('esc')
-                    time.sleep(1)
-                    pyautogui.click(939, 425)
+                    pyautogui.click(604, 359)
                     time.sleep(1)
                     pyautogui.click(514, (398 + (iii * moveValue)))
 
@@ -336,10 +337,11 @@ class AW1(object):
                     moveValue = 30
 
                     # xiao chu dui hua kuang
+                    self.GoCaiLiaoNPC()
+
+                    # dian ji NPC
                     time.sleep(1)
-                    pyautogui.press('esc')
-                    time.sleep(1)
-                    pyautogui.click(939, 425)
+                    pyautogui.click(604, 359)
                     time.sleep(1)
                     pyautogui.click(514, (398 + (iii * moveValue)))
 
@@ -365,7 +367,7 @@ class AW1(object):
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
-            time.sleep(1)
+            # time.sleep(1)
             self.HuiShou()
         print "CaiLiaoFuBen Complete at {}".format(self.CurrentDateTime())
         self.InIt()
@@ -1076,15 +1078,20 @@ class AW1(object):
         # self.InIt()
         self._WoYaoBianQaing()
 
+    def GoCaiLiaoNPC(self):
+        self._BaoWuShenDunJieMian()
+
     def _BaoWuShenDunJieMian(self):
         # da kai bao wu jie mian
+        self.InIt()
         time.sleep(1)
-        pyautogui.click(569, 636)
+        pyautogui.click(570, 677)
         time.sleep(1)
-        pyautogui.click(197, 250)
+        pyautogui.click(198, 269)
         time.sleep(1)
-        pyautogui.click(792, 591)
+        pyautogui.click(793, 569)
         time.sleep(1)
+        pyautogui.press('esc')
 
     def _BaoWuGuanZhiJieMian(self):
         # da kai bao wu jie mian
@@ -1176,37 +1183,6 @@ class AW1(object):
         pyautogui.typewrite(yy)
 
         # to do
-
-    def _ManyNPC(self, Coox, Cooy):
-        time.sleep(0.5)
-        pyautogui.press('esc')
-        time.sleep(0.5)
-        pyautogui.moveTo(self.x / 2, self.y / 2, duration=0.5)
-        time.sleep(0.5)
-        pyautogui.click(self.x / 2, self.y / 2)
-        time.sleep(0.5)
-        # di tu
-        time.sleep(1)
-        pyautogui.press('m')
-        time.sleep(0.1)
-        pyautogui.doubleClick(844, 564)
-        time.sleep(0.1)
-        pyautogui.doubleClick(844, 564)
-        time.sleep(0.1)
-        pyautogui.doubleClick(844, 564)
-        time.sleep(0.1)
-        pyautogui.doubleClick(844, 564)
-        pyautogui.scroll(-100)
-        time.sleep(1)
-        pyautogui.scroll(-100)
-        time.sleep(1)
-        pyautogui.scroll(-100, Coox, Cooy)
-        time.sleep(1)
-        pyautogui.scroll(-100, Coox, Cooy)
-        time.sleep(1)
-        pyautogui.scroll(-100, Coox, Cooy)
-        time.sleep(1)
-        pyautogui.scroll(-100, Coox, Cooy)
 
     def _TestScorll(self, ScorValue):
         print ScorValue

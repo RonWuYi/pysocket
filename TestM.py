@@ -8,5 +8,5 @@ SPlay = AW()
 SPlayN = AW1(2)
 
 time.sleep(2)
-SPlayN.GoChuMoNPC()
+SPlayN.GoCaiLiaoNPC()
 # SPlayN.TaFangFengMo(3)

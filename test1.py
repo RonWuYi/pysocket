@@ -3,7 +3,7 @@ import time
 from test import AW1
 
 
-SPlay = AW1(4)
+SPlay = AW1(3)
 SPlay.TabQieHuan()
 SPlay.InIt()
 
@@ -11,10 +11,10 @@ while True:
     print "start a round at {}".format(SPlay.CurrentDateTime())
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
     if CT > 1 and CT < 1000:
-        SPlay.GongXunRenWu(9, 120)
-        SPlay.JingYingRenWu(9, 150)
-        SPlay.ChuangTianGuan()
-        SPlay.HuiShou()
+        # SPlay.GongXunRenWu(9, 120)
+        # SPlay.JingYingRenWu(3, 150)
+        # SPlay.ChuangTianGuan()
+        # SPlay.HuiShou()
         SPlay.CaiLiaoFuBen()
         SPlay.HuiShou()
         SPlay.GeRenBoss()

@@ -19,7 +19,7 @@ while True:
         # SPlay.HuiShou()
         # SPlay.GeRenBoss()
         # SPlay.HuiShou()
-        # SPlay.TaFangFengMo(1)
+        SPlay.TaFangFengMo(2)
         # SPlay.WeiWangRenWu()
         SPlay.ChuMoRenWu(1)
         SPlay.LianGong(120)

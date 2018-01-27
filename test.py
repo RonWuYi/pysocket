@@ -195,12 +195,14 @@ class AW1(object):
 
             # deng dai jie shu
             time.sleep(420)
+
             # lin qu jiang li
+            time.sleep(5)
             pyautogui.click(606, 382)
 
-            self._GoFengMoNPC()
-            # lin qu jiang li
-            pyautogui.click(606, 382)
+            # self._GoFengMoNPC()
+            # # lin qu jiang li
+            # pyautogui.click(606, 382)
         print "TaFangFengMo Complete at {}".format(self.CurrentDateTime())
         self.InIt()
         self.TaFangFengMoComplete = True

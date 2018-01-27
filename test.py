@@ -591,9 +591,7 @@ class AW1(object):
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
 
-        # self.InIt()
         self.GoGuJiNPC()
-
         time.sleep(1)
         if self.CurrentLevel == 0:
             pyautogui.click(394, 418)
@@ -1078,7 +1076,6 @@ class AW1(object):
         time.sleep(1)
 
     def GoGuJiNPC(self):
-        # self.InIt()
         time.sleep(1)
         pyautogui.click(570, 677)
         time.sleep(1)
@@ -1088,7 +1085,6 @@ class AW1(object):
         time.sleep(1)
 
     def GoChuMoNPC(self):
-        # self.InIt()
         self._WoYaoBianQaing()
 
     def GoCaiLiaoNPC(self):

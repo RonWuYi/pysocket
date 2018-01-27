@@ -7,7 +7,6 @@ CT = (time.localtime()[3]*100) + (time.localtime()[4])
 SPlay = AW()
 SPlayN = AW1(2)
 
-# time.sleep(2)
-print CT
-SPlayN._TimeDiff(23,0,0)
+time.sleep(2)
+SPlayN.GoChuMoNPC()
 # SPlayN.TaFangFengMo(3)

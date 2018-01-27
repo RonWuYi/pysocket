@@ -2,20 +2,7 @@ import time
 from datetime import datetime
 from test import AW1
 
+x = str(datetime.now())
+# print datetime.now()[3] + datetime.now()[4] + datetime.now()[5]
 
-SPlay = AW1(4)
-# SPlay.TabQieHuan()
-# SPlay.InIt()b
-# CurrentLevel = 4b
-
-while True:
-    # CT = (time.localtime()[3]*100) + (time.localtime()[4])B
-    #
-    # print CTzbzz
-    # SPlay.GuaJi(15, 0)BBBKEY BBBB
-
-    A = datetime.now()
-    SPlay.InIt()
-    B = datetime.now()
-    print (B - A).seconds
-    time.sleep(2)
+print x[5:19]

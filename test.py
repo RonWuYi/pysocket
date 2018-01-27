@@ -479,6 +479,15 @@ class AW1(object):
         # wan cheng ren wu
         pyautogui.click(645, 526)
         time.sleep(2)
+
+        # lin qu jiang li
+        pyautogui.click(336, 600)
+        time.sleep(2)
+        pyautogui.click(450, 600)
+        time.sleep(2)
+        pyautogui.click(566, 600)
+        time.sleep(2)
+
         pyautogui.press('esc')
         print "WeiWangRenWu complete at {}".format(self.CurrentDateTime())
         self.InIt()
@@ -496,10 +505,8 @@ class AW1(object):
         # jin ru jiang jun mu
         time.sleep(2)
         pyautogui.click(544, 497)
-        # sui ji fei
         time.sleep(1)
-        pyautogui.press('e')
-
+        self._GoTo(63, 25)
         # da pai zi
         time.sleep(1)
         pyautogui.press('z')
@@ -541,24 +548,24 @@ class AW1(object):
         self.CurStatus = 'HuiShou'
         self.EventTime += 1
 
-        # da kai bei bao jie mian
-        time.sleep(1)
-        pyautogui.click(883, 578)
-        time.sleep(1)
-        pyautogui.click(522, 413)
-        time.sleep(2)
+        # # da kai bei bao jie mian
+        # time.sleep(1)
+        # pyautogui.click(883, 578)
+        # time.sleep(1)
+        # pyautogui.click(522, 413)
+        # time.sleep(2)
+        #
+        # # hui shou kuangshi
+        # pyautogui.click(602, 555)
+        # time.sleep(2)
+        # # hui shou zhuang bei
+        # pyautogui.click(801, 554)
+        # time.sleep(2)
 
-        # hui shou kuangshi
-        pyautogui.click(602, 555)
-        time.sleep(2)
-        # hui shou zhuang bei
-        pyautogui.click(801, 554)
-        time.sleep(2)
+        # pyautogui.press('esc')
+        # time.sleep(0.5)
 
-        pyautogui.press('esc')
-        time.sleep(0.5)
-
-        for i in range(2):
+        for i in range(3):
             time.sleep(0.5)
             pyautogui.press('q')
             time.sleep(0.5)
@@ -1071,7 +1078,7 @@ class AW1(object):
         time.sleep(1)
 
     def GoGuJiNPC(self):
-        self.InIt()
+        # self.InIt()
         time.sleep(1)
         pyautogui.click(570, 677)
         time.sleep(1)
@@ -1178,13 +1185,13 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('m')
         time.sleep(1)
-        pyautogui.click(612, 175)
+        pyautogui.click(610, 194)
         time.sleep(1)
         pyautogui.typewrite(xx)
 
         # zuo biao y
         time.sleep(1)
-        pyautogui.click(709, 176)
+        pyautogui.click(710, 194)
         time.sleep(1)
         pyautogui.typewrite(yy)
 
@@ -1222,7 +1229,7 @@ class AW1(object):
         TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
         TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
 
-        print "Gua ji shi jian is {} minutes".format(((TargetTime-CurrentTime).total_seconds())/60)
+        print "Gua ji shi jian is {} minutes".format(((TargetTime-CurrentTime).seconds())/60)
         return (abs((TargetTime-CurrentTime).seconds-10))
 
     def CeShi(self, HH, MM, SS):

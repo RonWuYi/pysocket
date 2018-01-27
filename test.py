@@ -152,7 +152,7 @@ class AW1(object):
             # # dian NPC
             # time.sleep(1)
             # pyautogui.click(610, 337)
-
+            time.sleep(6)
             # jin ru feng mo gu
             time.sleep(1)
             pyautogui.click(506, 592)
@@ -195,6 +195,8 @@ class AW1(object):
 
             # deng dai jie shu
             time.sleep(420)
+            # lin qu jiang li
+            pyautogui.click(606, 382)
 
             self._GoFengMoNPC()
             # lin qu jiang li
@@ -501,7 +503,7 @@ class AW1(object):
         self.InIt()
         self.WeiWangRenWuComplete = True
 
-    def ChuMoRenWu(self):
+    def ChuMoRenWu(self, RenWuTime):
         print "Start ChuMoRenWu at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuMoRenWu'
@@ -518,7 +520,7 @@ class AW1(object):
         # da pai zi
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(4000)
+        time.sleep(RenWuTime*60)
         self.GoChuMoNPC()
         for i in range(5):
             time.sleep(1)

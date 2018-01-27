@@ -19,9 +19,9 @@ while True:
         # SPlay.HuiShou()
         # SPlay.GeRenBoss()
         # SPlay.HuiShou()
-        SPlay.TaFangFengMo(2)
+        SPlay.TaFangFengMo(1)
         SPlay.WeiWangRenWu()
-        SPlay.ChuMoRenWu()
+        SPlay.ChuMoRenWu(60)
         SPlay.LianGong(120)
         SPlay.GuaJi(10, 0)
     elif CT > 1000 and CT < 1030:

@@ -1224,12 +1224,12 @@ class AW1(object):
         time.sleep(0.5)
         pyautogui.scroll(-100)
 
-    def _TimeDiff(self, HH, MM, SS):
+    def _TimeDiff(self, HH, MM, SS = 0):
         CurrentTime = sm.now()
         TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
         TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
 
-        print "Gua ji shi jian is {} minutes".format(((TargetTime-CurrentTime).seconds())/60)
+        print "Gua ji shi jian is {} minutes".format(((TargetTime-CurrentTime).total_seconds())/60)
         return (abs((TargetTime-CurrentTime).seconds-10))
 
     def CeShi(self, HH, MM, SS):

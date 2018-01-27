@@ -1,3 +1,4 @@
+from datetime import datetime
 import time
 
 from test import AW1
@@ -8,6 +9,7 @@ SPlay.TabQieHuan()
 SPlay.InIt()
 
 while True:
+    print "start a round at {}".format(datetime.now())
     CT = (time.localtime()[3] * 100) + (time.localtime()[4])
     if CT > 1 and CT < 1000:
         SPlay.GongXunRenWu(9, 120)

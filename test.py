@@ -492,11 +492,17 @@ class AW1(object):
 
         # chuan dao Zhang TianShi
         self.GoChuMoNPC()
+
         # jin ru jiang jun mu
-        time.sleep(1)
-        pyautogui.click(551, 571)
+        time.sleep(2)
+        pyautogui.click(544, 497)
+        # sui ji fei
         time.sleep(1)
         pyautogui.press('e')
+
+        # da pai zi
+        time.sleep(1)
+        pyautogui.press('z')
         time.sleep(3600)
         self.GoChuMoNPC()
         for i in range(5):

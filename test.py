@@ -149,13 +149,20 @@ class AW1(object):
         for jj in range(FengMoTime):
             self._GoFengMoNPC()
 
-            # dian NPC
-            time.sleep(1)
-            pyautogui.click(610, 337)
+            # # dian NPC
+            # time.sleep(1)
+            # pyautogui.click(610, 337)
 
             # jin ru feng mo gu
             time.sleep(1)
-            pyautogui.click(505, 593)
+            pyautogui.click(506, 592)
+
+            # xiao chu jie mian
+            time.sleep(1)
+            pyautogui.press('esc')
+
+            time.sleep(1)
+            pyautogui.press('esc')
 
             # kai shi shua guai
             time.sleep(1)
@@ -189,8 +196,9 @@ class AW1(object):
             # deng dai jie shu
             time.sleep(420)
 
+            self._GoFengMoNPC()
             # lin qu jiang li
-            pyautogui.click(606, 381)
+            pyautogui.click(606, 382)
         print "TaFangFengMo Complete at {}".format(self.CurrentDateTime())
         self.InIt()
         self.TaFangFengMoComplete = True
@@ -510,7 +518,7 @@ class AW1(object):
         # da pai zi
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(3600)
+        time.sleep(4000)
         self.GoChuMoNPC()
         for i in range(5):
             time.sleep(1)
@@ -881,9 +889,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(412, 214)
         time.sleep(1)
-        pyautogui.click(946, 221)
-        time.sleep(1)
-        pyautogui.press('esc')
+        pyautogui.click(892, 220)
         # time.sleep(1)
         # pyautogui.click(614, 339)
         # time.sleep(1)

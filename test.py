@@ -516,8 +516,17 @@ class AW1(object):
         time.sleep(2)
         pyautogui.click(544, 497)
         time.sleep(1)
+
+        pyautogui.press('esc')
+        time.sleep(1)
+        # pyautogui.click(462, 352)
+        # time.sleep(2)
+        time.sleep(1)
         self._GoTo(63, 25)
         # da pai zi
+        time.sleep(10)
+        time.sleep(1)
+        pyautogui.press('esc')
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(RenWuTime*60)
@@ -869,7 +878,7 @@ class AW1(object):
         time.sleep(2)
         pyautogui.press('esc')
 
-    def _WoYaoBianQaing(self):
+    def _WoYaoShengJi(self):
         time.sleep(1)
         pyautogui.click(335, 673)
         time.sleep(1)
@@ -877,11 +886,8 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(576, 601)
         time.sleep(1)
-        pyautogui.click(946, 413)
+        pyautogui.click(410, 214)
         time.sleep(1)
-        pyautogui.press('esc')
-        time.sleep(1)
-        pyautogui.click(462, 352)
 
     def _GoFengMoNPC(self):
         time.sleep(1)
@@ -1093,7 +1099,9 @@ class AW1(object):
         time.sleep(1)
 
     def GoChuMoNPC(self):
-        self._WoYaoBianQaing()
+        self._WoYaoShengJi()
+        pyautogui.click(893, 413)
+        time.sleep(11)
 
     def GoCaiLiaoNPC(self):
         self._BaoWuShenDunJieMian()
@@ -1191,14 +1199,17 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(610, 194)
         time.sleep(1)
-        pyautogui.typewrite(xx)
+        pyautogui.typewrite(str(xx))
 
         # zuo biao y
         time.sleep(1)
         pyautogui.click(710, 194)
         time.sleep(1)
-        pyautogui.typewrite(yy)
+        pyautogui.typewrite(str(yy))
 
+        # qian wang
+        time.sleep(1)
+        pyautogui.click(769, 194)
         # to do
 
     def _TestScorll(self, ScorValue):

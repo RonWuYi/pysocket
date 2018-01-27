@@ -529,7 +529,7 @@ class AW1(object):
         self.InIt()
         self.ChuMoRenWuComplete = True
 
-    def LianGong(self):
+    def LianGong(self, LianGongTime):
         print "Start LianGong at {}".format(self.CurrentDateTime())
         self.GoGuJiNPC()
         pyautogui.click(495, 616)
@@ -547,7 +547,7 @@ class AW1(object):
         pyautogui.click(864, 580)
         time.sleep(1)
         pyautogui.press('esc')
-        time.sleep(1200)
+        time.sleep(LianGongTime*60)
         print "LianGong complete at {}".format(self.CurrentDateTime())
         self.InIt()
 

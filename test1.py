@@ -22,7 +22,7 @@ while True:
         SPlay.TaFangFengMo(2)
         SPlay.WeiWangRenWu()
         SPlay.ChuMoRenWu()
-        SPlay.LianGong()
+        SPlay.LianGong(120)
         SPlay.GuaJi(10, 0)
     elif CT > 1000 and CT < 1030:
         SPlay.RiJinZhuSongLi()

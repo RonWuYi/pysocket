@@ -621,7 +621,7 @@ class AW1(object):
         elif self.CurrentLevel >0 and self.CurrentLevel <= 2:
             pyautogui.click(595, 418)
         elif self.CurrentLevel >2 and self.CurrentLevel <= 4:
-            pyautogui.click(494, 446)
+            pyautogui.click(595, 418)
         else:
             pyautogui.click(494, 446)
         time.sleep(1)

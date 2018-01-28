@@ -8,5 +8,5 @@ SPlay = AW()
 SPlayN = AW1(2)
 
 # time.sleep(2)
-SPlayN._TimeDiff(10,0)
+SPlayN.GuaJi(17,30)
 # SPlayN.TaFangFengMo(3)

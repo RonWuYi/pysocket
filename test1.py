@@ -40,7 +40,7 @@ while True:
         SPlay.RiBiGuan()
         SPlay.GuaJi(15, 0)
     elif CT > 1500 and CT < 1730:
-        SPlay.RiJiaLanShenDian()
+        # SPlay.RiJiaLanShenDian()
         SPlay.GuaJi(17, 30)
     elif CT > 1730 and CT < 1905:
         SPlay.RiMoBaiChengZhu()

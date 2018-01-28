@@ -608,6 +608,8 @@ class AW1(object):
 
     def GuaJi(self, HH, MM, SS = 0):
         print "Start Guaji at {}".format(self.CurrentDateTime())
+        print "Gua ji shi jian is {} minutes".format(self._TimeDiff(HH, MM, SS)/60)
+        # print type(self._TimeDiff(HH, MM, SS))
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
@@ -630,7 +632,7 @@ class AW1(object):
         # TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
         # TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
         # self._TimeDiff(HH, MM, SS)
-        time.sleep(self._TimeDiff(HH, MM, SS))
+        time.sleep(self._TimeDiff(HH, MM, SS)+15)
         print "GuaJi complete at {}".format(self.CurrentDateTime())
         self.InIt()
 
@@ -762,14 +764,16 @@ class AW1(object):
         self.EventTime += 1
 
         self._HuoDongJieMian()
+
         # can yu huo dong
+        time.sleep(2)
         pyautogui.click(508, 596)
-        time.sleep(1)
-        pyautogui.press('esc')
-        time.sleep(1)
-        pyautogui.press('z')
-        time.sleep(1)
-        time.sleep(900)
+        time.sleep(2)
+        # pyautogui.press('esc')
+        # time.sleep(1)
+        # pyautogui.press('z')
+        # time.sleep(1)
+        time.sleep(300)
         print "JinZhuSongLi complete at {}".format(self.CurrentDateTime())
         self.InIt()
         # self.JingYingRenWuComplete = True
@@ -1246,7 +1250,6 @@ class AW1(object):
         TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
         TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
 
-        print "Gua ji shi jian is {} minutes".format(((TargetTime-CurrentTime).total_seconds())/60)
         return (abs((TargetTime-CurrentTime).seconds-10))
 
     def CeShi(self, HH, MM, SS):

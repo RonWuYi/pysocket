@@ -237,15 +237,13 @@ class AW1(object):
         self.CurStatus = 'CaiLiaoFuBen'
         self.EventTime += 1
         time.sleep(1)
-
+        self.GoCaiLiaoNPC()
         for i in range(2):
             if self.CurrentLevel == 0:
                 for iii in range(1, 2):
                     moveValue = 30
 
                     # xiao chu dui hua kuang
-                    self.GoCaiLiaoNPC()
-
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -277,9 +275,6 @@ class AW1(object):
             elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
                 for iii in range(1, 5, 3):
                     moveValue = 30
-
-                    # xiao chu dui hua kuang
-                    self.GoCaiLiaoNPC()
 
                     # dian ji NPC
                     time.sleep(1)
@@ -313,9 +308,6 @@ class AW1(object):
                 for iii in range(0, 7):
                     moveValue = 30
 
-                    # xiao chu dui hua kuang
-                    self.GoCaiLiaoNPC()
-
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -347,9 +339,6 @@ class AW1(object):
             else:
                 for iii in range(0, 7):
                     moveValue = 30
-
-                    # xiao chu dui hua kuang
-                    self.GoCaiLiaoNPC()
 
                     # dian ji NPC
                     time.sleep(1)
@@ -1009,22 +998,58 @@ class AW1(object):
         self.CurStatus = 'RiDuoBeiYaSong'
         self.EventTime += 1
         time.sleep(1)
-        for i in range(3):
-            self._HuoDongJieMian()
-            pyautogui.click(510, 582)
+        # for i in range(3):
+        self._HuoDongJieMian()
+        # pyautogui.click(885, 601)
+        # time.sleep(1)
+
+        pyautogui.click(510, 582)
+        time.sleep(1)
+
+        # shua xin
+        for i in range(10):
             time.sleep(1)
-            for i in range(8):
-                time.sleep(1)
-                pyautogui.click(649, 542)
+            pyautogui.click(471, 551)
+        # hu song
+        time.sleep(1)
+        pyautogui.click(758, 550)
+        time.sleep(80)
+        # ji xu ya yun
+        time.sleep(1)
+        pyautogui.click(436, 500)
+
+        # shua xin
+        for i in range(10):
             time.sleep(1)
-            pyautogui.click(938, 549)
-            if i == 0:
-                pyautogui.press('esc')
-                time.sleep(300)
-            else:
-                pyautogui.press('esc')
-                time.sleep(300)
-            pyautogui.click(582, 499)
+            pyautogui.click(471, 551)
+        # hu song
+        time.sleep(1)
+        pyautogui.click(758, 550)
+        time.sleep(300)
+
+        # ji xu ya yun
+        time.sleep(1)
+        pyautogui.click(436, 500)
+
+        # shua xin
+        for i in range(10):
+            time.sleep(1)
+            pyautogui.click(471, 551)
+        # hu song
+        time.sleep(1)
+        pyautogui.click(758, 550)
+        time.sleep(300)
+        # if i == 0:
+        #     pyautogui.press('esc')
+        #     time.sleep(300)
+        # else:
+        # pyautogui.press('esc')
+        # time.sleep(900)
+        # pyautogui.click(582, 499)
+        # que ding
+        time.sleep(1)
+        pyautogui.click(581, 502)
+        time.sleep(1)
         print "RiDuoBeiYaSong complete at {}".format(self.CurrentDateTime())
         self.InIt()
         self.DuoBeiYaSongComplete = True

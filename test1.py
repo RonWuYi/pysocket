@@ -24,8 +24,8 @@ while True:
     #     SPlay.LianGong(120)
     #     SPlay.GuaJi(10, 0)
     if CT > 1 and CT < 100000:
-        SPlay.GongXunRenWu(9, 120)
-        SPlay.JingYingRenWu(9, 150)
+        SPlay.GongXunRenWu(9, 110)
+        SPlay.JingYingRenWu(9, 140)
         SPlay.ChuangTianGuan()
         SPlay.HuiShou()
         SPlay.CaiLiaoFuBen()

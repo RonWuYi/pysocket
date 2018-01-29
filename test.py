@@ -1321,3 +1321,12 @@ class AW1(object):
         h, m = divmod(m, 60)
 
         return "%02d:%02d:%02d" % (h, m, s)
+
+    def HuoYueJiang(self):
+        time.sleep(1)
+        pyautogui.click(258, 134)
+        time.sleep(1)
+        pyautogui.click(764, 545)
+        time.sleep(1)
+        pyautogui.click(766, 602)
+

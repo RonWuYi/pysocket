@@ -72,6 +72,7 @@ while True:
         SPlay.GuaJi(22, 30)
     elif CT > 223000 and CT < 230000:
         SPlay.RiDuoBeiYaSong()
+        SPlay.HuoYueJiang()
         SPlay.GuaJi(23, 30)
     else:
         time.sleep(1)

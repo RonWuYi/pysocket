@@ -502,6 +502,43 @@ class AW1(object):
         self.InIt()
         self.WeiWangRenWuComplete = True
 
+    # def ChuMoRenWu(self, RenWuTime):
+    #     print "Start ChuMoRenWu at {}".format(self.CurrentDateTime())
+    #     self.GuaJiFlag = False
+    #     self.CurStatus = 'ChuMoRenWu'
+    #     self.EventTime += 1
+    #
+    #     # chuan dao Zhang TianShi
+    #     self.GoChuMoNPC()
+    #
+    #     # jin ru jiang jun mu
+    #     time.sleep(2)
+    #     pyautogui.click(544, 497)
+    #     time.sleep(1)
+    #
+    #     pyautogui.press('esc')
+    #     time.sleep(1)
+    #     # pyautogui.click(462, 352)
+    #     # time.sleep(2)
+    #     time.sleep(1)
+    #     self._GoTo(63, 25)
+    #     # da pai zi
+    #     time.sleep(10)
+    #     time.sleep(1)
+    #     pyautogui.press('esc')
+    #     time.sleep(1)
+    #     pyautogui.press('z')
+    #     time.sleep(RenWuTime*60)
+    #     self.GoChuMoNPC()
+    #     for i in range(5):
+    #         time.sleep(1)
+    #         pyautogui.click(551, 571)
+    #     time.sleep(1)
+    #     pyautogui.press('esc')
+    #     print "ChuMoRenWu complete at {}".format(self.CurrentDateTime())
+    #     self.InIt()
+    #     self.ChuMoRenWuComplete = True
+
     def ChuMoRenWu(self, RenWuTime):
         print "Start ChuMoRenWu at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
@@ -529,6 +566,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(RenWuTime*60)
+        self.InIt()
         self.GoChuMoNPC()
         for i in range(5):
             time.sleep(1)

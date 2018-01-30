@@ -1,12 +1,18 @@
 import pyautogui
 import time
+import win32gui
+import ctypes
 
 from datetime import datetime as sm
+from PIL import ImageGrab
+from ScreenShot import RECT
 
 pyautogui.PAUSE = 1.5
 
 GongXunTime = 120
 JinYinTime = 160
+
+rect = RECT()
 
 class AW1(object):
     def __init__(self, CurrentLevel):
@@ -15,6 +21,7 @@ class AW1(object):
         self.CurStatus = 'null'
         self.Complete = False
         self.EventTime = 0
+        self.Seconds = 60
         self.GongXunRenWuComplete = False
         self.JingYingRenWuComplete = False
         self.WeiWangRenWuComplete = False
@@ -707,14 +714,21 @@ class AW1(object):
         pyautogui.press('esc')
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(900)
+        time.sleep(self.Seconds*60)
         time.sleep(2)
         for i in range(9):
-            pyautogui.click(889, 578)
-            time.sleep(1)
-            pyautogui.click(889, 578)
-            time.sleep(45)
-            pyautogui.click(511, 600)
+            if i == 6:
+                pyautogui.click(889, 578)
+                time.sleep(1)
+                pyautogui.click(889, 578)
+                time.sleep(70)
+                pyautogui.click(511, 600)
+            else:
+                pyautogui.click(889, 578)
+                time.sleep(1)
+                pyautogui.click(889, 578)
+                time.sleep(45)
+                pyautogui.click(511, 600)
         # li kai
         time.sleep(1)
         pyautogui.click(911, 566)
@@ -928,25 +942,57 @@ class AW1(object):
         time.sleep(1)
         self._HuoDongJieMian()
         pyautogui.click(509, 609)
+
+        # xiao chu jie mian
+        time.sleep(0.5)
+        pyautogui.press('esc')
+
         # di tu
         time.sleep(1)
         pyautogui.press('m')
 
-        # zuo biao x
-        time.sleep(1)
-        pyautogui.click(613, 210)
-        time.sleep(1)
-        pyautogui.typewrite('31')
+        if self.CurrentLevel >=4:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 210)
+            time.sleep(1)
+            pyautogui.typewrite('31')
 
-        # zuo biao y
-        time.sleep(1)
-        pyautogui.click(713, 209)
-        time.sleep(1)
-        pyautogui.typewrite('26')
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 209)
+            time.sleep(1)
+            pyautogui.typewrite('26')
+        elif self.CurrentLevel == 0:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 210)
+            time.sleep(1)
+            pyautogui.typewrite('27')
+
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 209)
+            time.sleep(1)
+            pyautogui.typewrite('30')
+        elif self.CurrentLevel > 0 and self.CurrentLevel < 4:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 210)
+            time.sleep(1)
+            pyautogui.typewrite('32')
+
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 209)
+            time.sleep(1)
+            pyautogui.typewrite('35')
 
         # qian wang di dian
         time.sleep(1)
         pyautogui.click(770, 209)
+
+        # zai ci dian ji
         time.sleep(1)
         pyautogui.click(770, 209)
         time.sleep(1200)
@@ -1018,6 +1064,10 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(436, 500)
 
+        # jie qu ren wu jie mian dian ji
+        pyautogui.click(510, 582)
+        time.sleep(1)
+
         # shua xin
         for i in range(10):
             time.sleep(1)
@@ -1030,6 +1080,10 @@ class AW1(object):
         # ji xu ya yun
         time.sleep(1)
         pyautogui.click(436, 500)
+
+        # jie qu ren wu jie mian dian ji
+        pyautogui.click(510, 582)
+        time.sleep(1)
 
         # shua xin
         for i in range(10):
@@ -1329,4 +1383,17 @@ class AW1(object):
         pyautogui.click(764, 545)
         time.sleep(1)
         pyautogui.click(766, 602)
+
+    def XingQiJi(self):
+        xingqiji = sm.now()
+        return xingqiji.weekday()
+
+    def CapturePic(self, CurTime):
+        HWND = win32gui.GetForegroundWindow()
+        ctypes.windll.user32.GetWindowRect(HWND, ctypes.byref(rect))
+
+        coordinate = (rect.left + 2, rect.top + 2, rect.right - 2, rect.bottom - 2)
+        pic = ImageGrab.grab(coordinate)
+        pic.save("C:\\test\\xingqi{}_{}.png".format(self.XingQiJi(), CurTime), quality=100)
+
 

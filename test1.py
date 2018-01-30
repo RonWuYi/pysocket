@@ -24,6 +24,7 @@ while True:
     #     SPlay.LianGong(120)
     #     SPlay.GuaJi(10, 0)
     if CT > 1 and CT < 100000:
+        SPlay.CapturePic(CT)
         SPlay.GongXunRenWu(9, 110)
         SPlay.JingYingRenWu(9, 140)
         SPlay.ChuangTianGuan()
@@ -44,6 +45,7 @@ while True:
         SPlay.RiShenWei()
         SPlay.GuaJi(13, 0)
     elif CT > 130000 and CT < 140000:
+        SPlay.CapturePic(CT)
         SPlay.RiSuoYaoTa()
         SPlay.GuaJi(14, 0)
     elif CT > 140000 and CT < 143500:
@@ -62,6 +64,7 @@ while True:
         SPlay.RiWorldBoss()
         SPlay.GuaJi(19, 30)
     elif CT > 193000 and CT < 213500:
+        SPlay.CapturePic(CT)
         SPlay.RiYeZhanBiQi()
         SPlay.GuaJi(21, 35)
     elif CT > 213500 and CT < 220000:

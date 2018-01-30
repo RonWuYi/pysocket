@@ -44,6 +44,7 @@ class AW1(object):
         self.JiaLanShenDianComplete = False
         self.SanBeiLianGongComplete = False
         self.ShiMuMiZhenComplete = False
+        self.XingQi = self.XingQiJi()
         self.x, self.y = pyautogui.size()
 
         self.Y = str(sm.now())[0:4]
@@ -696,7 +697,7 @@ class AW1(object):
         self.InIt()
         self.YeZhanBiQiComplete = True
 
-    def RiShenWei(self):
+    def RiShenWei(self, ShenWeiTimeMinutes):
         print "Start ShenWei at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
         self.CurStatus = 'ShenWei'
@@ -714,7 +715,7 @@ class AW1(object):
         pyautogui.press('esc')
         time.sleep(1)
         pyautogui.press('z')
-        time.sleep(self.Seconds*60)
+        time.sleep(self.Seconds*ShenWeiTimeMinutes)
         time.sleep(2)
         for i in range(9):
             if i == 6:

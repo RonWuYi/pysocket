@@ -939,7 +939,6 @@ class AW1(object):
         self.GeRenBossiComplete = True
 
     def InIt(self):
-        SS = sm.now()
         time.sleep(0.5)
         pyautogui.click(951, 714)
         time.sleep(1)
@@ -958,8 +957,6 @@ class AW1(object):
         pyautogui.click(801, 554)
         time.sleep(2)
         pyautogui.press('esc')
-        DD = sm.now()
-        print self.SecondsChange((DD - SS).seconds)
 
     def _WoYaoShengJi(self):
         time.sleep(1)
@@ -1480,3 +1477,8 @@ class AW1(object):
     # To Do
     def DaBoss(self):
         pass
+
+    def RunTime(self):
+        SS = sm.now()
+        DD = sm.now()
+        print self.SecondsChange((DD - SS).seconds)

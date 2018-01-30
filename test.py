@@ -934,6 +934,15 @@ class AW1(object):
         pyautogui.click(750, 615)
         time.sleep(0.5)
 
+    def _ViewHuoDongJieMianNoClick(self):
+        time.sleep(0.5)
+        pyautogui.click(951, 714)
+        time.sleep(0.5)
+        pyautogui.press('j')
+        # time.sleep(1)
+        # pyautogui.click(750, 615)
+        time.sleep(0.5)
+
     def RiBiGuan(self):
         print "Start BiGuan at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
@@ -1389,6 +1398,7 @@ class AW1(object):
         return xingqiji.weekday()
 
     def CapturePic(self, CurTime):
+        self._ViewHuoDongJieMianNoClick()
         HWND = win32gui.GetForegroundWindow()
         ctypes.windll.user32.GetWindowRect(HWND, ctypes.byref(rect))
 

@@ -1396,4 +1396,6 @@ class AW1(object):
         pic = ImageGrab.grab(coordinate)
         pic.save("C:\\test\\xingqi{}_{}.png".format(self.XingQiJi(), CurTime), quality=100)
 
-
+    # To Do
+    def DaBoss(self):
+        pass

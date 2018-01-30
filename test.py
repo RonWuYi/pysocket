@@ -804,7 +804,12 @@ class AW1(object):
                 time.sleep(0.5)
                 pyautogui.press('z')
                 time.sleep(1)
-                time.sleep(30 + (i * 18))
+                if i == 0:
+                    time.sleep(30 + (i * 15))
+                elif i == 1:
+                    time.sleep(40 + (i * 15))
+                else:
+                    time.sleep(50 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
@@ -823,7 +828,14 @@ class AW1(object):
                 time.sleep(0.5)
                 pyautogui.press('z')
                 time.sleep(1)
-                time.sleep(30 + (i * 18))
+                if i == 0:
+                    time.sleep(30 + (i * 15))
+                elif i == 1:
+                    time.sleep(40 + (i * 15))
+                elif i == 2:
+                    time.sleep(50 + (i * 15))
+                else:
+                    time.sleep(60 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
@@ -842,11 +854,20 @@ class AW1(object):
                 time.sleep(0.5)
                 pyautogui.press('z')
                 time.sleep(1)
-                time.sleep(30 + (i * 18))
+                if i == 0:
+                    time.sleep(30 + (i * 15))
+                elif i == 1:
+                    time.sleep(40 + (i * 15))
+                elif i == 2:
+                    time.sleep(50 + (i * 15))
+                elif i == 3:
+                    time.sleep(55 + (i * 15))
+                else:
+                    time.sleep(60 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         else:
-            for i in range(6):
+            for i in range(5):
                 # ge ren boss
                 time.sleep(1)
                 pyautogui.click(713, 116)
@@ -861,7 +882,18 @@ class AW1(object):
                 time.sleep(0.5)
                 pyautogui.press('z')
                 time.sleep(1)
-                time.sleep(30 + (i * 18))
+                if i == 0:
+                    time.sleep(30 + (i * 15))
+                elif i == 1:
+                    time.sleep(40 + (i * 15))
+                elif i == 2:
+                    time.sleep(50 + (i * 15))
+                elif i == 3:
+                    time.sleep(53 + (i * 15))
+                elif i == 4:
+                    time.sleep(58 + (i * 15))
+                else:
+                    time.sleep(65 + (i * 18))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         print "GeRenBoss complete at {}".format(self.CurrentDateTime())

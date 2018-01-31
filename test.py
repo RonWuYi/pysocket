@@ -2,6 +2,7 @@ import pyautogui
 import time
 import win32gui
 import ctypes
+import os
 
 from datetime import datetime as sm
 from PIL import ImageGrab
@@ -1473,7 +1474,16 @@ class AW1(object):
 
         coordinate = (rect.left + 2, rect.top + 2, rect.right - 2, rect.bottom - 2)
         pic = ImageGrab.grab(coordinate)
-        pic.save("C:\\test\\xingqi{}_{}.png".format(self.XingQiJi(), CurTime), quality=100)
+        path = "C:\\xingqi{}".format(self.XingQi)
+        if os.path.exists(path):
+            pic.save(path + "\\" + "xingqi" + str(self.XingQi) + "_" + str(CurTime) + ".png", quality=100)
+        else:
+            os.mkdir(path)
+            pic.save(path + "\\" + "xingqi" + str(self.XingQi) + "_" + str(CurTime) + ".png", quality=100)
+        time.sleep(1)
+        # time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(1)
 
     # ToDo
     def DaBoss(self):

@@ -1145,15 +1145,15 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(936, 550)
 
-            # que ding bu shi shuang bei
-            time.sleep(1)
-            pyautogui.click(509, 454)
-            # 509, 454
+            # # que ding bu shi shuang bei
+            # time.sleep(1)
+            # pyautogui.click(509, 454)
+
             if ii == 0:
                 time.sleep(45)
                 # pyautogui.press('esc')
             else:
-                time.sleep(145)
+                time.sleep(165)
                 # pyautogui.press('esc')
             # que ding
             time.sleep(1)

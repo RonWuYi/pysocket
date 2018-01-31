@@ -1115,6 +1115,7 @@ class AW1(object):
         self.InIt()
         self.SuoYaoTaComplete = True
 
+    # TODO-HIGH, improve it
     def RiDuoBeiYaSong(self):
         print "Start RiDuoBeiYaSong at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
@@ -1474,11 +1475,12 @@ class AW1(object):
         pic = ImageGrab.grab(coordinate)
         pic.save("C:\\test\\xingqi{}_{}.png".format(self.XingQiJi(), CurTime), quality=100)
 
-    # To Do
+    # ToDo
     def DaBoss(self):
         pass
 
     def RunTime(self):
         SS = sm.now()
+        # put method below
         DD = sm.now()
         print self.SecondsChange((DD - SS).seconds)

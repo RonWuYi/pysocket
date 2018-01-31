@@ -1116,7 +1116,6 @@ class AW1(object):
         self.InIt()
         self.SuoYaoTaComplete = True
 
-    # TODO-HIGH, improve it
     def RiDuoBeiYaSong(self):
         print "Start RiDuoBeiYaSong at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
@@ -1124,65 +1123,85 @@ class AW1(object):
         self.EventTime += 1
         time.sleep(1)
         # for i in range(3):
-        self._HuoDongJieMian()
+        # self._HuoDongJieMian()
         # pyautogui.click(885, 601)
         # time.sleep(1)
+        for ii in range(3):
+            self._BaoWuJieMian(3)
 
-        pyautogui.click(510, 582)
-        time.sleep(1)
-
-        # shua xin
-        for i in range(10):
+            # qian wang
             time.sleep(1)
-            pyautogui.click(471, 551)
-        # hu song
-        time.sleep(1)
-        pyautogui.click(758, 550)
-        time.sleep(80)
-        # ji xu ya yun
-        time.sleep(1)
-        pyautogui.click(436, 500)
+            pyautogui.click(793, 551)
+
+            # jie qu ren wu
+            time.sleep(1)
+            pyautogui.click(509, 582)
+
+            # shua xin
+            for i in range(10):
+                time.sleep(1)
+                pyautogui.click(649, 551)
+            # hu song
+            time.sleep(1)
+            pyautogui.click(936, 550)
+
+            # que ding bu shi shuang bei
+            time.sleep(1)
+            pyautogui.click(509, 454)
+            # 509, 454
+            if ii == 0:
+                time.sleep(45)
+                # pyautogui.press('esc')
+            else:
+                time.sleep(145)
+                # pyautogui.press('esc')
+            # que ding
+            time.sleep(1)
+            pyautogui.click(581, 502)
+        # # ji xu ya yun
+        # time.sleep(1)
+        # pyautogui.click(436, 500)
 
         # jie qu ren wu jie mian dian ji
-        pyautogui.click(510, 582)
-        time.sleep(1)
-
-        # shua xin
-        for i in range(10):
-            time.sleep(1)
-            pyautogui.click(471, 551)
-        # hu song
-        time.sleep(1)
-        pyautogui.click(758, 550)
-        time.sleep(300)
-
-        # ji xu ya yun
-        time.sleep(1)
-        pyautogui.click(436, 500)
-
-        # jie qu ren wu jie mian dian ji
-        pyautogui.click(510, 582)
-        time.sleep(1)
-
-        # shua xin
-        for i in range(10):
-            time.sleep(1)
-            pyautogui.click(471, 551)
-        # hu song
-        time.sleep(1)
-        pyautogui.click(758, 550)
-        time.sleep(300)
-        # if i == 0:
-        #     pyautogui.press('esc')
-        #     time.sleep(300)
-        # else:
-        # pyautogui.press('esc')
-        # time.sleep(900)
-        # pyautogui.click(582, 499)
-        # que ding
-        time.sleep(1)
-        pyautogui.click(581, 502)
-        time.sleep(1)
+        # pyautogui.click(510, 582)
+        # time.sleep(1)
+        #
+        # # shua xin
+        # for i in range(10):
+        #     time.sleep(1)
+        #     pyautogui.click(471, 551)
+        # # hu song
+        # time.sleep(1)
+        # pyautogui.click(758, 550)
+        # time.sleep(300)
+        #
+        # # ji xu ya yun
+        # time.sleep(1)
+        # pyautogui.click(436, 500)
+        #
+        # # jie qu ren wu jie mian dian ji
+        # pyautogui.click(510, 582)
+        # time.sleep(1)
+        #
+        # # shua xin
+        # for i in range(10):
+        #     time.sleep(1)
+        #     pyautogui.click(471, 551)
+        # # hu song
+        # time.sleep(1)
+        # pyautogui.click(758, 550)
+        # time.sleep(300)
+        # # if i == 0:
+        # #     pyautogui.press('esc')
+        # #     time.sleep(300)
+        # # else:
+        # # pyautogui.press('esc')
+        # # time.sleep(900)
+        # # pyautogui.click(582, 499)
+        # # que ding
+        # time.sleep(1)
+        # pyautogui.click(581, 502)
+        # time.sleep(1)
         print "RiDuoBeiYaSong complete at {}".format(self.CurrentDateTime())
         self.InIt()
         self.DuoBeiYaSongComplete = True
@@ -1305,15 +1324,33 @@ class AW1(object):
         pyautogui.click(792, 591)
         time.sleep(1)
 
-    def _BaoWuLongPoJieMian(self):
+    def _BaoWuJieMian(self, level):
         # da kai bao wu jie mian
+        self._XiaoChuJieMian()
         time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 410)
-        time.sleep(1)
-        pyautogui.click(792, 591)
-        time.sleep(1)
+        pyautogui.click(569, 679)
+        if level == 1:
+            time.sleep(1)
+            pyautogui.click(200, 217)
+        elif level == 2:
+            time.sleep(1)
+            pyautogui.click(200, (217+(level-1)*54))
+        elif level == 3:
+            time.sleep(1)
+            pyautogui.click(200, (217+(level-1)*54))
+        elif level == 4:
+            time.sleep(1)
+            pyautogui.click(200, (217+(level-1)*54))
+        else:
+            time.sleep(1)
+            pyautogui.click(200, 433)
+        # time.sleep(1)
+        # if SubLevel == 1:
+        #     time.sleep(1)
+        #     pyautogui.click(793, 551)
+        # elif level == 2:
+        #     pyautogui.click(792, 591)
+        #     time.sleep(1)
 
     def BaoWuXueYuJieMian(self):
         # da kai bao wu jie mian
@@ -1377,7 +1414,6 @@ class AW1(object):
         # qian wang
         time.sleep(1)
         pyautogui.click(769, 194)
-        # to do
 
     def _TestScorll(self, ScorValue):
         print ScorValue
@@ -1494,3 +1530,10 @@ class AW1(object):
         # put method below
         DD = sm.now()
         print self.SecondsChange((DD - SS).seconds)
+
+    def _XiaoChuJieMian(self):
+        time.sleep(0.5)
+        pyautogui.click(951, 714)
+        time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(0.5)

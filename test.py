@@ -1304,25 +1304,25 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
 
-    def _BaoWuGuanZhiJieMian(self):
-        # da kai bao wu jie mian
-        time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 304)
-        time.sleep(1)
-        pyautogui.click(792, 591)
-        time.sleep(1)
-
-    def _BaoWuLongHunJieMian(self):
-        # da kai bao wu jie mian
-        time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 359)
-        time.sleep(1)
-        pyautogui.click(792, 591)
-        time.sleep(1)
+    # def _BaoWuGuanZhiJieMian(self):
+    #     # da kai bao wu jie mian
+    #     time.sleep(1)
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 304)
+    #     time.sleep(1)
+    #     pyautogui.click(792, 591)
+    #     time.sleep(1)
+    #
+    # def _BaoWuLongHunJieMian(self):
+    #     # da kai bao wu jie mian
+    #     time.sleep(1)
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 359)
+    #     time.sleep(1)
+    #     pyautogui.click(792, 591)
+    #     time.sleep(1)
 
     def _BaoWuJieMian(self, level):
         # da kai bao wu jie mian
@@ -1352,51 +1352,51 @@ class AW1(object):
         #     pyautogui.click(792, 591)
         #     time.sleep(1)
 
-    def BaoWuXueYuJieMian(self):
-        # da kai bao wu jie mian
-        pyautogui.click(569, 636)
+    # def BaoWuXueYuJieMian(self):
+    #     # da kai bao wu jie mian
+    #     pyautogui.click(569, 636)
+    #
+    # def BaoWuShenDunJieMian(self):
+    #     # da kai bao wu jie mian
+    #     time.sleep(1)
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 250)
+    #
+    # def BaoWuGuanZhiJieMian(self):
+    #     # da kai bao wu jie mian
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 304)
+    #
+    # def BaoWuLongHunJieMian(self):
+    #     time.sleep(1)
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 359)
+    #
+    # def BaoWuLongPoJieMian(self):
+    #     time.sleep(1)
+    #     pyautogui.click(569, 636)
+    #     time.sleep(1)
+    #     pyautogui.click(197, 410)
+    #     time.sleep(1)
+    #
+    # def JinYinRenWuNPC(self):
+    #     self._ClickCenter()
+    #     time.sleep(1)
+    #     pyautogui.click(792, 591)
+    #     time.sleep(1)
+    #     pyautogui.press('esc')
 
-    def BaoWuShenDunJieMian(self):
-        # da kai bao wu jie mian
-        time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 250)
-
-    def BaoWuGuanZhiJieMian(self):
-        # da kai bao wu jie mian
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 304)
-
-    def BaoWuLongHunJieMian(self):
-        time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 359)
-
-    def BaoWuLongPoJieMian(self):
-        time.sleep(1)
-        pyautogui.click(569, 636)
-        time.sleep(1)
-        pyautogui.click(197, 410)
-        time.sleep(1)
-
-    def JinYinRenWuNPC(self):
-        self._ClickCenter()
-        time.sleep(1)
-        pyautogui.click(792, 591)
-        time.sleep(1)
-        pyautogui.press('esc')
-
-    def _ClickCenter(self):
-        time.sleep(0.5)
-        pyautogui.click(self.x / 2, self.y / 2)
-        time.sleep(0.5)
+    # def _ClickCenter(self):
+    #     time.sleep(0.5)
+    #     pyautogui.click(self.x / 2, self.y / 2)
+    #     time.sleep(0.5)
 
     # To Do
     def _GoTo(self, xx, yy):
-        self._ClickCenter()
+        self._XiaoChuJieMian()
         # di tu
         time.sleep(1)
         pyautogui.press('m')
@@ -1415,32 +1415,32 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(769, 194)
 
-    def _TestScorll(self, ScorValue):
-        print ScorValue
-        time.sleep(5)
-        pyautogui.scroll(100)
-        time.sleep(0.5)
-        pyautogui.scroll(100)
-        time.sleep(0.5)
-        pyautogui.scroll(100)
-        time.sleep(0.5)
-        pyautogui.scroll(100)
-        time.sleep(0.5)
-        pyautogui.scroll(100)
-        time.sleep(0.5)
-        pyautogui.scroll(100)
-        time.sleep(5)
-        pyautogui.scroll(-100)
-        time.sleep(0.5)
-        pyautogui.scroll(-100)
-        time.sleep(0.5)
-        pyautogui.scroll(-100)
-        time.sleep(0.5)
-        pyautogui.scroll(-100)
-        time.sleep(0.5)
-        pyautogui.scroll(-100)
-        time.sleep(0.5)
-        pyautogui.scroll(-100)
+    # def _TestScorll(self, ScorValue):
+    #     print ScorValue
+    #     time.sleep(5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(100)
+    #     time.sleep(5)
+    #     pyautogui.scroll(-100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(-100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(-100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(-100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(-100)
+    #     time.sleep(0.5)
+    #     pyautogui.scroll(-100)
 
     def _TimeDiff(self, HH, MM, SS = 0):
         CurrentTime = sm.now()
@@ -1491,7 +1491,7 @@ class AW1(object):
 
         return "%02d:%02d:%02d" % (h, m, s)
 
-    def HuoYueJiang(self):
+    def LinQuHuoYueJiangLi(self):
         time.sleep(1)
         pyautogui.click(258, 134)
         time.sleep(1)
@@ -1537,3 +1537,11 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(0.5)
+
+    #To do
+    def _WoYaoBianQiangJieMian(self):
+        pass
+    
+    # To Do
+    def ReStart(self):
+        pass

@@ -41,8 +41,11 @@ while True:
     elif CT > 100000 and CT < 103000:
         SPlay.RiJinZhuSongLi()
         SPlay.GuaJi(10, 30)
-    elif CT > 103000 and CT < 130000:
-        SPlay.RiShenWei(60)
+    elif CT > 103000 and CT < 111000:
+        SPlay.RiShenWei(30)
+        SPlay.GuaJi(13, 0)
+    elif CT > 111000 and CT < 130000:
+        SPlay.RiDuoBeiYaSong()
         SPlay.GuaJi(13, 0)
     elif CT > 130000 and CT < 140000:
         SPlay.CapturePic(CT)

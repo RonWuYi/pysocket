@@ -793,8 +793,11 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(2000)
-        # pyautogui.click(909, 685)
-        # time.sleep(1)
+
+        # jia bei
+        for i in range(10):
+            pyautogui.click(454, 548)
+            time.sleep(1)
         # pyautogui.press('e')
         print "WorldBoss complete at {}".format(self.CurrentDateTime())
         self.InIt()

@@ -751,7 +751,8 @@ class AW1(object):
         # time.sleep(1)
         # pyautogui.click(508, 606)
         # time.sleep(1)
-        pyautogui.press('esc')
+
+        self._XiaoChuJieMian()
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(self.Seconds*ShenWeiTimeMinutes)
@@ -1495,12 +1496,14 @@ class AW1(object):
         return "%02d:%02d:%02d" % (h, m, s)
 
     def LinQuHuoYueJiangLi(self):
+        self._XiaoChuJieMian()
         time.sleep(1)
-        pyautogui.click(258, 134)
-        time.sleep(1)
-        pyautogui.click(764, 545)
-        time.sleep(1)
-        pyautogui.click(766, 602)
+        pyautogui.click(260, 128)
+        for i in range(5):
+            time.sleep(1)
+            pyautogui.click(766, (373+i*57))
+            time.sleep(1)
+            # pyautogui.click(766, 602)
 
     def XingQiJi(self):
         xingqiji = sm.now()
@@ -1536,7 +1539,7 @@ class AW1(object):
 
     def _XiaoChuJieMian(self):
         time.sleep(0.5)
-        pyautogui.click(951, 714)
+        pyautogui.click(951, 714, button='right')
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(0.5)

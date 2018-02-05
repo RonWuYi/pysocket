@@ -14,4 +14,4 @@ time.sleep(3)
 #
 # print type(SPlayN.SecondsChange(SPlayN._TimeDiff(19, 5)))
 #
-SPlayN.DaSuoYaoTa(5)
+SPlayN.GuaSuoYaoTa(90)

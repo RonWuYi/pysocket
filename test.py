@@ -1558,8 +1558,47 @@ class AW1(object):
         pass
 
     # To Do
-    def GuaSuoYaoTa(self):
-        pass
+    def GuaSuoYaoTa(self, GuaTime):
+        self._GoGuJiNPC()
+        self._XiaoChuJieMian()
+
+        time.sleep(1)
+        pyautogui.click(654, 390)
+
+        if self.CurrentLevel == 0:
+            time.sleep(1)
+            pyautogui.click(515, 397)
+        elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
+            time.sleep(1)
+            pyautogui.click(515, 426)
+        elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
+            time.sleep(1)
+            pyautogui.click(515, 453)
+        elif self.CurrentLevel > 4 and self.CurrentLevel <= 6:
+            time.sleep(1)
+            pyautogui.click(515, 483)
+        elif self.CurrentLevel > 6 and self.CurrentLevel <= 8:
+            time.sleep(1)
+            pyautogui.click(515, 511)
+        else:
+            time.sleep(1)
+            pyautogui.click(515, 539)
+        while True:
+            self._XiaoChuJieMian()
+            pyautogui.press('z')
+            time.sleep(self.Seconds * GuaTime)
+            pyautogui.click(854, 684)
+            time.sleep(1)
+            pyautogui.click(310, 204)
+            time.sleep(1)
+            for i in range(8):
+                time.sleep(2)
+                pyautogui.doubleClick(197, 271)
+                time.sleep(0.5)
+            pyautogui.press('esc')
+            self._BossHuiShou()
+            self._XiaoChuJieMian()
+            pyautogui.press('z')
 
     def DaSuoYaoTa(self,GuaTime):
         self._GoGuJiNPC()
@@ -1600,6 +1639,8 @@ class AW1(object):
             time.sleep(0.5)
         pyautogui.press('esc')
         self._BossHuiShou()
+        self._XiaoChuJieMian()
+        pyautogui.press('z')
 
     def _BossHuiShou(self):
         time.sleep(1)

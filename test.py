@@ -63,7 +63,7 @@ class AW1(object):
         self.GuaJiFlag = False
 
     def GongXunRenWu(self, Rtimes, Wtimes):
-        print "Start GongXunRenWu at {}".format(self.CurrentDateTime())
+        print "Start GongXunRenWu at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'JinYanGongXun'
         self.EventTime += 1
@@ -107,12 +107,12 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(613, 510)
             time.sleep(1)
-        print "GongXunRenWu complete at {}".format(self.CurrentDateTime())
+        print "GongXunRenWu complete at {}".format(sm.now())
         self.InIt()
         self.GongXunRenWuComplete = True
 
     def JingYingRenWu(self, Rtimes, Wtimes):
-        print "Start JingYingRenWu at {}".format(self.CurrentDateTime())
+        print "Start JingYingRenWu at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'TianFu'
         self.EventTime += 1
@@ -144,12 +144,12 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(613, 510)
             time.sleep(1)
-        print "JingYingRenWu complete at {}".format(self.CurrentDateTime())
+        print "JingYingRenWu complete at {}".format(sm.now())
         self.InIt()
         self.JingYingRenWuComplete = True
 
     def TaFangFengMo(self, FengMoTime):
-        print "Start TaFangFengMo at {}".format(self.CurrentDateTime())
+        print "Start TaFangFengMo at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'TaFangFengMo'
         self.EventTime += 1
@@ -212,12 +212,12 @@ class AW1(object):
             # self._GoFengMoNPC()
             # # lin qu jiang li
             # pyautogui.click(606, 382)
-        print "TaFangFengMo Complete at {}".format(self.CurrentDateTime())
+        print "TaFangFengMo Complete at {}".format(sm.now())
         self.InIt()
         self.TaFangFengMoComplete = True
 
     def ChuangTianGuan(self):
-        print "Start ChuangTianGuan at {}".format(self.CurrentDateTime())
+        print "Start ChuangTianGuan at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
         self.EventTime += 1
@@ -236,12 +236,12 @@ class AW1(object):
         else:
             time.sleep(1300)
         pyautogui.click(511, 514)
-        print "ChuangTianGuan Complete at {}".format(self.CurrentDateTime())
+        print "ChuangTianGuan Complete at {}".format(sm.now())
         self.InIt()
         self.ChuangTianGuanComplete = True
 
     def CaiLiaoFuBen(self):
-        print "Start CaiLiaoFuBen at {}".format(self.CurrentDateTime())
+        print "Start CaiLiaoFuBen at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'CaiLiaoFuBen'
         self.EventTime += 1
@@ -379,12 +379,12 @@ class AW1(object):
                     pyautogui.click(860, 528)
             # time.sleep(1)
             self.HuiShou()
-        print "CaiLiaoFuBen Complete at {}".format(self.CurrentDateTime())
+        print "CaiLiaoFuBen Complete at {}".format(sm.now())
         self.InIt()
         self.CaiLiaoFuBenComplete = True
 
     def WeiWangRenWu(self):
-        print "Start WeiWangRenWu at {}".format(self.CurrentDateTime())
+        print "Start WeiWangRenWu at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'WeiWangRenWu'
         self.EventTime += 1
@@ -499,12 +499,12 @@ class AW1(object):
         time.sleep(2)
 
         pyautogui.press('esc')
-        print "WeiWangRenWu complete at {}".format(self.CurrentDateTime())
+        print "WeiWangRenWu complete at {}".format(sm.now())
         self.InIt()
         self.WeiWangRenWuComplete = True
 
     # def ChuMoRenWu(self, RenWuTime):
-    #     print "Start ChuMoRenWu at {}".format(self.CurrentDateTime())
+    #     print "Start ChuMoRenWu at {}".format(sm.now())
     #     self.GuaJiFlag = False
     #     self.CurStatus = 'ChuMoRenWu'
     #     self.EventTime += 1
@@ -536,12 +536,12 @@ class AW1(object):
     #         pyautogui.click(551, 571)
     #     time.sleep(1)
     #     pyautogui.press('esc')
-    #     print "ChuMoRenWu complete at {}".format(self.CurrentDateTime())
+    #     print "ChuMoRenWu complete at {}".format(sm.now())
     #     self.InIt()
     #     self.ChuMoRenWuComplete = True
 
     def ChuMoRenWu(self, RenWuTime):
-        print "Start ChuMoRenWu at {}".format(self.CurrentDateTime())
+        print "Start ChuMoRenWu at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuMoRenWu'
         self.EventTime += 1
@@ -572,12 +572,12 @@ class AW1(object):
             pyautogui.click(551, 571)
         time.sleep(1)
         pyautogui.press('esc')
-        print "ChuMoRenWu complete at {}".format(self.CurrentDateTime())
+        print "ChuMoRenWu complete at {}".format(sm.now())
         self.InIt()
         self.ChuMoRenWuComplete = True
 
     def LianGong(self, LianGongTime):
-        print "Start LianGong at {}".format(self.CurrentDateTime())
+        print "Start LianGong at {}".format(sm.now())
         self.GoGuJiNPC()
         pyautogui.click(495, 616)
         time.sleep(1)
@@ -595,7 +595,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(LianGongTime*60)
-        print "LianGong complete at {}".format(self.CurrentDateTime())
+        print "LianGong complete at {}".format(sm.now())
         self.InIt()
 
     def HuiShou(self):
@@ -641,7 +641,7 @@ class AW1(object):
         pyautogui.press('esc')
 
     def GuaJi(self, HH, MM, SS = 0):
-        print "Start Guaji at {}".format(self.CurrentDateTime())
+        print "Start Guaji at {}".format(sm.now())
         # print type(self._TimeDiff(HH, MM, SS))
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
@@ -668,12 +668,12 @@ class AW1(object):
         # self._TimeDiff(HH, MM, SS)
         print "GuaJi shijian is ", self.SecondsChange(self._TimeDiff(HH, MM, SS))
         time.sleep(self._TimeDiff(HH, MM, SS)-10)
-        print "GuaJi complete at {}".format(self.CurrentDateTime())
+        print "GuaJi complete at {}".format(sm.now())
         self.InIt()
 
     # ToDo imporve it
     def WaKuang(self):
-        print "Start WaKuang at {}".format(self.CurrentDateTime())
+        print "Start WaKuang at {}".format(sm.now())
         self.GuaJiFlag = True
         self.CurStatus = 'WaKuang'
         self.EventTime += 1
@@ -681,11 +681,11 @@ class AW1(object):
         time.sleep(100)
         pyautogui.click(1220, 611)
         time.sleep(1)
-        print "WaKuang Complete at {}".format(self.CurrentDateTime())
+        print "WaKuang Complete at {}".format(sm.now())
         self.InIt()
 
     def RiMoBaiChengZhu(self):
-        print "Start MoBaiChengZhu at {}".format(self.CurrentDateTime())
+        print "Start MoBaiChengZhu at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'MoBaiChengZhu'
         self.EventTime += 1
@@ -714,12 +714,12 @@ class AW1(object):
         pyautogui.press('esc')
         time.sleep(0.5)
         pyautogui.press('r')
-        print "MoBaiChengZhu complete at {}".format(self.CurrentDateTime())
+        print "MoBaiChengZhu complete at {}".format(sm.now())
         self.InIt()
         self.MoBaiChengZhuComplete = True
 
     def RiYeZhanBiQi(self):
-        print "Start YeZhanBiQi at {}".format(self.CurrentDateTime())
+        print "Start YeZhanBiQi at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'YeZhanBiQi'
         self.EventTime += 1
@@ -731,12 +731,12 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1200)
-        print "YeZhanBiQi complete at {}".format(self.CurrentDateTime())
+        print "YeZhanBiQi complete at {}".format(sm.now())
         self.InIt()
         self.YeZhanBiQiComplete = True
 
     def RiShenWei(self, ShenWeiTimeMinutes):
-        print "Start ShenWei at {}".format(self.CurrentDateTime())
+        print "Start ShenWei at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'ShenWei'
         self.EventTime += 1
@@ -774,12 +774,12 @@ class AW1(object):
         # que ding
         time.sleep(1)
         pyautogui.click(448, 455)
-        print "ShenWei complete at {}".format(self.CurrentDateTime())
+        print "ShenWei complete at {}".format(sm.now())
         self.InIt()
         self.ShenWeiComplete = True
 
     def RiWorldBoss(self):
-        print "Start WorldBoss at {}".format(self.CurrentDateTime())
+        print "Start WorldBoss at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'WorldBoss'
         self.EventTime += 1
@@ -798,12 +798,12 @@ class AW1(object):
             pyautogui.click(454, 548)
             time.sleep(1)
         # pyautogui.press('e')
-        print "WorldBoss complete at {}".format(self.CurrentDateTime())
+        print "WorldBoss complete at {}".format(sm.now())
         self.InIt()
         self.WorldBossComplete = True
 
     def RiJinZhuSongLi(self):
-        print "Start JinZhuSongLi at {}".format(self.CurrentDateTime())
+        print "Start JinZhuSongLi at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'JinZhuSongLi'
         self.EventTime += 1
@@ -819,12 +819,12 @@ class AW1(object):
         # pyautogui.press('z')
         # time.sleep(1)
         time.sleep(300)
-        print "JinZhuSongLi complete at {}".format(self.CurrentDateTime())
+        print "JinZhuSongLi complete at {}".format(sm.now())
         self.InIt()
         # self.JingYingRenWuComplete = True
 
     def GeRenBoss(self):
-        print "Start GeRenBoss at {}".format(self.CurrentDateTime())
+        print "Start GeRenBoss at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'GeRenBoss'
         self.EventTime += 1
@@ -937,7 +937,7 @@ class AW1(object):
                     time.sleep(65 + (i * 18))
                 time.sleep(1)
                 pyautogui.click(859, 533)
-        print "GeRenBoss complete at {}".format(self.CurrentDateTime())
+        print "GeRenBoss complete at {}".format(sm.now())
         self.InIt()
         self.GeRenBossiComplete = True
 
@@ -1016,7 +1016,7 @@ class AW1(object):
         time.sleep(0.5)
 
     def RiBiGuan(self):
-        print "Start BiGuan at {}".format(self.CurrentDateTime())
+        print "Start BiGuan at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'BiGuan'
         self.EventTime += 1
@@ -1080,13 +1080,13 @@ class AW1(object):
 
         time.sleep(1)
         pyautogui.press('esc')
-        print "BiGuan complete at {}".format(self.CurrentDateTime())
+        print "BiGuan complete at {}".format(sm.now())
         self.InIt()
         # flag
         self.BiGuanComplete = True
 
     def RiGuaiWuGongCheng(self):
-        print "Start GuaiWuGongCheng at {}".format(self.CurrentDateTime())
+        print "Start GuaiWuGongCheng at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'GuaiWuGongCheng'
         self.EventTime += 1
@@ -1098,12 +1098,12 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1750)
-        print "GuaiWuGongCheng complete at {}".format(self.CurrentDateTime())
+        print "GuaiWuGongCheng complete at {}".format(sm.now())
         self.InIt()
         self.GuaiWuGongChengComplete = False
 
     def RiSuoYaoTa(self):
-        print "Start RiSuoYaoTa at {}".format(self.CurrentDateTime())
+        print "Start RiSuoYaoTa at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'RiSuoYaoTa'
         self.EventTime += 1
@@ -1115,12 +1115,12 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1750)
-        print "RiSuoYaoTa complete at {}".format(self.CurrentDateTime())
+        print "RiSuoYaoTa complete at {}".format(sm.now())
         self.InIt()
         self.SuoYaoTaComplete = True
 
     def RiDuoBeiYaSong(self):
-        print "Start RiDuoBeiYaSong at {}".format(self.CurrentDateTime())
+        print "Start RiDuoBeiYaSong at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'RiDuoBeiYaSong'
         self.EventTime += 1
@@ -1205,23 +1205,23 @@ class AW1(object):
         # time.sleep(1)
         # pyautogui.click(581, 502)
         # time.sleep(1)
-        print "RiDuoBeiYaSong complete at {}".format(self.CurrentDateTime())
+        print "RiDuoBeiYaSong complete at {}".format(sm.now())
         self.InIt()
         self.DuoBeiYaSongComplete = True
 
     def RiSanBeiLianGong(self, LTime):
-        print "Start SanBeiLianGong at {}".format(self.CurrentDateTime())
+        print "Start SanBeiLianGong at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'SanBeiLianGong'
         self.EventTime += 1
 
         self.LianGong(LTime)
-        print "SanBeiLianGong complete at {}".format(self.CurrentDateTime())
+        print "SanBeiLianGong complete at {}".format(sm.now())
         self.InIt()
         self.SanBeiLianGongComplete = True
 
     def RiJiaLanShenDian(self):
-        print "Start JiaLanShenDian at {}".format(self.CurrentDateTime())
+        print "Start JiaLanShenDian at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'JiaLanShenDian'
         self.EventTime += 1
@@ -1232,13 +1232,13 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(20)
-        print "JiaLanShenDian complete at {}".format(self.CurrentDateTime())
+        print "JiaLanShenDian complete at {}".format(sm.now())
         self.InIt()
         self.JiaLanShenDianComplete = True
 
     # To Do
     def RiHaiTianShengYan(self):
-        print "Start HaiTianShengYan at {}".format(self.CurrentDateTime())
+        print "Start HaiTianShengYan at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'HaiTianShengYan'
         self.EventTime += 1
@@ -1254,12 +1254,12 @@ class AW1(object):
         time.sleep(900)
 
         # NPC part and delay part
-        print "HaiTianShengYan complete at {}".format(self.CurrentDateTime())
+        print "HaiTianShengYan complete at {}".format(sm.now())
         self.InIt()
         self.HaiTianShengYanComplete = True
 
     def RiShiMuMiZhen(self):
-        print "Start ShiMuMiZhen at {}".format(self.CurrentDateTime())
+        print "Start ShiMuMiZhen at {}".format(sm.now())
         self.GuaJiFlag = False
         self.CurStatus = 'RiShiMuMiZhen'
         self.EventTime += 1
@@ -1270,7 +1270,7 @@ class AW1(object):
         time.sleep(5)
         # ToDo
         # NPC part and delay part
-        print "ShiMuMiZhen complete at {}".format(self.CurrentDateTime())
+        print "ShiMuMiZhen complete at {}".format(sm.now())
         self.InIt()
         self.ShiMuMiZhenComplete = True
 
@@ -1475,7 +1475,7 @@ class AW1(object):
 
     def TestPlay(self, s):
         print "start play in %s" %(s)
-        print self.CurrentDateTime()
+        print sm.now()
 
     def TestGuaJi(self, HH, MM, SS):
         print "StartGuaJi"

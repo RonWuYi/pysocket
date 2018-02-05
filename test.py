@@ -579,7 +579,7 @@ class AW1(object):
 
     def LianGong(self, LianGongTime):
         print "Start LianGong at {}".format(sm.now())
-        self.GoGuJiNPC()
+        self._GoGuJiNPC()
         pyautogui.click(495, 616)
         time.sleep(1)
         pyautogui.press('esc')
@@ -648,7 +648,7 @@ class AW1(object):
         self.CurStatus = 'GuaJi'
         self.EventTime += 1
 
-        self.GoGuJiNPC()
+        self._GoGuJiNPC()
         time.sleep(1)
         if self.CurrentLevel == 0:
             pyautogui.click(394, 418)
@@ -1281,7 +1281,8 @@ class AW1(object):
         pyautogui.click(715, 188)
         time.sleep(1)
 
-    def GoGuJiNPC(self):
+    def _GoGuJiNPC(self):
+        self._XiaoChuJieMian()
         time.sleep(1)
         pyautogui.click(570, 677)
         time.sleep(1)
@@ -1560,5 +1561,55 @@ class AW1(object):
     def GuaSuoYaoTa(self):
         pass
 
-    def DaSuoYaoTa(self):
-        pass
+    def DaSuoYaoTa(self,GuaTime):
+        self._GoGuJiNPC()
+        self._XiaoChuJieMian()
+
+        time.sleep(1)
+        pyautogui.click(654, 390)
+
+        if self.CurrentLevel == 0:
+            time.sleep(1)
+            pyautogui.click(515, 397)
+        elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
+            time.sleep(1)
+            pyautogui.click(515, 426)
+        elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
+            time.sleep(1)
+            pyautogui.click(515, 453)
+        elif self.CurrentLevel > 4 and self.CurrentLevel <= 6:
+            time.sleep(1)
+            pyautogui.click(515, 483)
+        elif self.CurrentLevel > 6 and self.CurrentLevel <= 8:
+            time.sleep(1)
+            pyautogui.click(515, 511)
+        else:
+            time.sleep(1)
+            pyautogui.click(515, 539)
+
+        self._XiaoChuJieMian()
+        pyautogui.press('z')
+        time.sleep(self.Seconds*GuaTime)
+        pyautogui.click(854, 684)
+        time.sleep(1)
+        pyautogui.click(310, 204)
+        time.sleep(1)
+        for i in range(6):
+            time.sleep(2)
+            pyautogui.doubleClick(197, 271)
+            time.sleep(0.5)
+        pyautogui.press('esc')
+        self._BossHuiShou()
+
+    def _BossHuiShou(self):
+        time.sleep(1)
+        pyautogui.click(714, 119)
+        time.sleep(1)
+        pyautogui.click(597, 197)
+        time.sleep(1)
+        pyautogui.click(719, 617)
+        time.sleep(1)
+        pyautogui.press('esc')
+        time.sleep(1)
+
+

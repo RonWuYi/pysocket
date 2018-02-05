@@ -3,6 +3,7 @@ import time
 import win32gui
 import ctypes
 import os
+import unittest
 
 from datetime import datetime as sm
 from PIL import ImageGrab
@@ -1447,7 +1448,8 @@ class AW1(object):
     #     time.sleep(0.5)
     #     pyautogui.scroll(-100)
 
-    def _TimeDiff(self, HH, MM, SS = 0):
+    #@classmethod
+    def _TimeDiff(self, HH, MM = 0, SS = 0):
         CurrentTime = sm.now()
         TargetTimeS = self.Y+'-'+self.M+'-'+self.D+' '+str(HH)+':'+str(MM)+':'+str(SS)+'.0'
         TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
@@ -1490,6 +1492,7 @@ class AW1(object):
         print "%02d:%02d:%02d" % (h, m, s)
         time.sleep(self._TimeDiff(HH, MM, SS)+10)
 
+    @classmethod
     def SecondsChange(self, TotalSeconds):
         m, s = divmod(TotalSeconds, 60)
         h, m = divmod(m, 60)

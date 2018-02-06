@@ -7,11 +7,11 @@ CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localt
 # print CT
 SPlay = AW()
 SPlayN = AW1(2)
-time.sleep(3)
+# time.sleep(3)
 #
 # print datetime.now()
-# print SPlayN.SecondsChange(SPlayN._TimeDiff(4))[0:5]
+print SPlayN.SecondsChange(80000)
 #
 # print type(SPlayN.SecondsChange(SPlayN._TimeDiff(19, 5)))
 #
-SPlayN.GuaSuoYaoTa(90)
+# SPlayN.GuaSuoYaoTa(90)

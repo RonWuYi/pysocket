@@ -668,7 +668,7 @@ class AW1(object):
         # TargetTime = sm.strptime(TargetTimeS, "%Y-%m-%d %H:%M:%S.%f")
         # self._TimeDiff(HH, MM, SS)
         print "GuaJi shijian is ", self.SecondsChange(self._TimeDiff(HH, MM, SS))
-        time.sleep(self._TimeDiff(HH, MM, SS)-10)
+        time.sleep(abs(self._TimeDiff(HH, MM, SS)-10))
         print "GuaJi complete at {}".format(sm.now())
         self.InIt()
 
@@ -1497,8 +1497,9 @@ class AW1(object):
     def SecondsChange(self, TotalSeconds):
         m, s = divmod(TotalSeconds, 60)
         h, m = divmod(m, 60)
+        d, h = divmod(h, 23)
 
-        return "%02d:%02d:%02d" % (h, m, s)
+        return "%02d:%02d:%02d:%02d" % (d, h, m, s)
 
     def LinQuHuoYueJiangLi(self):
         self._XiaoChuJieMian()
@@ -1586,7 +1587,7 @@ class AW1(object):
         while True:
             self._XiaoChuJieMian()
             pyautogui.press('z')
-            time.sleep(self.Seconds * GuaTime)
+            time.sleep(600)
             pyautogui.click(854, 684)
             time.sleep(1)
             pyautogui.click(310, 204)
@@ -1597,8 +1598,9 @@ class AW1(object):
                 time.sleep(0.5)
             pyautogui.press('esc')
             self._BossHuiShou()
-            self._XiaoChuJieMian()
-            pyautogui.press('z')
+            time.sleep(360000)
+            # self._XiaoChuJieMian()
+            # pyautogui.press('z')
 
     def DaSuoYaoTa(self,GuaTime):
         self._GoGuJiNPC()
@@ -1629,18 +1631,19 @@ class AW1(object):
         self._XiaoChuJieMian()
         pyautogui.press('z')
         time.sleep(self.Seconds*GuaTime)
-        pyautogui.click(854, 684)
-        time.sleep(1)
-        pyautogui.click(310, 204)
-        time.sleep(1)
-        for i in range(6):
-            time.sleep(2)
-            pyautogui.doubleClick(197, 271)
-            time.sleep(0.5)
-        pyautogui.press('esc')
-        self._BossHuiShou()
-        self._XiaoChuJieMian()
-        pyautogui.press('z')
+        self.InIt()
+        # pyautogui.click(854, 684)
+        # time.sleep(1)
+        # pyautogui.click(310, 204)
+        # time.sleep(1)
+        # for i in range(6):
+        #     time.sleep(2)
+        #     pyautogui.doubleClick(197, 271)
+        #     time.sleep(0.5)
+        # pyautogui.press('esc')
+        # self._BossHuiShou()
+        # self._XiaoChuJieMian()
+        # pyautogui.press('z')
 
     def _BossHuiShou(self):
         time.sleep(1)

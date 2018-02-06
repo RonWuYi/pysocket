@@ -841,6 +841,10 @@ class AW1(object):
                 self._BaoWuJieMian(2)
                 time.sleep(1)
                 pyautogui.click(792, 595)
+
+                time.sleep(1)
+                pyautogui.click(348, 198)
+
                 # boss ming zi
                 time.sleep(1)
                 pyautogui.click(261, (255 + (i * 40)))
@@ -863,6 +867,9 @@ class AW1(object):
                 self._BaoWuJieMian(2)
                 time.sleep(1)
                 pyautogui.click(792, 595)
+
+                time.sleep(1)
+                pyautogui.click(348, 198)
 
                 # boss ming zi
                 time.sleep(1)
@@ -888,6 +895,9 @@ class AW1(object):
                 self._BaoWuJieMian(2)
                 time.sleep(1)
                 pyautogui.click(792, 595)
+
+                time.sleep(1)
+                pyautogui.click(348, 198)
 
                 # boss ming zi
                 time.sleep(1)
@@ -915,6 +925,9 @@ class AW1(object):
                 self._BaoWuJieMian(2)
                 time.sleep(1)
                 pyautogui.click(792, 595)
+
+                time.sleep(1)
+                pyautogui.click(348, 198)
 
                 # boss ming zi
                 time.sleep(1)

@@ -282,7 +282,7 @@ class AW1(object):
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
-            elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
+            elif self.CurrentLevel > 0 and self.CurrentLevel <= 4:
                 for iii in range(1, 5, 3):
                     moveValue = 30
 
@@ -314,38 +314,38 @@ class AW1(object):
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
-            elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
-                for iii in range(0, 7):
-                    moveValue = 30
-
-                    # dian ji NPC
-                    time.sleep(1)
-                    pyautogui.click(604, 359)
-                    time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * moveValue)))
-
-                    time.sleep(1)
-                    pyautogui.click(499, 583)
-
-                    # zi dong zhan dou
-                    time.sleep(1)
-                    pyautogui.press('z')
-                    if iii < 3:
-                        time.sleep(88)
-                    elif iii == 3:
-                        time.sleep(110)
-                    elif iii == 4:
-                        time.sleep(270)
-                    elif iii == 5:
-                        time.sleep(75)
-                    elif iii == 6:
-                        time.sleep(130)
-                    else:
-                        time.sleep(130)
-
-                    # li kai fu ben / mian fei lin qu jiang li
-                    time.sleep(1)
-                    pyautogui.click(860, 528)
+            # elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
+            #     for iii in range(0, 7):
+            #         moveValue = 30
+            #
+            #         # dian ji NPC
+            #         time.sleep(1)
+            #         pyautogui.click(604, 359)
+            #         time.sleep(1)
+            #         pyautogui.click(514, (398 + (iii * moveValue)))
+            #
+            #         time.sleep(1)
+            #         pyautogui.click(499, 583)
+            #
+            #         # zi dong zhan dou
+            #         time.sleep(1)
+            #         pyautogui.press('z')
+            #         if iii < 3:
+            #             time.sleep(88)
+            #         elif iii == 3:
+            #             time.sleep(110)
+            #         elif iii == 4:
+            #             time.sleep(270)
+            #         elif iii == 5:
+            #             time.sleep(75)
+            #         elif iii == 6:
+            #             time.sleep(130)
+            #         else:
+            #             time.sleep(130)
+            #
+            #         # li kai fu ben / mian fei lin qu jiang li
+            #         time.sleep(1)
+            #         pyautogui.click(860, 528)
             else:
                 for iii in range(0, 7):
                     moveValue = 30
@@ -875,9 +875,9 @@ class AW1(object):
                 elif i == 1:
                     time.sleep(40 + (i * 15))
                 elif i == 2:
-                    time.sleep(50 + (i * 15))
-                else:
                     time.sleep(60 + (i * 15))
+                else:
+                    time.sleep(90 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:

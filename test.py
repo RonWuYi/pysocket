@@ -46,6 +46,7 @@ class AW1(object):
         self.JiaLanShenDianComplete = False
         self.SanBeiLianGongComplete = False
         self.ShiMuMiZhenComplete = False
+        self.DaTi = False
         self.XingQi = self.XingQiJi()
         self.x, self.y = pyautogui.size()
 
@@ -641,7 +642,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
 
-    def GuaJi(self, HH, MM, SS = 0):
+    def GuaJi(self, HH, MM = 0, SS = 0):
         print "Start Guaji at {}".format(sm.now())
         # print type(self._TimeDiff(HH, MM, SS))
         self.GuaJiFlag = True
@@ -847,11 +848,11 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(30 + (i * 15))
+                    time.sleep(35 + (i * 15))
                 elif i == 1:
-                    time.sleep(40 + (i * 15))
-                else:
                     time.sleep(50 + (i * 15))
+                else:
+                    time.sleep(70 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
@@ -871,11 +872,11 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(30 + (i * 15))
+                    time.sleep(35 + (i * 15))
                 elif i == 1:
-                    time.sleep(40 + (i * 15))
+                    time.sleep(50 + (i * 15))
                 elif i == 2:
-                    time.sleep(60 + (i * 15))
+                    time.sleep(70 + (i * 15))
                 else:
                     time.sleep(90 + (i * 15))
                 time.sleep(1)
@@ -897,15 +898,15 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(30 + (i * 15))
+                    time.sleep(35 + (i * 15))
                 elif i == 1:
-                    time.sleep(40 + (i * 15))
+                    time.sleep(45 + (i * 15))
                 elif i == 2:
-                    time.sleep(50 + (i * 15))
-                elif i == 3:
                     time.sleep(55 + (i * 15))
+                elif i == 3:
+                    time.sleep(70 + (i * 15))
                 else:
-                    time.sleep(60 + (i * 15))
+                    time.sleep(80 + (i * 15))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         else:
@@ -925,17 +926,17 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(30 + (i * 15))
+                    time.sleep(35 + (i * 15))
                 elif i == 1:
-                    time.sleep(40 + (i * 15))
+                    time.sleep(45 + (i * 15))
                 elif i == 2:
-                    time.sleep(50 + (i * 15))
+                    time.sleep(60 + (i * 15))
                 elif i == 3:
-                    time.sleep(53 + (i * 15))
+                    time.sleep(70 + (i * 15))
                 elif i == 4:
-                    time.sleep(58 + (i * 15))
+                    time.sleep(90 + (i * 15))
                 else:
-                    time.sleep(65 + (i * 18))
+                    time.sleep(100 + (i * 18))
                 time.sleep(1)
                 pyautogui.click(859, 533)
         print "GeRenBoss complete at {}".format(sm.now())
@@ -1026,8 +1027,7 @@ class AW1(object):
         pyautogui.click(509, 609)
 
         # xiao chu jie mian
-        time.sleep(0.5)
-        pyautogui.press('esc')
+        self._XiaoChuJieMian()
 
         # di tu
         time.sleep(1)
@@ -1038,37 +1038,37 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(613, 210)
             time.sleep(1)
-            pyautogui.typewrite('31')
-
-            # zuo biao y
-            time.sleep(1)
-            pyautogui.click(713, 209)
-            time.sleep(1)
-            pyautogui.typewrite('26')
-        elif self.CurrentLevel == 0:
-            # zuo biao x
-            time.sleep(1)
-            pyautogui.click(613, 210)
-            time.sleep(1)
-            pyautogui.typewrite('27')
+            pyautogui.typewrite('22')
 
             # zuo biao y
             time.sleep(1)
             pyautogui.click(713, 209)
             time.sleep(1)
             pyautogui.typewrite('30')
-        elif self.CurrentLevel > 0 and self.CurrentLevel < 4:
+        elif self.CurrentLevel == 0:
             # zuo biao x
             time.sleep(1)
             pyautogui.click(613, 210)
             time.sleep(1)
-            pyautogui.typewrite('32')
+            pyautogui.typewrite('26')
 
             # zuo biao y
             time.sleep(1)
             pyautogui.click(713, 209)
             time.sleep(1)
-            pyautogui.typewrite('35')
+            pyautogui.typewrite('34')
+        elif self.CurrentLevel > 0 and self.CurrentLevel < 4:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 210)
+            time.sleep(1)
+            pyautogui.typewrite('26')
+
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 209)
+            time.sleep(1)
+            pyautogui.typewrite('34')
 
         # qian wang di dian
         time.sleep(1)
@@ -1093,9 +1093,22 @@ class AW1(object):
         self.EventTime += 1
         time.sleep(1)
 
-        self._HuoDongJieMian()
-        pyautogui.click(701, 458)
-        # gua ji ban ge xiao shi
+        # self._HuoDongJieMian()
+        self._BaoWuJieMian(4)
+
+        # Qian Wang
+        pyautogui.click(793, 581)
+        time.sleep(1)
+
+        # can yu huo dong
+        pyautogui.click(509, 596)
+        time.sleep(1)
+
+        # su ji
+        pyautogui.click(679, 728)
+        time.sleep(1)
+
+        self._XiaoChuJieMian()
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1750)
@@ -1267,8 +1280,11 @@ class AW1(object):
         time.sleep(1)
 
         self._HuoDongJieMian()
-        pyautogui.click(508, 597)
-        time.sleep(5)
+
+        # Jin ru huo dong
+        time.sleep(0.5)
+        pyautogui.click(510, 599)
+        time.sleep(10)
         # ToDo
         # NPC part and delay part
         print "ShiMuMiZhen complete at {}".format(sm.now())
@@ -1655,5 +1671,54 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1)
+
+    def RiDaTi(self):
+        print "Start DaTi at {}".format(sm.now())
+        self.GuaJiFlag = False
+        self.CurStatus = 'RiDaTi'
+        self.EventTime += 1
+        time.sleep(1)
+
+        self._HuoDongJieMian()
+
+        # Jin ru huo dong
+        time.sleep(0.5)
+        pyautogui.click(509, 581)
+        time.sleep(900)
+        # ToDo
+        # NPC part and delay part
+        print "DaTi complete at {}".format(sm.now())
+        self.InIt()
+        self.DaTi = True
+
+    def BangHui(self):
+        print "Start BangHui at {}".format(sm.now())
+        self.GuaJiFlag = False
+        self.CurStatus = 'BangHui'
+        self.EventTime += 1
+        time.sleep(1)
+
+        # self._HuoDongJieMian()
+
+        # Jin ru huo dong
+        time.sleep(1)
+        pyautogui.click(854, 685)
+
+        time.sleep(1)
+        pyautogui.click(373, 202)
+
+        time.sleep(1)
+        pyautogui.click(503, 561)
+
+        time.sleep(1)
+        pyautogui.click(507, 581)
+        time.sleep(1)
+        pyautogui.click(508, 621)
+        time.sleep(600)
+        # ToDo
+        # NPC part and delay part
+        print "DaTi complete at {}".format(sm.now())
+        self.InIt()
+        # self.DaTi = True
 
 

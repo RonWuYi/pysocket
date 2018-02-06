@@ -1587,7 +1587,7 @@ class AW1(object):
         pass
 
     # To Do
-    def GuaSuoYaoTa(self, GuaTime):
+    def GuaSuoYaoTa(self):
         self._GoGuJiNPC()
         self._XiaoChuJieMian()
 
@@ -1614,6 +1614,7 @@ class AW1(object):
             pyautogui.click(515, 539)
         while True:
             self._XiaoChuJieMian()
+            time.sleep(0.5)
             pyautogui.press('z')
             time.sleep(600)
             pyautogui.click(854, 684)

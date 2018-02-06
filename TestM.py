@@ -14,4 +14,4 @@ print SPlayN.SecondsChange(80000)
 #
 # print type(SPlayN.SecondsChange(SPlayN._TimeDiff(19, 5)))
 #
-# SPlayN.GuaSuoYaoTa(90)
+SPlayN.GuaSuoYaoTa()

@@ -834,11 +834,13 @@ class AW1(object):
         if self.CurrentLevel == 0:
             for i in range(3):
                 # ge ren boss
+                # time.sleep(1)
+                # pyautogui.click(713, 116)
+                # time.sleep(1)
+                # pyautogui.click(346, 196)
+                self._BaoWuJieMian(2)
                 time.sleep(1)
-                pyautogui.click(713, 116)
-                time.sleep(1)
-                pyautogui.click(346, 196)
-
+                pyautogui.click(792, 595)
                 # boss ming zi
                 time.sleep(1)
                 pyautogui.click(261, (255 + (i * 40)))
@@ -858,10 +860,9 @@ class AW1(object):
         elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
             for i in range(4):
                 # ge ren boss
+                self._BaoWuJieMian(2)
                 time.sleep(1)
-                pyautogui.click(713, 116)
-                time.sleep(1)
-                pyautogui.click(346, 196)
+                pyautogui.click(792, 595)
 
                 # boss ming zi
                 time.sleep(1)
@@ -884,10 +885,9 @@ class AW1(object):
         elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
             for i in range(5):
                 # ge ren boss
+                self._BaoWuJieMian(2)
                 time.sleep(1)
-                pyautogui.click(713, 116)
-                time.sleep(1)
-                pyautogui.click(346, 196)
+                pyautogui.click(792, 595)
 
                 # boss ming zi
                 time.sleep(1)
@@ -912,10 +912,9 @@ class AW1(object):
         else:
             for i in range(6):
                 # ge ren boss
+                self._BaoWuJieMian(2)
                 time.sleep(1)
-                pyautogui.click(713, 116)
-                time.sleep(1)
-                pyautogui.click(346, 196)
+                pyautogui.click(792, 595)
 
                 # boss ming zi
                 time.sleep(1)

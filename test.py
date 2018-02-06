@@ -860,6 +860,8 @@ class AW1(object):
                 else:
                     time.sleep(70 + (i * 15))
                 time.sleep(1)
+                self._BossHuiShou()
+                time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
             for i in range(4):
@@ -887,6 +889,8 @@ class AW1(object):
                     time.sleep(70 + (i * 15))
                 else:
                     time.sleep(90 + (i * 15))
+                time.sleep(1)
+                self._BossHuiShou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
         elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
@@ -917,6 +921,8 @@ class AW1(object):
                     time.sleep(70 + (i * 15))
                 else:
                     time.sleep(80 + (i * 15))
+                time.sleep(1)
+                self._BossHuiShou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
         else:
@@ -949,6 +955,8 @@ class AW1(object):
                     time.sleep(90 + (i * 15))
                 else:
                     time.sleep(100 + (i * 18))
+                time.sleep(1)
+                self._BossHuiShou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
         print "GeRenBoss complete at {}".format(sm.now())

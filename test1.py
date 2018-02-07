@@ -1,22 +1,21 @@
 import time
-from datetime import datetime
 from test import AW1
 
-SPlay = AW1(3)
+SPlay = AW1(5)
 SPlay.TabQieHuan()
 SPlay.InIt()
 
 while True:
-    print "start a round at {}".format(datetime.now())
+    print "start a new round at {}, with {} times events complete.".format(SPlay.CurrentDateTime(), SPlay.EventTime)
     CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localtime()[5]))
     if CT > 1 and CT < 100000:
-        # SPlay.CapturePic(CT)
-        # SPlay.GongXunRenWu(5, 105)
-        # SPlay.JingYingRenWu(9, 130)
-        # SPlay.ChuangTianGuan()
-        # SPlay.HuiShou()
-        # SPlay.CaiLiaoFuBen()
-        # SPlay.HuiShou()
+        SPlay.CapturePic(CT)
+        SPlay.GongXunRenWu(9, 105)
+        SPlay.JingYingRenWu(9, 130)
+        SPlay.ChuangTianGuan()
+        SPlay.HuiShou()
+        SPlay.CaiLiaoFuBen()
+        SPlay.HuiShou()
         SPlay.GeRenBoss()
         SPlay.HuiShou()
         SPlay.TaFangFengMo(3)
@@ -67,7 +66,6 @@ while True:
         # SPlay.CapturePic(CT)
         SPlay.RiYeZhanBiQi()
         SPlay.GuaJi(20)
-
     elif CT > 200000 and CT < 213500:
         # SPlay.CapturePic(CT)
         SPlay.BangHui()

@@ -3,14 +3,12 @@ import time
 import win32gui
 import ctypes
 import os
-import unittest
 
 from datetime import datetime as sm
 from PIL import ImageGrab
 from ScreenShot import RECT
 
 pyautogui.PAUSE = 1.5
-
 GongXunTime = 120
 JinYinTime = 160
 

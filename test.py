@@ -392,7 +392,7 @@ class AW1(object):
         pyautogui.click(645, 526)
         time.sleep(1)
 
-        ############ task 2 #########################################
+        # task 2
 
         # jie qu ren wu
         pyautogui.click(327, 307)
@@ -414,7 +414,7 @@ class AW1(object):
         pyautogui.click(645, 526)
         time.sleep(1)
 
-        ############ task 3 #########################################
+        # task 3
         # ri chang ren wu
         time.sleep(1)
         pyautogui.click(335, 402)
@@ -435,7 +435,7 @@ class AW1(object):
         pyautogui.click(645, 526)
         time.sleep(2)
 
-        ############ task 4 #########################################
+        # task 4
         pyautogui.click(334, 452)
 
         # jie qu ren wu
@@ -1190,16 +1190,16 @@ class AW1(object):
         if self.CurrentLevel == 0:
             time.sleep(1)
             pyautogui.click(515, 397)
-        elif self.CurrentLevel > 0 and self.CurrentLevel <= 2:
+        elif 0 < self.CurrentLevel <= 2:
             time.sleep(1)
             pyautogui.click(515, 426)
-        elif self.CurrentLevel > 2 and self.CurrentLevel <= 4:
+        elif 2 < self.CurrentLevel <= 4:
             time.sleep(1)
             pyautogui.click(515, 453)
-        elif self.CurrentLevel > 4 and self.CurrentLevel <= 6:
+        elif 4 < self.CurrentLevel <= 6:
             time.sleep(1)
             pyautogui.click(515, 483)
-        elif self.CurrentLevel > 6 and self.CurrentLevel <= 8:
+        elif 6 < self.CurrentLevel <= 8:
             time.sleep(1)
             pyautogui.click(515, 511)
         else:

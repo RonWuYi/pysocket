@@ -13,3 +13,5 @@ pytest==3.4.0
 PyTweening==1.0.3
 pywin32==221
 six==1.11.0
+win32gui
+PIL

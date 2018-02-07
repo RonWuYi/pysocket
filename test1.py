@@ -4,7 +4,7 @@ from test import current_date_time
 from test import customize_init
 from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
-from test import capture_pic
+# from test import capture_pic
 
 SPlay = AW1(5)
 SPlay.tab_qie_huan()
@@ -18,7 +18,7 @@ while True:
     # if CT > 1 and CT < 100000:
 
     if 1 < CT < 100000:
-        capture_pic(CT)
+        # capture_pic(CT)
         SPlay.gong_xun_ren_wu(9, 105)
         SPlay.jing_ying_ren_wu(9, 130)
         SPlay.chuang_tian_guan()
@@ -57,7 +57,7 @@ while True:
     # elif CT > 130000 and CT < 140000:
 
     elif 130000 < CT < 140000:
-        capture_pic(CT)
+        # capture_pic(CT)
         SPlay.ri_suo_yao_ta()
         SPlay.gua_ji(14)
     # elif CT > 140000 and CT < 143500:

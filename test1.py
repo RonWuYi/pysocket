@@ -2,7 +2,7 @@ import time
 from test import AW1
 
 SPlay = AW1(5)
-SPlay.TabQieHuan()
+SPlay.tab_qie_huan()
 SPlay.InIt()
 
 while True:
@@ -12,7 +12,7 @@ while True:
 
     if 1 < CT < 100000:
         SPlay.CapturePic(CT)
-        SPlay.GongXunRenWu(9, 105)
+        SPlay.gong_xun_ren_wu(9, 105)
         SPlay.JingYingRenWu(9, 130)
         SPlay.ChuangTianGuan()
         SPlay.HuiShou()

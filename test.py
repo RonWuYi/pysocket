@@ -52,7 +52,8 @@ class AW1(object):
         self.M = str(sm.now())[5:7]
         self.D = str(sm.now())[8:10]
 
-    def TabQieHuan(self):
+    # def TabQieHuan(self):
+    def tab_qie_huan(self):
         time.sleep(1)
         try:
             pyautogui.keyDown('alt')
@@ -62,7 +63,9 @@ class AW1(object):
             print "except"
         self.GuaJiFlag = False
 
-    def GongXunRenWu(self, Rtimes, Wtimes):
+    # def GongXunRenWu(self, Rtimes, Wtimes):
+
+    def gong_xun_ren_wu(self, rtimes, wtimes):
         print "Start GongXunRenWu at {}".format(self.CurrentDateTime())
         self.GuaJiFlag = False
         self.CurStatus = 'JinYanGongXun'
@@ -80,7 +83,7 @@ class AW1(object):
         pyautogui.click(509, 567)
 
         # deng dai wan cheng
-        time.sleep(Wtimes)
+        time.sleep(wtimes)
 
         # dian ji di mian (fang zi wa kuang cuo wo)
         pyautogui.click(522, 537)
@@ -91,7 +94,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(613, 510)
         time.sleep(1)
-        for i in range(Rtimes):
+        for i in range(rtimes):
             time.sleep(1)
             pyautogui.click(622, 527)
             time.sleep(8)

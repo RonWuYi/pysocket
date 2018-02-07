@@ -10,10 +10,9 @@ SPlayN = AW1(2)
 # time.sleep(3)
 #
 # print datetime.now()
-print SPlayN.CurrentDateTime()
 #
 
-print SPlayN.SecondsChange(SPlayN._TimeDiff(23, 59))
+print SPlayN.seconds_change(SPlayN._TimeDiff(23, 59))
 # print type(SPlayN.SecondsChange(SPlayN._TimeDiff(19, 5)))
 # #
 # SPlayN.GuaSuoYaoTa()

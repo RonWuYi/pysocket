@@ -998,53 +998,11 @@ class AW1(object):
             else:
                 time.sleep(165)
                 # pyautogui.press('esc')
+
             # que ding
             time.sleep(1)
             pyautogui.click(581, 502)
-        # # ji xu ya yun
-        # time.sleep(1)
-        # pyautogui.click(436, 500)
 
-        # jie qu ren wu jie mian dian ji
-        # pyautogui.click(510, 582)
-        # time.sleep(1)
-        #
-        # # shua xin
-        # for i in range(10):
-        #     time.sleep(1)
-        #     pyautogui.click(471, 551)
-        # # hu song
-        # time.sleep(1)
-        # pyautogui.click(758, 550)
-        # time.sleep(300)
-        #
-        # # ji xu ya yun
-        # time.sleep(1)
-        # pyautogui.click(436, 500)
-        #
-        # # jie qu ren wu jie mian dian ji
-        # pyautogui.click(510, 582)
-        # time.sleep(1)
-        #
-        # # shua xin
-        # for i in range(10):
-        #     time.sleep(1)
-        #     pyautogui.click(471, 551)
-        # # hu song
-        # time.sleep(1)
-        # pyautogui.click(758, 550)
-        # time.sleep(300)
-        # # if i == 0:
-        # #     pyautogui.press('esc')
-        # #     time.sleep(300)
-        # # else:
-        # # pyautogui.press('esc')
-        # # time.sleep(900)
-        # # pyautogui.click(582, 499)
-        # # que ding
-        # time.sleep(1)
-        # pyautogui.click(581, 502)
-        # time.sleep(1)
         print "RiDuoBeiYaSong complete at {}".format(current_date_time())
         customize_init()
         self.DuoBeiYaSongComplete = True
@@ -1127,33 +1085,6 @@ class AW1(object):
     #     pyautogui.click(715, 188)
     #     time.sleep(1)
 
-    # def _TestScorll(self, ScorValue):
-    #     print ScorValue
-    #     time.sleep(5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(100)
-    #     time.sleep(5)
-    #     pyautogui.scroll(-100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(-100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(-100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(-100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(-100)
-    #     time.sleep(0.5)
-    #     pyautogui.scroll(-100)
-
     def _time_diff(self, hh, mm=0, ss=0):
         current_time = sm.now()
         target_times = self.Y+'-'+self.M+'-'+self.D+' '+str(hh)+':'+str(mm)+':'+str(ss)+'.0'
@@ -1164,13 +1095,6 @@ class AW1(object):
     # ToDo
     def da_boss(self):
         pass
-
-    # def _XiaoChuJieMian(self):
-    #     time.sleep(0.5)
-    #     pyautogui.click(951, 714, button='right')
-    #     time.sleep(1)
-    #     pyautogui.press('esc')
-    #     time.sleep(0.5)
 
     def _wo_yao_bian_qiang_jie_mian(self):
         pass
@@ -1252,18 +1176,6 @@ class AW1(object):
         pyautogui.press('z')
         time.sleep(self.Seconds*da_time)
         customize_init()
-        # pyautogui.click(854, 684)
-        # time.sleep(1)
-        # pyautogui.click(310, 204)
-        # time.sleep(1)
-        # for i in range(6):
-        #     time.sleep(2)
-        #     pyautogui.doubleClick(197, 271)
-        #     time.sleep(0.5)
-        # pyautogui.press('esc')
-        # self._BossHuiShou()
-        # self._XiaoChuJieMian()
-        # pyautogui.press('z')
 
     def ri_da_ti(self):
         print "Start DaTi at {}".format(current_date_time())

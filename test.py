@@ -854,7 +854,7 @@ class AW1(object):
         # xiao chu jie mian
         _xiao_chu_jie_mian()
 
-        #To do, improve it
+        # To do, improve it
         # di tu
         time.sleep(1)
         pyautogui.press('m')

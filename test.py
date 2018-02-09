@@ -1134,10 +1134,6 @@ class AW1(object):
         pass
 
     # To Do
-    def re_start(self):
-        pass
-
-    # To Do
     def gua_suo_yao_ta(self):
         _go_gua_ji_npc()
         _xiao_chu_jie_mian()
@@ -1537,3 +1533,17 @@ def _yin_xiong_jie_mian(ge_su):
 
     pyautogui.click(628, 206)
     time.sleep(1)
+
+
+def _re_start():
+    time.sleep(1)
+    pyautogui.click(1008,  13)
+
+    time.sleep(1)
+    pyautogui.click(477, 457)
+
+    time.sleep(5)
+
+    time.sleep(1)
+    pyautogui.click(366, 288)
+    time.sleep(30)

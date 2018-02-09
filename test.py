@@ -131,33 +131,38 @@ class AW1(object):
         self.CurStatus = 'TianFu'
         self.EventTime += 1
 
-        time.sleep(1)
-        pyautogui.click(943, 347)
-        time.sleep(1)
-        pyautogui.click(509, 567)
-        time.sleep(1)
-        pyautogui.click(509, 567)
-        time.sleep(wait_time)
-
-        time.sleep(1)
-        pyautogui.click(901, 346)
-
-        time.sleep(1)
-        pyautogui.click(613, 510)
-        time.sleep(1)
+        # time.sleep(1)
+        # pyautogui.click(943, 347)
+        _yin_xiong_jie_mian(3)
 
         for j in range(run_times):
+            time.sleep(1)
             pyautogui.click(509, 567)
             time.sleep(1)
             pyautogui.click(509, 567)
-            time.sleep(JinYinTime)
+            time.sleep(wait_time)
 
             time.sleep(1)
-            pyautogui.click(901, 346)
+            # pyautogui.click(901, 346)
+            pyautogui.click(628, 206)
+            time.sleep(1)
 
             time.sleep(1)
             pyautogui.click(613, 510)
             time.sleep(1)
+
+        # for j in range(run_times):
+        #     pyautogui.click(509, 567)
+        #     time.sleep(1)
+        #     pyautogui.click(509, 567)
+        #     time.sleep(JinYinTime)
+        #
+        #     time.sleep(1)
+        #     pyautogui.click(901, 346)
+        #
+        #     time.sleep(1)
+        #     pyautogui.click(613, 510)
+        #     time.sleep(1)
         print "JingYingRenWu complete at {}".format(current_date_time())
         customize_init()
         self.JingYingRenWuComplete = True
@@ -1497,4 +1502,25 @@ def _boss_hui_shou():
     pyautogui.click(719, 617)
     time.sleep(1)
     pyautogui.press('esc')
+    time.sleep(1)
+
+
+def _yin_xiong_jie_mian(ge_su):
+    time.sleep(1)
+    pyautogui.click(383, 672)
+    time.sleep(1)
+    if ge_su == 3:
+        pyautogui.click(197, 317)
+        time.sleep(1)
+    elif ge_su == 4:
+        pyautogui.click(197, 317)
+        time.sleep(1)
+    elif ge_su == 5:
+        pyautogui.click(197, 317)
+        time.sleep(1)
+    else:
+        pyautogui.click(197, 317)
+        time.sleep(1)
+
+    pyautogui.click(628, 206)
     time.sleep(1)

@@ -17,4 +17,4 @@ time.sleep(2)
 # print type(SPlayN.SecondsChange(SPlayN._TimeDiff(19, 5)))
 # #
 customize_init()
-SPlayN.jing_ying_ren_wu(9, 160)
+SPlayN.jing_ying_ren_wu(9, 180)

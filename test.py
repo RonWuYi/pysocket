@@ -242,7 +242,20 @@ class AW1(object):
         self.EventTime += 1
 
         time.sleep(1)
-        pyautogui.click(911, 503)
+        # pyautogui.click(911, 503)
+        # _bao_wu_jie_mian(1)
+        #
+        # time.sleep(1)
+        # pyautogui.click(507, 600)
+        #
+        # time.sleep(1)
+        # pyautogui.click(507, 600)
+
+        _go_gua_ji_npc()
+
+        time.sleep(1)
+        pyautogui.click(1013, 632)
+        time.sleep(5)
 
         time.sleep(1)
         pyautogui.click(507, 600)

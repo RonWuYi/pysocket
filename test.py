@@ -400,6 +400,8 @@ class AW1(object):
         pyautogui.click(684, 488)
         time.sleep(1)
 
+        pyautogui.press('esc')
+        time.sleep(1)
         # shou ji 1
         pyautogui.click(533, 399)
         time.sleep(22)
@@ -436,6 +438,8 @@ class AW1(object):
         pyautogui.click(709, 490)
         time.sleep(1)
 
+        pyautogui.press('esc')
+        time.sleep(1)
         # deng dai wan cheng
         time.sleep(50)
 
@@ -457,7 +461,8 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(696, 489)
         time.sleep(1)
-
+        pyautogui.press('esc')
+        time.sleep(1)
         # deng dai wan cheng
         time.sleep(50)
 
@@ -476,6 +481,8 @@ class AW1(object):
         pyautogui.click(645, 525)
         time.sleep(1)
         pyautogui.click(684, 487)
+        pyautogui.press('esc')
+        time.sleep(1)
         time.sleep(35)
 
         # chuan
@@ -1323,9 +1330,9 @@ def customize_init():
 def _go_wei_wang_npc():
     customize_init()
     time.sleep(1)
-    pyautogui.click(777, 206, button='right')
+    pyautogui.click(665, 676)
     time.sleep(1)
-    pyautogui.click(659, 205)
+    pyautogui.click(877, 539)
     time.sleep(2)
 
 

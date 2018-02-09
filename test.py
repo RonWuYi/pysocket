@@ -66,46 +66,61 @@ class AW1(object):
         self.GuaJiFlag = False
         self.CurStatus = 'JinYanGongXun'
         self.EventTime += 1
-        time.sleep(1)
-        pyautogui.click(943, 347)
+        # time.sleep(1)
+        # pyautogui.click(943, 347)
 
+        _bao_wu_jie_mian(3)
         time.sleep(1)
-        pyautogui.click(622, 527)
-        time.sleep(8)
+        pyautogui.click(793, 583)
 
-        pyautogui.click(509, 567)
-        time.sleep(1)
-
-        pyautogui.click(509, 567)
-
-        # deng dai wan cheng
-        time.sleep(wait_time)
-
-        # dian ji di mian (fang zi wa kuang cuo wo)
-        pyautogui.click(522, 537)
-        time.sleep(1)
-
-        # click chuan
-        pyautogui.click(900, 345)
-        time.sleep(1)
-        pyautogui.click(613, 510)
-        time.sleep(1)
         for i in range(run_times):
+            # time.sleep(1)
+            # pyautogui.press('esc')
+
+            # shu xin
             time.sleep(1)
             pyautogui.click(622, 527)
             time.sleep(8)
+
+            # jie shou ren wu
             pyautogui.click(509, 567)
             time.sleep(1)
 
+            # qian wang wan cheng ren wu
             pyautogui.click(509, 567)
-            time.sleep(GongXunTime)
+
+            # deng dai wan cheng
+            time.sleep(wait_time)
+
             # dian ji di mian (fang zi wa kuang cuo wo)
-            pyautogui.click(522, 537)
+            # pyautogui.click(522, 537)
+            # time.sleep(1)
+            # time.sleep(1)
+            # pyautogui.click(963, 581)
+            # click chuan
             time.sleep(1)
-            pyautogui.click(900, 345)
+            pyautogui.click(793, 583)
+
+            # wan cheng ren wu - san bei jiang li
+            time.sleep(2)
+            pyautogui.click(610, 511)
             time.sleep(1)
-            pyautogui.click(613, 510)
-            time.sleep(1)
+        # for i in range(run_times-1):
+        #     time.sleep(1)
+        #     pyautogui.click(622, 527)
+        #     time.sleep(8)
+        #     pyautogui.click(509, 567)
+        #     time.sleep(1)
+        #
+        #     pyautogui.click(509, 567)
+        #     time.sleep(GongXunTime)
+        #     # dian ji di mian (fang zi wa kuang cuo wo)
+        #     pyautogui.click(522, 537)
+        #     time.sleep(1)
+        #     pyautogui.click(900, 345)
+        #     time.sleep(1)
+        #     pyautogui.click(613, 510)
+        #     time.sleep(1)
         print "GongXunRenWu complete at {}".format(current_date_time())
         customize_init()
         self.GongXunRenWuComplete = True

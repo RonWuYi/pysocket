@@ -6,7 +6,7 @@ from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import capture_pic
 
-SPlay = AW1(0, 79)
+SPlay = AW1(1, 81)
 SPlay.tab_qie_huan()
 customize_init()
 
@@ -19,11 +19,13 @@ while True:
 
     if 1 < CT < 100000:
         # capture_pic(CT)
-        SPlay.gong_xun_ren_wu(50)
-        SPlay.jing_ying_ren_wu(65)
-        SPlay.chuang_tian_guan()
+        SPlay.gong_xun_ren_wu(run_times=10,
+                        wait_time=100, extra_time=50, ge_su=3)
+        SPlay.jing_ying_ren_wu(run_times=10,
+                         wait_time=100, extra_time=65, ge_su=4)
+        # SPlay.chuang_tian_guan()
         SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(2, 3, 75, 30)
+        SPlay.cai_liao_fu_ben(2, 7, 75, 30)
         SPlay.hui_shou_full()
         SPlay.ge_ren_boss(50)
         SPlay.hui_shou_full()

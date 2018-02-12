@@ -130,7 +130,7 @@ class AW1(object):
         self.GongXunRenWuComplete = True
 
     def jing_ying_ren_wu(self, run_times=10,
-                         wait_time=100, extra_time=0):
+                         wait_time=100, extra_time=0, ge_su=4):
         print "Start JingYingRenWu at {}"\
             .format(current_date_time())
         self.GuaJiFlag = False
@@ -139,7 +139,7 @@ class AW1(object):
 
         # time.sleep(1)
         # pyautogui.click(943, 347)
-        _yin_xiong_jie_mian(3)
+        _yin_xiong_jie_mian(ge_su)
 
         for j in range(run_times):
             time.sleep(1)

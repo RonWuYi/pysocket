@@ -6,7 +6,7 @@ from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import capture_pic
 
-SPlay = AW1(5, 80)
+SPlay = AW1(0, 79)
 SPlay.tab_qie_huan()
 customize_init()
 
@@ -23,13 +23,13 @@ while True:
         SPlay.jing_ying_ren_wu(65)
         SPlay.chuang_tian_guan()
         SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben()
+        SPlay.cai_liao_fu_ben(2, 3, 75, 30)
         SPlay.hui_shou_full()
-        SPlay.ge_ren_boss()
+        SPlay.ge_ren_boss(50)
         SPlay.hui_shou_full()
         SPlay.ta_fang_feng_mo(3)
         SPlay.wei_wang_ren_wu()
-        SPlay.chu_mo_ren_wu(10)
+        SPlay.chu_mo_ren_wu(45, False)
         lian_gong(45)
         SPlay.gua_ji(10, 0)
         # pass

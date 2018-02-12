@@ -12,6 +12,7 @@ pyautogui.PAUSE = 1.5
 GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
+fang_kuai_move_value = 56
 rect = RECT()
 
 
@@ -740,16 +741,20 @@ class AW1(object):
             if self.zhuan_shen_level == 0:
                 pyautogui.click(394, 418)
             elif self.zhuan_shen_level == 1:
-                pyautogui.click(394, 418)
+                pyautogui.click(493, 419)
             elif self.zhuan_shen_level == 2:
                 pyautogui.click(595, 418)
             elif 2 < self.zhuan_shen_level <= 4:
-                pyautogui.click(595, 418)
+                pyautogui.click(393, 449)
             else:
                 pyautogui.click(494, 446)
         else:
-            pyautogui.click(394, 418)
+            pyautogui.click(593, 390)
 
+        # sui ji
+        time.sleep(1)
+        pyautogui.click(678, 728)
+        time.sleep(1)
         _xiao_chu_jie_mian()
         pyautogui.press('z')
 
@@ -1696,13 +1701,13 @@ def _yin_xiong_jie_mian(ge_su):
         pyautogui.click(197, 317)
         time.sleep(1)
     elif ge_su == 4:
-        pyautogui.click(197, 317)
+        pyautogui.click(197, (317+fang_kuai_move_value))
         time.sleep(1)
     elif ge_su == 5:
-        pyautogui.click(197, 317)
+        pyautogui.click(197, (317+fang_kuai_move_value*2))
         time.sleep(1)
     else:
-        pyautogui.click(197, 317)
+        pyautogui.click(197, (317+fang_kuai_move_value*3))
         time.sleep(1)
 
     pyautogui.click(628, 206)

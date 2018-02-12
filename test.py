@@ -12,14 +12,14 @@ pyautogui.PAUSE = 1.5
 GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
-
 rect = RECT()
 
 
 class AW1(object):
 
-    def __init__(self, current_level):
+    def __init__(self, current_zhuan_shen, current_level=81):
         self.CurrentLevel = current_level
+        self.zhuan_shen_level = current_zhuan_shen
         self.GuaJiFlag = True
         self.CurStatus = 'null'
         self.Complete = False
@@ -61,15 +61,17 @@ class AW1(object):
         pyautogui.keyUp('alt')
         self.GuaJiFlag = False
 
-    def gong_xun_ren_wu(self, run_times, wait_time):
-        print "Start GongXunRenWu at {}".format(current_date_time())
+    def gong_xun_ren_wu(self, run_times=10,
+                        wait_time=100, extra_time=0, ge_su=3):
+        print "Start GongXunRenWu at {}"\
+            .format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'JinYanGongXun'
         self.EventTime += 1
         # time.sleep(1)
         # pyautogui.click(943, 347)
 
-        _bao_wu_jie_mian(3)
+        _bao_wu_jie_mian(ge_su)
         time.sleep(1)
         pyautogui.click(793, 583)
 
@@ -90,7 +92,7 @@ class AW1(object):
             pyautogui.click(509, 567)
 
             # deng dai wan cheng
-            time.sleep(wait_time)
+            time.sleep(wait_time+extra_time)
 
             # dian ji di mian (fang zi wa kuang cuo wo)
             # pyautogui.click(522, 537)
@@ -121,12 +123,15 @@ class AW1(object):
         #     time.sleep(1)
         #     pyautogui.click(613, 510)
         #     time.sleep(1)
-        print "GongXunRenWu complete at {}".format(current_date_time())
+        print "GongXunRenWu complete at {}"\
+            .format(current_date_time())
         customize_init()
         self.GongXunRenWuComplete = True
 
-    def jing_ying_ren_wu(self, run_times, wait_time):
-        print "Start JingYingRenWu at {}".format(current_date_time())
+    def jing_ying_ren_wu(self, run_times=10,
+                         wait_time=100, extra_time=0):
+        print "Start JingYingRenWu at {}"\
+            .format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'TianFu'
         self.EventTime += 1
@@ -140,7 +145,7 @@ class AW1(object):
             pyautogui.click(509, 567)
             time.sleep(1)
             pyautogui.click(509, 567)
-            time.sleep(wait_time)
+            time.sleep(wait_time+extra_time)
 
             time.sleep(1)
             # pyautogui.click(901, 346)
@@ -259,11 +264,11 @@ class AW1(object):
 
         time.sleep(1)
         pyautogui.click(507, 600)
-        if self.CurrentLevel == 0:
+        if self.zhuan_shen_level == 0:
             time.sleep(190)
-        elif 0 < self.CurrentLevel <= 2:
+        elif 0 < self.zhuan_shen_level <= 2:
             time.sleep(430)
-        elif 2 < self.CurrentLevel <= 4:
+        elif 2 < self.zhuan_shen_level <= 4:
             time.sleep(790)
         else:
             time.sleep(1300)
@@ -272,7 +277,8 @@ class AW1(object):
         customize_init()
         self.ChuangTianGuanComplete = True
 
-    def cai_liao_fu_ben(self, fu_ben_time=2):
+    def cai_liao_fu_ben(self, fu_ben_time=2,
+                        which_one=7, basic_time=75, extra_time=0):
         print "Start CaiLiaoFuBen at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'CaiLiaoFuBen'
@@ -280,7 +286,100 @@ class AW1(object):
         time.sleep(1)
         _bao_wu_shen_dun_jie_mian()
         for i in range(fu_ben_time):
-            if self.CurrentLevel == 0:
+            # if self.zhuan_shen_level == 0:
+            #     for iii in range(1, 2):
+            #         # dian ji NPC
+            #         time.sleep(1)
+            #         pyautogui.click(604, 359)
+            #         time.sleep(1)
+            #         pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+            #
+            #         time.sleep(1)
+            #         pyautogui.click(499, 583)
+            #
+            #         # zi dong zhan dou
+            #         time.sleep(1)
+            #         pyautogui.press('z')
+            #         if iii < 3:
+            #             time.sleep(88)
+            #         elif iii == 3:
+            #             time.sleep(110)
+            #         elif iii == 4:
+            #             time.sleep(270)
+            #         elif iii == 5:
+            #             time.sleep(75)
+            #         elif iii == 6:
+            #             time.sleep(130)
+            #         else:
+            #             time.sleep(130)
+            #         _boss_hui_shou()
+            #         # li kai fu ben / mian fei lin qu jiang li
+            #         time.sleep(1)
+            #         pyautogui.click(860, 528)
+            # elif 0 < self.zhuan_shen_level <= 4:
+            #     for iii in range(1, 5, 3):
+            #
+            #         # dian ji NPC
+            #         time.sleep(1)
+            #         pyautogui.click(604, 359)
+            #         time.sleep(1)
+            #         pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+            #
+            #         time.sleep(1)
+            #         pyautogui.click(499, 583)
+            #
+            #         # zi dong zhan dou
+            #         time.sleep(1)
+            #         pyautogui.press('z')
+            #         if iii < 3:
+            #             time.sleep(88)
+            #         elif iii == 3:
+            #             time.sleep(110)
+            #         elif iii == 4:
+            #             time.sleep(270)
+            #         elif iii == 5:
+            #             time.sleep(75)
+            #         elif iii == 6:
+            #             time.sleep(130)
+            #         else:
+            #             time.sleep(130)
+            #         _boss_hui_shou()
+            #         # li kai fu ben / mian fei lin qu jiang li
+            #         time.sleep(1)
+            #         pyautogui.click(860, 528)
+            # else:
+            #     for iii in range(0, 7):
+            #
+            #         # dian ji NPC
+            #         time.sleep(1)
+            #         pyautogui.click(604, 359)
+            #         time.sleep(1)
+            #         pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+            #
+            #         time.sleep(1)
+            #         pyautogui.click(499, 583)
+            #
+            #         # zi dong zhan dou
+            #         time.sleep(1)
+            #         pyautogui.press('z')
+            #         if iii < 3:
+            #             time.sleep(88)
+            #         elif iii == 3:
+            #             time.sleep(110)
+            #         elif iii == 4:
+            #             time.sleep(270)
+            #         elif iii == 5:
+            #             time.sleep(75)
+            #         elif iii == 6:
+            #             time.sleep(130)
+            #         else:
+            #             time.sleep(130)
+            #         _boss_hui_shou()
+            #         # li kai fu ben / mian fei lin qu jiang li
+            #         time.sleep(1)
+            #         pyautogui.click(860, 528)
+            # time.sleep(1)
+            if which_one == 1:
                 for iii in range(1, 2):
                     # dian ji NPC
                     time.sleep(1)
@@ -295,24 +394,23 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.press('z')
                     if iii < 3:
-                        time.sleep(88)
+                        time.sleep(10+basic_time+extra_time)
                     elif iii == 3:
-                        time.sleep(110)
+                        time.sleep(35+basic_time+extra_time)
                     elif iii == 4:
-                        time.sleep(270)
+                        time.sleep(195+basic_time+extra_time)
                     elif iii == 5:
-                        time.sleep(75)
+                        time.sleep(basic_time+extra_time)
                     elif iii == 6:
-                        time.sleep(130)
+                        time.sleep(55+basic_time+extra_time)
                     else:
-                        time.sleep(130)
+                        time.sleep(50+basic_time+extra_time)
                     _boss_hui_shou()
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
-            elif 0 < self.CurrentLevel <= 4:
+            elif which_one == 2:
                 for iii in range(1, 5, 3):
-
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -326,24 +424,83 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.press('z')
                     if iii < 3:
-                        time.sleep(88)
+                        time.sleep(10+basic_time+extra_time)
                     elif iii == 3:
-                        time.sleep(110)
+                        time.sleep(35+basic_time+extra_time)
                     elif iii == 4:
-                        time.sleep(270)
+                        time.sleep(195+basic_time+extra_time)
                     elif iii == 5:
-                        time.sleep(75)
+                        time.sleep(basic_time+extra_time)
                     elif iii == 6:
-                        time.sleep(130)
+                        time.sleep(55+basic_time+extra_time)
                     else:
-                        time.sleep(130)
+                        time.sleep(50+basic_time+extra_time)
+                    _boss_hui_shou()
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            elif which_one == 3:
+                for iii in [1, 4, 6]:
+                    # dian ji NPC
+                    time.sleep(1)
+                    pyautogui.click(604, 359)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
+
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(10+basic_time+extra_time)
+                    elif iii == 3:
+                        time.sleep(35+basic_time+extra_time)
+                    elif iii == 4:
+                        time.sleep(195+basic_time+extra_time)
+                    elif iii == 5:
+                        time.sleep(basic_time+extra_time)
+                    elif iii == 6:
+                        time.sleep(55+basic_time+extra_time)
+                    else:
+                        time.sleep(50+basic_time+extra_time)
+                    _boss_hui_shou()
+                    # li kai fu ben / mian fei lin qu jiang li
+                    time.sleep(1)
+                    pyautogui.click(860, 528)
+            elif which_one == 4:
+                for iii in [1, 4, 5, 6]:
+                    # dian ji NPC
+                    time.sleep(1)
+                    pyautogui.click(604, 359)
+                    time.sleep(1)
+                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+
+                    time.sleep(1)
+                    pyautogui.click(499, 583)
+
+                    # zi dong zhan dou
+                    time.sleep(1)
+                    pyautogui.press('z')
+                    if iii < 3:
+                        time.sleep(10+basic_time+extra_time)
+                    elif iii == 3:
+                        time.sleep(35+basic_time+extra_time)
+                    elif iii == 4:
+                        time.sleep(195+basic_time+extra_time)
+                    elif iii == 5:
+                        time.sleep(basic_time+extra_time)
+                    elif iii == 6:
+                        time.sleep(55+basic_time+extra_time)
+                    else:
+                        time.sleep(50+basic_time+extra_time)
                     _boss_hui_shou()
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
             else:
                 for iii in range(0, 7):
-
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -357,22 +514,22 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.press('z')
                     if iii < 3:
-                        time.sleep(88)
+                        time.sleep(10+basic_time+extra_time)
                     elif iii == 3:
-                        time.sleep(110)
+                        time.sleep(35+basic_time+extra_time)
                     elif iii == 4:
-                        time.sleep(270)
+                        time.sleep(195+basic_time+extra_time)
                     elif iii == 5:
-                        time.sleep(75)
+                        time.sleep(basic_time+extra_time)
                     elif iii == 6:
-                        time.sleep(130)
+                        time.sleep(55+basic_time+extra_time)
                     else:
-                        time.sleep(130)
+                        time.sleep(50+basic_time+extra_time)
                     _boss_hui_shou()
                     # li kai fu ben / mian fei lin qu jiang li
                     time.sleep(1)
                     pyautogui.click(860, 528)
-            # time.sleep(1)
+
             self.hui_shou_full()
         print "CaiLiaoFuBen Complete at {}".format(current_date_time())
         customize_init()
@@ -505,7 +662,7 @@ class AW1(object):
         customize_init()
         self.WeiWangRenWuComplete = True
 
-    def chu_mo_ren_wu(self, chu_mo_time):
+    def chu_mo_ren_wu(self, chu_mo_time, go_to_true=True):
         print "Start ChuMoRenWu at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuMoRenWu'
@@ -524,12 +681,17 @@ class AW1(object):
         # pyautogui.click(462, 352)
         # time.sleep(2)
         time.sleep(1)
-        _go_to(63, 25)
-        # da pai zi
-        time.sleep(10)
-        _xiao_chu_jie_mian()
-        pyautogui.press('z')
-        time.sleep(chu_mo_time*60)
+        if go_to_true:
+            _go_to(63, 25)
+            # da pai zi
+            time.sleep(10)
+            _xiao_chu_jie_mian()
+            pyautogui.press('z')
+            time.sleep(chu_mo_time*60)
+        else:
+            _xiao_chu_jie_mian()
+            pyautogui.press('z')
+            time.sleep(chu_mo_time*60)
         customize_init()
         go_chu_mo_npc()
         for i in range(5):
@@ -574,14 +736,19 @@ class AW1(object):
 
         _go_gua_ji_npc()
         time.sleep(1)
-        if self.CurrentLevel == 0:
-            pyautogui.click(394, 418)
-        elif 0 < self.CurrentLevel <= 2:
-            pyautogui.click(595, 418)
-        elif 2 < self.CurrentLevel <= 4:
-            pyautogui.click(595, 418)
+        if self.CurrentLevel > 80:
+            if self.zhuan_shen_level == 0:
+                pyautogui.click(394, 418)
+            elif self.zhuan_shen_level == 1:
+                pyautogui.click(394, 418)
+            elif self.zhuan_shen_level == 2:
+                pyautogui.click(595, 418)
+            elif 2 < self.zhuan_shen_level <= 4:
+                pyautogui.click(595, 418)
+            else:
+                pyautogui.click(494, 446)
         else:
-            pyautogui.click(494, 446)
+            pyautogui.click(394, 418)
 
         _xiao_chu_jie_mian()
         pyautogui.press('z')
@@ -744,13 +911,13 @@ class AW1(object):
         customize_init()
         # self.JingYingRenWuComplete = True
 
-    def ge_ren_boss(self):
+    def ge_ren_boss(self, extra_time=0):
         print "Start GeRenBoss at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'GeRenBoss'
         self.EventTime += 1
 
-        if self.CurrentLevel == 0:
+        if self.zhuan_shen_level == 0:
             for i in range(3):
                 # ge ren boss
                 # time.sleep(1)
@@ -773,16 +940,16 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15))
+                    time.sleep(35 + (i * 15) + extra_time)
                 elif i == 1:
-                    time.sleep(50 + (i * 15))
+                    time.sleep(50 + (i * 15) + extra_time)
                 else:
-                    time.sleep(70 + (i * 15))
+                    time.sleep(70 + (i * 15) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
-        elif 0 < self.CurrentLevel <= 2:
+        elif 0 < self.zhuan_shen_level <= 2:
             for i in range(4):
                 # ge ren boss
                 _bao_wu_jie_mian(2)
@@ -801,18 +968,18 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15))
+                    time.sleep(35 + (i * 15) + extra_time)
                 elif i == 1:
-                    time.sleep(50 + (i * 15))
+                    time.sleep(50 + (i * 15) + extra_time)
                 elif i == 2:
-                    time.sleep(70 + (i * 15))
+                    time.sleep(70 + (i * 15) + extra_time)
                 else:
-                    time.sleep(90 + (i * 15))
+                    time.sleep(90 + (i * 15) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
-        elif 2 < self.CurrentLevel <= 4:
+        elif 2 < self.zhuan_shen_level <= 4:
             for i in range(5):
                 # ge ren boss
                 _bao_wu_jie_mian(2)
@@ -831,15 +998,15 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15))
+                    time.sleep(35 + (i * 15) + extra_time)
                 elif i == 1:
-                    time.sleep(45 + (i * 15))
+                    time.sleep(45 + (i * 15) + extra_time)
                 elif i == 2:
-                    time.sleep(55 + (i * 15))
+                    time.sleep(55 + (i * 15) + extra_time)
                 elif i == 3:
-                    time.sleep(70 + (i * 15))
+                    time.sleep(70 + (i * 15) + extra_time)
                 else:
-                    time.sleep(80 + (i * 15))
+                    time.sleep(80 + (i * 15) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
@@ -863,17 +1030,17 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15))
+                    time.sleep(35 + (i * 15) + extra_time)
                 elif i == 1:
-                    time.sleep(45 + (i * 15))
+                    time.sleep(45 + (i * 15) + extra_time)
                 elif i == 2:
-                    time.sleep(60 + (i * 15))
+                    time.sleep(60 + (i * 15) + extra_time)
                 elif i == 3:
-                    time.sleep(70 + (i * 15))
+                    time.sleep(70 + (i * 15) + extra_time)
                 elif i == 4:
-                    time.sleep(90 + (i * 15))
+                    time.sleep(90 + (i * 15) + extra_time)
                 else:
-                    time.sleep(100 + (i * 18))
+                    time.sleep(100 + (i * 18) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
@@ -899,7 +1066,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('m')
 
-        if self.CurrentLevel == 0:
+        if self.zhuan_shen_level == 0:
             # zuo biao x
             time.sleep(1)
             pyautogui.click(613, 210)
@@ -911,7 +1078,7 @@ class AW1(object):
             pyautogui.click(713, 209)
             time.sleep(1)
             pyautogui.typewrite('34')
-        elif 0 < self.CurrentLevel < 4:
+        elif 0 < self.zhuan_shen_level < 4:
             # zuo biao x
             time.sleep(1)
             pyautogui.click(613, 210)
@@ -1148,19 +1315,19 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(654, 390)
 
-        if self.CurrentLevel == 0:
+        if self.zhuan_shen_level == 0:
             time.sleep(1)
             pyautogui.click(515, 397)
-        elif 0 < self.CurrentLevel <= 2:
+        elif 0 < self.zhuan_shen_level <= 2:
             time.sleep(1)
             pyautogui.click(515, 426)
-        elif 2 < self.CurrentLevel <= 4:
+        elif 2 < self.zhuan_shen_level <= 4:
             time.sleep(1)
             pyautogui.click(515, 453)
-        elif 4 < self.CurrentLevel <= 6:
+        elif 4 < self.zhuan_shen_level <= 6:
             time.sleep(1)
             pyautogui.click(515, 483)
-        elif 6 < self.CurrentLevel <= 8:
+        elif 6 < self.zhuan_shen_level <= 8:
             time.sleep(1)
             pyautogui.click(515, 511)
         else:
@@ -1190,19 +1357,19 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(654, 390)
 
-        if self.CurrentLevel == 0:
+        if self.zhuan_shen_level == 0:
             time.sleep(1)
             pyautogui.click(515, 397)
-        elif 0 < self.CurrentLevel <= 2:
+        elif 0 < self.zhuan_shen_level <= 2:
             time.sleep(1)
             pyautogui.click(515, 426)
-        elif 2 < self.CurrentLevel <= 4:
+        elif 2 < self.zhuan_shen_level <= 4:
             time.sleep(1)
             pyautogui.click(515, 453)
-        elif 4 < self.CurrentLevel <= 6:
+        elif 4 < self.zhuan_shen_level <= 6:
             time.sleep(1)
             pyautogui.click(515, 483)
-        elif 6 < self.CurrentLevel <= 8:
+        elif 6 < self.zhuan_shen_level <= 8:
             time.sleep(1)
             pyautogui.click(515, 511)
         else:

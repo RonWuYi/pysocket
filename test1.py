@@ -6,7 +6,7 @@ from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import capture_pic
 
-SPlay = AW1(5)
+SPlay = AW1(5, 80)
 SPlay.tab_qie_huan()
 customize_init()
 

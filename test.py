@@ -267,12 +267,20 @@ class AW1(object):
         pyautogui.click(507, 600)
         if self.zhuan_shen_level == 0:
             time.sleep(190)
-        elif 0 < self.zhuan_shen_level <= 2:
+        elif self.zhuan_shen_level == 1:
+            time.sleep(230)
+        elif self.zhuan_shen_level == 2:
             time.sleep(430)
-        elif 2 < self.zhuan_shen_level <= 4:
+        elif self.zhuan_shen_level == 3:
+            time.sleep(600)
+        elif self.zhuan_shen_level == 4:
             time.sleep(790)
+        elif self.zhuan_shen_level == 5:
+            time.sleep(860)
+        elif self.zhuan_shen_level == 6:
+            time.sleep(960)
         else:
-            time.sleep(1300)
+            time.sleep(1500)
         pyautogui.click(511, 514)
         print "ChuangTianGuan Complete at {}".format(current_date_time())
         customize_init()
@@ -381,28 +389,27 @@ class AW1(object):
             #         pyautogui.click(860, 528)
             # time.sleep(1)
             if which_one == 1:
-                for iii in range(2, 3):
+                for j in range(2, 3):
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
                     time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
-
+                    pyautogui.click(514, (398 + (j * cai_liao_move_value)))
                     time.sleep(1)
                     pyautogui.click(499, 583)
 
                     # zi dong zhan dou
                     time.sleep(1)
                     pyautogui.press('z')
-                    if iii < 3:
+                    if j < 3:
                         time.sleep(10+basic_time+extra_time)
-                    elif iii == 3:
+                    elif j == 3:
                         time.sleep(35+basic_time+extra_time)
-                    elif iii == 4:
+                    elif j == 4:
                         time.sleep(195+basic_time+extra_time)
-                    elif iii == 5:
+                    elif j == 5:
                         time.sleep(basic_time+extra_time)
-                    elif iii == 6:
+                    elif j == 6:
                         time.sleep(55+basic_time+extra_time)
                     else:
                         time.sleep(50+basic_time+extra_time)
@@ -411,12 +418,12 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 2:
-                for iii in range(2, 6, 3):
+                for j in range(2, 6, 3):
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
                     time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+                    pyautogui.click(514, (398 + (j * cai_liao_move_value)))
 
                     time.sleep(1)
                     pyautogui.click(499, 583)
@@ -424,15 +431,15 @@ class AW1(object):
                     # zi dong zhan dou
                     time.sleep(1)
                     pyautogui.press('z')
-                    if iii < 3:
+                    if j < 3:
                         time.sleep(10+basic_time+extra_time)
-                    elif iii == 3:
+                    elif j == 3:
                         time.sleep(35+basic_time+extra_time)
-                    elif iii == 4:
+                    elif j == 4:
                         time.sleep(195+basic_time+extra_time)
-                    elif iii == 5:
+                    elif j == 5:
                         time.sleep(basic_time+extra_time)
-                    elif iii == 6:
+                    elif j == 6:
                         time.sleep(55+basic_time+extra_time)
                     else:
                         time.sleep(50+basic_time+extra_time)
@@ -441,12 +448,12 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 3:
-                for iii in [2, 5, 7]:
+                for j in [2, 5, 7]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
                     time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+                    pyautogui.click(514, (398 + (j * cai_liao_move_value)))
 
                     time.sleep(1)
                     pyautogui.click(499, 583)
@@ -454,15 +461,15 @@ class AW1(object):
                     # zi dong zhan dou
                     time.sleep(1)
                     pyautogui.press('z')
-                    if iii < 3:
+                    if j < 3:
                         time.sleep(10+basic_time+extra_time)
-                    elif iii == 3:
+                    elif j == 3:
                         time.sleep(35+basic_time+extra_time)
-                    elif iii == 4:
+                    elif j == 4:
                         time.sleep(195+basic_time+extra_time)
-                    elif iii == 5:
+                    elif j == 5:
                         time.sleep(basic_time+extra_time)
-                    elif iii == 6:
+                    elif j == 6:
                         time.sleep(55+basic_time+extra_time)
                     else:
                         time.sleep(50+basic_time+extra_time)
@@ -471,12 +478,12 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 4:
-                for iii in [2, 5, 6, 7]:
+                for j in [2, 5, 6, 7]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
                     time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+                    pyautogui.click(514, (398 + (j * cai_liao_move_value)))
 
                     time.sleep(1)
                     pyautogui.click(499, 583)
@@ -484,15 +491,15 @@ class AW1(object):
                     # zi dong zhan dou
                     time.sleep(1)
                     pyautogui.press('z')
-                    if iii < 3:
+                    if j < 3:
                         time.sleep(10+basic_time+extra_time)
-                    elif iii == 3:
+                    elif j == 3:
                         time.sleep(35+basic_time+extra_time)
-                    elif iii == 4:
+                    elif j == 4:
                         time.sleep(195+basic_time+extra_time)
-                    elif iii == 5:
+                    elif j == 5:
                         time.sleep(basic_time+extra_time)
-                    elif iii == 6:
+                    elif j == 6:
                         time.sleep(55+basic_time+extra_time)
                     else:
                         time.sleep(50+basic_time+extra_time)
@@ -501,12 +508,12 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             else:
-                for iii in range(0, 7):
+                for j in range(0, 7):
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
                     time.sleep(1)
-                    pyautogui.click(514, (398 + (iii * cai_liao_move_value)))
+                    pyautogui.click(514, (398 + (j * cai_liao_move_value)))
 
                     time.sleep(1)
                     pyautogui.click(499, 583)
@@ -514,15 +521,15 @@ class AW1(object):
                     # zi dong zhan dou
                     time.sleep(1)
                     pyautogui.press('z')
-                    if iii < 3:
+                    if j < 3:
                         time.sleep(10+basic_time+extra_time)
-                    elif iii == 3:
+                    elif j == 3:
                         time.sleep(35+basic_time+extra_time)
-                    elif iii == 4:
+                    elif j == 4:
                         time.sleep(195+basic_time+extra_time)
-                    elif iii == 5:
+                    elif j == 5:
                         time.sleep(basic_time+extra_time)
-                    elif iii == 6:
+                    elif j == 6:
                         time.sleep(55+basic_time+extra_time)
                     else:
                         time.sleep(50+basic_time+extra_time)

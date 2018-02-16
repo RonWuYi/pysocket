@@ -21,7 +21,7 @@ while True:
         # capture_pic(CT)
         SPlay.gong_xun_ren_wu(run_times=10, extra_time=50, ge_su=3)
         SPlay.jing_ying_ren_wu(run_times=10, extra_time=65, ge_su=4)
-        # SPlay.chuang_tian_guan()
+        SPlay.chuang_tian_guan()
         SPlay.hui_shou_full()
         SPlay.cai_liao_fu_ben(2, 7, 75, 30)
         SPlay.hui_shou_full()

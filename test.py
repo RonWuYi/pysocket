@@ -389,7 +389,7 @@ class AW1(object):
             #         pyautogui.click(860, 528)
             # time.sleep(1)
             if which_one == 1:
-                for j in range(2, 3):
+                for j in [1]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -418,7 +418,7 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 2:
-                for j in range(2, 6, 3):
+                for j in [1, 4]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -448,7 +448,7 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 3:
-                for j in [2, 5, 7]:
+                for j in [1, 4, 6]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)
@@ -478,7 +478,7 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
             elif which_one == 4:
-                for j in [2, 5, 6, 7]:
+                for j in [1, 4, 5, 6]:
                     # dian ji NPC
                     time.sleep(1)
                     pyautogui.click(604, 359)

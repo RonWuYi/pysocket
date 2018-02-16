@@ -23,17 +23,15 @@ while True:
         SPlay.jing_ying_ren_wu(run_times=10, extra_time=65, ge_su=4)
         SPlay.chuang_tian_guan()
         SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(2, 7, 75, 30)
+        SPlay.cai_liao_fu_ben(which_one=7, extra_time=50)
         SPlay.hui_shou_full()
-        SPlay.ge_ren_boss(50)
+        SPlay.ge_ren_boss(80)
         SPlay.hui_shou_full()
         SPlay.ta_fang_feng_mo(3)
         SPlay.wei_wang_ren_wu()
         SPlay.chu_mo_ren_wu(45, False)
         lian_gong(45)
         SPlay.gua_ji(10, 0)
-        # pass
-    # elif CT > 100000 and CT < 103000:
 
     elif 100000 < CT < 103000:
         SPlay.ri_jin_zhu_song_li()

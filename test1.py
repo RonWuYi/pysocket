@@ -20,7 +20,7 @@ while True:
     if 1 < CT < 100000:
         # capture_pic(CT)
         SPlay.gong_xun_ren_wu(run_times=10, extra_time=110, ge_su=3)
-        SPlay.jing_ying_ren_wu(run_times=10, extra_time=125, ge_su=4)
+        SPlay.jing_ying_ren_wu(run_times=10, extra_time=125, ge_su=5)
         SPlay.chuang_tian_guan()
         SPlay.hui_shou_full()
         SPlay.cai_liao_fu_ben(which_one=4, extra_time=50)

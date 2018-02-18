@@ -241,7 +241,7 @@ class AW1(object):
         customize_init()
         self.TaFangFengMoComplete = True
 
-    def chuang_tian_guan(self):
+    def chuang_tian_guan(self, extra_time=0):
         print "Start ChuangTianGuan at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
@@ -266,21 +266,21 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(507, 600)
         if self.zhuan_shen_level == 0:
-            time.sleep(190)
+            time.sleep(190 + extra_time)
         elif self.zhuan_shen_level == 1:
-            time.sleep(230)
+            time.sleep(230 + extra_time)
         elif self.zhuan_shen_level == 2:
-            time.sleep(430)
+            time.sleep(430 + extra_time)
         elif self.zhuan_shen_level == 3:
-            time.sleep(600)
+            time.sleep(600 + extra_time)
         elif self.zhuan_shen_level == 4:
-            time.sleep(790)
+            time.sleep(790 + extra_time)
         elif self.zhuan_shen_level == 5:
-            time.sleep(860)
+            time.sleep(860 + extra_time)
         elif self.zhuan_shen_level == 6:
-            time.sleep(960)
+            time.sleep(960 + extra_time)
         else:
-            time.sleep(1500)
+            time.sleep(1500 + extra_time)
         pyautogui.click(511, 514)
         print "ChuangTianGuan Complete at {}".format(current_date_time())
         customize_init()

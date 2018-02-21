@@ -613,7 +613,7 @@ class AW1(object):
         pyautogui.press('z')
 
         print "GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss))
-        time.sleep(abs(self._time_diff(hh, mm, ss)-10))
+        time.sleep(self._time_diff(hh, mm, ss))
         print "GuaJi complete at {}".format(current_date_time())
         customize_init()
 
@@ -1123,8 +1123,10 @@ class AW1(object):
         current_time = sm.now()
         target_times = self.Y+'-'+self.M+'-'+self.D+' '+str(hh)+':'+str(mm)+':'+str(ss)+'.0'
         target_time = sm.strptime(target_times, "%Y-%m-%d %H:%M:%S.%f")
-
-        return (target_time-current_time).seconds
+        if current_time < target_time:
+            return (target_time-current_time).seconds
+        else:
+            return 0
 
     # ToDo
     def da_boss(self):

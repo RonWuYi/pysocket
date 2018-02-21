@@ -1537,7 +1537,7 @@ def _yin_xiong_jie_mian(ge_su):
     time.sleep(1)
 
 
-def re_start():
+def re_start(sleep_time):
     time.sleep(1)
     pyautogui.click(1008,  13)
 
@@ -1548,7 +1548,7 @@ def re_start():
 
     time.sleep(1)
     pyautogui.click(366, 288)
-    time.sleep(30)
+    time.sleep(sleep_time)
 
 
 def gua_suo_yao_ta():

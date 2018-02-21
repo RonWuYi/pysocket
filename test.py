@@ -1533,7 +1533,7 @@ def _yin_xiong_jie_mian(ge_su):
     time.sleep(1)
 
 
-def _re_start():
+def re_start():
     time.sleep(1)
     pyautogui.click(1008,  13)
 

@@ -596,7 +596,9 @@ class AW1(object):
                 pyautogui.click(493, 419)
             elif self.zhuan_shen_level == 2:
                 pyautogui.click(595, 418)
-            elif 2 < self.zhuan_shen_level <= 4:
+            elif self.zhuan_shen_level == 3:
+                pyautogui.click(595, 418)
+            elif self.zhuan_shen_level == 4:
                 pyautogui.click(393, 449)
             else:
                 pyautogui.click(494, 446)
@@ -1545,3 +1547,17 @@ def re_start():
     time.sleep(1)
     pyautogui.click(366, 288)
     time.sleep(30)
+
+
+def gua_suo_yao_ta():
+    time.sleep(4)
+    pyautogui.click(852, 685)
+
+    time.sleep(2)
+    pyautogui.click(309, 204)
+
+    for i in range(7):
+        time.sleep(2)
+        pyautogui.doubleClick(194, 269)
+
+    _boss_hui_shou()

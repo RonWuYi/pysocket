@@ -12,7 +12,7 @@ customize_init()
 
 while True:
     print "start a new round at " \
-          "{}, with {} times events " \
+          "{}, with {} events " \
           "complete.".format(current_date_time(), SPlay.EventTime)
     CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localtime()[5]))
 

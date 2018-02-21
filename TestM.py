@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 from NewAllWay import AW
 from test import AW1
-from test import re_start
+from test import seconds_change
 from test import customize_init
 from test import lian_gong
 
@@ -34,4 +34,4 @@ SPlay = AW1(0,81)
 # SPlay.chu_mo_ren_wu(45, False)
 # lian_gong(45)
 
-print SPlay._time_diff(hh=3, mm=0, ss=0)
+print seconds_change(SPlay._time_diff(hh=1, mm=20))

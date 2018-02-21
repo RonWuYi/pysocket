@@ -42,7 +42,7 @@ while True:
     elif 111000 < CT < 113500:
         SPlay.ri_duo_bei_ya_song()
         SPlay.gua_ji(hh=11, mm=35)
-        re_start()
+        re_start(40)
 
     elif 113500 < CT < 130000:
         # lian_gong(30)
@@ -63,7 +63,7 @@ while True:
     elif 150000 < CT < 173000:
         SPlay.ri_guai_wu_gong_cheng()
         SPlay.gua_ji(hh=17)
-        re_start()
+        re_start(40)
 
     elif 173000 < CT < 190000:
         SPlay.ri_mo_bai_cheng_zhu()
@@ -105,4 +105,4 @@ while True:
         SPlay.gua_ji(hh=23, mm=58)
         SPlay.D += 1
         SPlay.hui_shou_full()
-        re_start()
+        re_start(40)

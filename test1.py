@@ -11,6 +11,7 @@ SPlay.tab_qie_huan()
 customize_init()
 
 while True:
+    SPlay = AW1(2, 81)
     print "start a new round at " \
           "{}, with {} events " \
           "complete.".format(current_date_time(), SPlay.EventTime)
@@ -103,6 +104,6 @@ while True:
         time.sleep(1)
         SPlay.hui_shou_full()
         SPlay.gua_ji(hh=23, mm=58)
-        SPlay.D += 1
+        # SPlay.D += 1
         SPlay.hui_shou_full()
         # re_start(40)

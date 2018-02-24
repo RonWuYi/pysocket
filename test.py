@@ -1,10 +1,10 @@
 import pyautogui
 import time
-import ctypes
-import os
-import win32gui
+# import ctypes
+# import os
+# import win32gui
 
-from PIL import ImageGrab
+# from PIL import ImageGrab
 from datetime import datetime as sm
 from ScreenShot import RECT
 
@@ -1478,22 +1478,22 @@ def seconds_change(total_seconds):
     return "%02d:%02d:%02d:%02d" % (d, h, m, s)
 
 
-def capture_pic(cur_time):
-    _huo_dong_jie_mian_no_click()
-    hwnd = win32gui.GetForegroundWindow()
-    ctypes.windll.user32.GetWindowRect(hwnd, ctypes.byref(rect))
-
-    coordinate = (rect.left + 2, rect.top + 2, rect.right - 2, rect.bottom - 2)
-    pic = ImageGrab.grab(coordinate)
-    path = "C:\\xingqi{}".format(xing_qi_ji)
-    if os.path.exists(path):
-        pic.save(path + "\\" + "xingqi" + str(xing_qi_ji) + "_" + str(cur_time) + ".png", quality=100)
-    else:
-        os.mkdir(path)
-        pic.save(path + "\\" + "xingqi" + str(xing_qi_ji) + "_" + str(cur_time) + ".png", quality=100)
-    time.sleep(1)
-    pyautogui.press('esc')
-    time.sleep(1)
+# def capture_pic(cur_time):
+#     _huo_dong_jie_mian_no_click()
+#     hwnd = win32gui.GetForegroundWindow()
+#     ctypes.windll.user32.GetWindowRect(hwnd, ctypes.byref(rect))
+#
+#     coordinate = (rect.left + 2, rect.top + 2, rect.right - 2, rect.bottom - 2)
+#     pic = ImageGrab.grab(coordinate)
+#     path = "C:\\xingqi{}".format(xing_qi_ji)
+#     if os.path.exists(path):
+#         pic.save(path + "\\" + "xingqi" + str(xing_qi_ji) + "_" + str(cur_time) + ".png", quality=100)
+#     else:
+#         os.mkdir(path)
+#         pic.save(path + "\\" + "xingqi" + str(xing_qi_ji) + "_" + str(cur_time) + ".png", quality=100)
+#     time.sleep(1)
+#     pyautogui.press('esc')
+#     time.sleep(1)
 
 
 def run_time():

@@ -640,7 +640,7 @@ class AW1(object):
         _huo_dong_jie_mian()
         pyautogui.click(701, 458)
 
-        for i in range(9):
+        for i in range(10):
             time.sleep(1)
             for j in range(4):
                 time.sleep(0.5)

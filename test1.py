@@ -91,7 +91,7 @@ while True:
         SPlay.gua_ji(hh=22)
 
     elif 220000 < CT < 223000:
-        SPlay.ri_shen_wei(120)
+        SPlay.ri_shen_wei(90)
         lin_qu_huo_yue_jiang_li()
         SPlay.gua_ji(hh=22, mm=30)
 

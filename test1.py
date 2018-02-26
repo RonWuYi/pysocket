@@ -95,15 +95,8 @@ while True:
         lin_qu_huo_yue_jiang_li()
         SPlay.gua_ji(hh=22, mm=30)
 
-    # elif 223000 < CT < 230000:
-    #     SPlay.ri_duo_bei_ya_song()
-    #     lin_qu_huo_yue_jiang_li()
-    #     SPlay.gua_ji(23, 30)
-
     else:
         time.sleep(1)
         SPlay.hui_shou_full()
         SPlay.gua_ji(hh=23, mm=58)
-        # SPlay.D += 1
         SPlay.hui_shou_full()
-        # re_start(40)

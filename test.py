@@ -1551,7 +1551,7 @@ def re_start(sleep_time):
     time.sleep(sleep_time)
 
 
-def gua_suo_yao_ta():
+def cun_ru_cang_ku():
     time.sleep(4)
     pyautogui.click(852, 685)
 
@@ -1563,3 +1563,8 @@ def gua_suo_yao_ta():
         pyautogui.doubleClick(194, 269)
 
     _boss_hui_shou()
+
+
+# To Do
+def da_boss():
+    pass

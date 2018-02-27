@@ -913,13 +913,13 @@ class AW1(object):
         if self.zhuan_shen_level == 0:
             # zuo biao x
             time.sleep(1)
-            pyautogui.click(613, 210)
+            pyautogui.click(612, 192)
             time.sleep(1)
             pyautogui.typewrite('26')
 
             # zuo biao y
             time.sleep(1)
-            pyautogui.click(713, 209)
+            pyautogui.click(710, 192)
             time.sleep(1)
             pyautogui.typewrite('34')
         elif 0 < self.zhuan_shen_level < 4:
@@ -949,7 +949,7 @@ class AW1(object):
 
         # qian wang di dian
         time.sleep(1)
-        pyautogui.click(770, 209)
+        pyautogui.click(770, 192)
 
         # zai ci dian ji
         time.sleep(1)

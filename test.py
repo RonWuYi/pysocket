@@ -960,7 +960,7 @@ class AW1(object):
             pyautogui.click(713, 192)
             time.sleep(1)
             pyautogui.typewrite('34')
-        
+
         else:
             # zuo biao x
             time.sleep(1)

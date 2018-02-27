@@ -922,28 +922,55 @@ class AW1(object):
             pyautogui.click(710, 192)
             time.sleep(1)
             pyautogui.typewrite('34')
-        elif 0 < self.zhuan_shen_level < 4:
+        elif 0 < self.zhuan_shen_level <= 2:
             # zuo biao x
             time.sleep(1)
-            pyautogui.click(613, 210)
+            pyautogui.click(613, 192)
             time.sleep(1)
             pyautogui.typewrite('26')
 
             # zuo biao y
             time.sleep(1)
-            pyautogui.click(713, 209)
+            pyautogui.click(713, 192)
             time.sleep(1)
             pyautogui.typewrite('34')
+
+        elif 2 < self.zhuan_shen_level <= 4:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 192)
+            time.sleep(1)
+            pyautogui.typewrite('26')
+
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 192)
+            time.sleep(1)
+            pyautogui.typewrite('34')
+
+        elif 4 < self.zhuan_shen_level <= 6:
+            # zuo biao x
+            time.sleep(1)
+            pyautogui.click(613, 192)
+            time.sleep(1)
+            pyautogui.typewrite('26')
+
+            # zuo biao y
+            time.sleep(1)
+            pyautogui.click(713, 192)
+            time.sleep(1)
+            pyautogui.typewrite('34')
+        
         else:
             # zuo biao x
             time.sleep(1)
-            pyautogui.click(613, 210)
+            pyautogui.click(613, 192)
             time.sleep(1)
             pyautogui.typewrite('22')
 
             # zuo biao y
             time.sleep(1)
-            pyautogui.click(713, 209)
+            pyautogui.click(713, 192)
             time.sleep(1)
             pyautogui.typewrite('30')
 
@@ -953,7 +980,7 @@ class AW1(object):
 
         # zai ci dian ji
         time.sleep(1)
-        pyautogui.click(770, 209)
+        pyautogui.click(770, 192)
         time.sleep(1200)
 
         time.sleep(1)

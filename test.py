@@ -1,19 +1,13 @@
 import pyautogui
 import time
-# import ctypes
-# import os
-# import win32gui
 
-# from PIL import ImageGrab
 from datetime import datetime as sm
-from ScreenShot import RECT
 
 pyautogui.PAUSE = 1.5
 GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
 fang_kuai_move_value = 56
-rect = RECT()
 
 
 class AW1(object):

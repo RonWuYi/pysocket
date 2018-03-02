@@ -18,11 +18,11 @@ while True:
     CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localtime()[5]))
 
     if 1 < CT < 100000:
-        SPlay.gong_xun_ren_wu(run_times=10, extra_time=40, ge_su=3)
-        SPlay.jing_ying_ren_wu(run_times=10, extra_time=60, ge_su=5)
-        SPlay.chuang_tian_guan(160)
+        SPlay.gong_xun_ren_wu(run_times=10, extra_time=15, ge_su=3)
+        SPlay.jing_ying_ren_wu(run_times=10, extra_time=35, ge_su=5)
+        SPlay.chuang_tian_guan(140)
         SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(which_one=7, extra_time=50)
+        SPlay.cai_liao_fu_ben(which_one=7, extra_time=30)
         SPlay.hui_shou_full()
         SPlay.ge_ren_boss(160)
         SPlay.hui_shou_full()

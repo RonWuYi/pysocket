@@ -61,10 +61,14 @@ while True:
         SPlay.ri_bi_guan()
         SPlay.gua_ji(hh=15)
 
-    elif 150000 < CT < 173000:
+    elif 150000 < CT < 161500:
         SPlay.ri_guai_wu_gong_cheng()
         SPlay.gua_ji(hh=17)
         # re_start(40)
+
+    elif 161500 < CT < 173000:
+        SPlay.ri_jin_zhu_song_li()
+        SPlay.gua_ji(hh=17, mm=30)
 
     elif 173000 < CT < 190000:
         SPlay.ri_mo_bai_cheng_zhu()

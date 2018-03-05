@@ -48,8 +48,8 @@ while True:
         SPlay.gua_ji(hh=11, mm=35)
         # re_start(40)
 
-    elif 113500 < CT < 130000:
-        # lian_gong(30)
+    elif 113000 < CT < 123000:
+        SPlay.ri_hai_tian_sheng_yan()
         SPlay.gua_ji(hh=13)
 
     elif 130000 < CT < 140000:

@@ -1329,6 +1329,15 @@ def customize_init():
     # hui shou zhuang bei
     pyautogui.click(801, 554)
     time.sleep(2)
+
+    for i in range(3):
+        # hui shou tianfumojin
+        pyautogui.doubleClick(587, 728)
+        time.sleep(1)
+        # hui shou xueyu
+        pyautogui.doubleClick(634, 728)
+        time.sleep(1)
+
     pyautogui.press('esc')
 
 

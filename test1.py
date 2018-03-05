@@ -63,7 +63,7 @@ while True:
 
     elif 150000 < CT < 161500:
         SPlay.ri_guai_wu_gong_cheng()
-        SPlay.gua_ji(hh=17)
+        SPlay.gua_ji(hh=16, mm=15)
         # re_start(40)
 
     elif 161500 < CT < 173000:

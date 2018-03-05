@@ -18,7 +18,7 @@ class AW1(object):
         self.GuaJiFlag = True
         self.CurStatus = 'null'
         self.Complete = False
-        self.EventTime = 0
+        # self.EventTime = 0
         self.Seconds = 60
         self.GongXunRenWuComplete = False
         self.JingYingRenWuComplete = False
@@ -62,7 +62,6 @@ class AW1(object):
             .format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'JinYanGongXun'
-        self.EventTime += 1
 
         _bao_wu_jie_mian(ge_su)
         time.sleep(1)
@@ -105,7 +104,6 @@ class AW1(object):
             .format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'TianFu'
-        self.EventTime += 1
 
         _yin_xiong_jie_mian(ge_su)
 
@@ -132,7 +130,6 @@ class AW1(object):
         print "Start TaFangFengMo at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'TaFangFengMo'
-        self.EventTime += 1
 
         # self._BaoWuShenDunJieMian()
         for jj in range(feng_mo_time):
@@ -193,7 +190,6 @@ class AW1(object):
         print "Start ChuangTianGuan at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
-        self.EventTime += 1
 
         time.sleep(1)
 
@@ -231,7 +227,6 @@ class AW1(object):
         print "Start CaiLiaoFuBen at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'CaiLiaoFuBen'
-        self.EventTime += 1
         time.sleep(1)
         _bao_wu_shen_dun_jie_mian()
         for i in range(fu_ben_time):
@@ -394,7 +389,6 @@ class AW1(object):
         print "Start WeiWangRenWu at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'WeiWangRenWu'
-        self.EventTime += 1
 
         _go_wei_wang_npc()
 
@@ -516,7 +510,6 @@ class AW1(object):
         print "Start ChuMoRenWu at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'ChuMoRenWu'
-        self.EventTime += 1
 
         # chuan dao Zhang TianShi
         go_chu_mo_npc()
@@ -553,7 +546,6 @@ class AW1(object):
     def hui_shou_full(self):
         self.GuaJiFlag = False
         self.CurStatus = 'HuiShou'
-        self.EventTime += 1
 
         for i in range(3):
             time.sleep(0.5)
@@ -579,7 +571,6 @@ class AW1(object):
         print "Start Guaji at {}".format(current_date_time())
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
-        self.EventTime += 1
 
         _go_gua_ji_npc()
         time.sleep(1)
@@ -616,7 +607,6 @@ class AW1(object):
         print "Start WaKuang at {}".format(current_date_time())
         self.GuaJiFlag = True
         self.CurStatus = 'WaKuang'
-        self.EventTime += 1
 
         time.sleep(wa_kuang_time*self.Seconds)
         pyautogui.click(1220, 611)
@@ -628,7 +618,6 @@ class AW1(object):
         print "Start MoBaiChengZhu at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'MoBaiChengZhu'
-        self.EventTime += 1
 
         time.sleep(1)
         _huo_dong_jie_mian()
@@ -662,7 +651,6 @@ class AW1(object):
         print "Start YeZhanBiQi at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'YeZhanBiQi'
-        self.EventTime += 1
 
         _huo_dong_jie_mian()
 
@@ -679,7 +667,6 @@ class AW1(object):
         print "Start ShenWei at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'ShenWei'
-        self.EventTime += 1
 
         _huo_dong_jie_mian()
         time.sleep(0.5)
@@ -718,7 +705,6 @@ class AW1(object):
         print "Start WorldBoss at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'WorldBoss'
-        self.EventTime += 1
 
         time.sleep(1)
         _huo_dong_jie_mian()
@@ -742,7 +728,6 @@ class AW1(object):
         print "Start JinZhuSongLi at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'JinZhuSongLi'
-        self.EventTime += 1
 
         _huo_dong_jie_mian()
 
@@ -757,7 +742,6 @@ class AW1(object):
         print "Start GeRenBoss at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'GeRenBoss'
-        self.EventTime += 1
 
         if self.zhuan_shen_level == 0:
             for i in range(3):
@@ -891,7 +875,7 @@ class AW1(object):
         print "Start BiGuan at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'BiGuan'
-        self.EventTime += 1
+
         time.sleep(1)
         _huo_dong_jie_mian()
         pyautogui.click(509, 609)
@@ -988,7 +972,7 @@ class AW1(object):
         print "Start GuaiWuGongCheng at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'GuaiWuGongCheng'
-        self.EventTime += 1
+
         time.sleep(1)
 
         # # self._HuoDongJieMian()
@@ -1024,7 +1008,7 @@ class AW1(object):
         print "Start RiSuoYaoTa at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'RiSuoYaoTa'
-        self.EventTime += 1
+
         time.sleep(1)
 
         _huo_dong_jie_mian()
@@ -1042,7 +1026,7 @@ class AW1(object):
         print "Start RiDuoBeiYaSong at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'RiDuoBeiYaSong'
-        self.EventTime += 1
+
         time.sleep(1)
 
         for ii in range(3):
@@ -1081,7 +1065,6 @@ class AW1(object):
         print "Start SanBeiLianGong at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'SanBeiLianGong'
-        self.EventTime += 1
 
         lian_gong(lian_gong_time)
         print "SanBeiLianGong complete at {}".format(current_date_time())
@@ -1092,7 +1075,7 @@ class AW1(object):
         print "Start JiaLanShenDian at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'JiaLanShenDian'
-        self.EventTime += 1
+
         time.sleep(1)
 
         _huo_dong_jie_mian()
@@ -1112,7 +1095,7 @@ class AW1(object):
         print "Start HaiTianShengYan at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'HaiTianShengYan'
-        self.EventTime += 1
+
         time.sleep(1)
 
         _huo_dong_jie_mian()
@@ -1131,7 +1114,7 @@ class AW1(object):
         print "Start ShiMuMiZhen at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'RiShiMuMiZhen'
-        self.EventTime += 1
+
         time.sleep(1)
 
         _huo_dong_jie_mian()
@@ -1240,7 +1223,7 @@ class AW1(object):
         print "Start DaTi at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'RiDaTi'
-        self.EventTime += 1
+
         time.sleep(1)
 
         _huo_dong_jie_mian()
@@ -1259,7 +1242,7 @@ class AW1(object):
         print "Start BangHui at {}".format(current_date_time())
         self.GuaJiFlag = False
         self.CurStatus = 'BangHui'
-        self.EventTime += 1
+        # self.EventTime += 1
         time.sleep(1)
 
         # Jin ru huo dong

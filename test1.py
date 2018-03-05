@@ -12,14 +12,17 @@ customize_init()
 
 while True:
     SPlay = AW1(2, 81)
-    print "start a new round at " \
-          "{}, with {} events " \
-          "complete.".format(current_date_time(), SPlay.EventTime)
-    CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localtime()[5]))
+    print "start a new round at {}.".format(current_date_time())
+
+    CT = ((time.localtime()[3] * 10000)
+          + (time.localtime()[4] * 100)
+          + (time.localtime()[5]))
 
     if 1 < CT < 100000:
-        SPlay.gong_xun_ren_wu(run_times=10, extra_time=15, ge_su=3)
-        SPlay.jing_ying_ren_wu(run_times=10, extra_time=35, ge_su=5)
+        SPlay.gong_xun_ren_wu(run_times=10,
+                              extra_time=15, ge_su=3)
+        SPlay.jing_ying_ren_wu(run_times=10,
+                               extra_time=35, ge_su=5)
         SPlay.chuang_tian_guan(180)
         SPlay.hui_shou_full()
         SPlay.cai_liao_fu_ben(which_one=7, extra_time=30)

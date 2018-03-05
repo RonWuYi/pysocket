@@ -691,7 +691,7 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(self.Seconds*shen_wei_time)
-        for i in range(9):
+        for i in range(10):
             if i == 6:
                 pyautogui.click(889, 578)
                 time.sleep(5)
@@ -702,7 +702,7 @@ class AW1(object):
                 pyautogui.click(889, 578)
                 time.sleep(5)
                 pyautogui.click(889, 578)
-                time.sleep(42)
+                time.sleep(52)
                 pyautogui.click(511, 600)
         # li kai
         time.sleep(1)
@@ -991,15 +991,21 @@ class AW1(object):
         self.EventTime += 1
         time.sleep(1)
 
-        # self._HuoDongJieMian()
-        _bao_wu_jie_mian(4)
+        # # self._HuoDongJieMian()
+        # _bao_wu_jie_mian(4)
+        #
+        # # Qian Wang
+        # pyautogui.click(793, 581)
+        # time.sleep(1)
+        #
+        # # can yu huo dong
+        # pyautogui.click(509, 596)
+        # time.sleep(1)
 
-        # Qian Wang
-        pyautogui.click(793, 581)
+        _huo_dong_jie_mian()
         time.sleep(1)
 
-        # can yu huo dong
-        pyautogui.click(509, 596)
+        pyautogui.click(508, 609)
         time.sleep(1)
 
         # su ji

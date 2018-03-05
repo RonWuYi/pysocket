@@ -975,22 +975,22 @@ class AW1(object):
 
         time.sleep(1)
 
-        # # self._HuoDongJieMian()
-        # _bao_wu_jie_mian(4)
-        #
-        # # Qian Wang
-        # pyautogui.click(793, 581)
-        # time.sleep(1)
-        #
-        # # can yu huo dong
-        # pyautogui.click(509, 596)
-        # time.sleep(1)
+        # self._HuoDongJieMian()
+        _bao_wu_jie_mian(5)
 
-        _huo_dong_jie_mian()
+        # Qian Wang
+        pyautogui.click(793, 581)
         time.sleep(1)
 
-        pyautogui.click(508, 609)
+        # can yu huo dong
+        pyautogui.click(509, 596)
         time.sleep(1)
+
+        # _huo_dong_jie_mian()
+        # time.sleep(1)
+        #
+        # pyautogui.click(508, 609)
+        # time.sleep(1)
 
         # su ji
         pyautogui.click(679, 728)

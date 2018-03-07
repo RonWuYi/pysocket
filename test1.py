@@ -1,14 +1,15 @@
 import time
 from test import AW1
 from test import current_date_time
-from test import customize_init
+# from test import customize_init
 from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import re_start
 
 SPlay = AW1(2, 81)
-SPlay.tab_qie_huan()
-customize_init()
+# SPlay.tab_qie_huan()
+# customize_init()
+time.sleep(5)
 
 while True:
     SPlay = AW1(2, 81)

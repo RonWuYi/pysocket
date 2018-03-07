@@ -380,7 +380,7 @@ class AW1(object):
                     time.sleep(1)
                     pyautogui.click(860, 528)
 
-            self.hui_shou_full()
+            # self.hui_shou_full()
         print "CaiLiaoFuBen Complete at {}".format(current_date_time())
         customize_init()
         self.CaiLiaoFuBenComplete = True
@@ -543,29 +543,29 @@ class AW1(object):
         customize_init()
         self.ChuMoRenWuComplete = True
 
-    def hui_shou_full(self):
-        self.GuaJiFlag = False
-        self.CurStatus = 'HuiShou'
-
-        for i in range(3):
-            time.sleep(0.5)
-            pyautogui.press('q')
-            time.sleep(0.5)
-            pyautogui.press('q')
-            time.sleep(0.5)
-            pyautogui.press('w')
-            time.sleep(0.5)
-            pyautogui.press('w')
-
-        # lie mo ji fen
-        time.sleep(1)
-        pyautogui.click(713, 116)
-        time.sleep(1)
-        pyautogui.click(594, 200)
-        time.sleep(1)
-        pyautogui.click(716, 617)
-        time.sleep(1)
-        pyautogui.press('esc')
+    # def hui_shou_full(self):
+    #     self.GuaJiFlag = False
+    #     self.CurStatus = 'HuiShou'
+    #
+    #     for i in range(3):
+    #         time.sleep(0.5)
+    #         pyautogui.press('q')
+    #         time.sleep(0.5)
+    #         pyautogui.press('q')
+    #         time.sleep(0.5)
+    #         pyautogui.press('w')
+    #         time.sleep(0.5)
+    #         pyautogui.press('w')
+    #
+    #     # lie mo ji fen
+    #     time.sleep(1)
+    #     pyautogui.click(713, 116)
+    #     time.sleep(1)
+    #     pyautogui.click(594, 200)
+    #     time.sleep(1)
+    #     pyautogui.click(716, 617)
+    #     time.sleep(1)
+    #     pyautogui.press('esc')
 
     def gua_ji(self, hh, mm=0, ss=0):
         print "Start Guaji at {}".format(current_date_time())

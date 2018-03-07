@@ -22,13 +22,13 @@ while True:
         SPlay.gong_xun_ren_wu(run_times=10,
                               extra_time=15, ge_su=3)
         SPlay.jing_ying_ren_wu(run_times=10,
-                               extra_time=35, ge_su=5)
+                               extra_time=35, ge_su=6)
         SPlay.chuang_tian_guan(180)
-        SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(which_one=7, extra_time=30)
-        SPlay.hui_shou_full()
+        # SPlay.hui_shou_full()
+        SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=7, extra_time=30)
+        # SPlay.hui_shou_full()
         SPlay.ge_ren_boss(160)
-        SPlay.hui_shou_full()
+        # SPlay.hui_shou_full()
         SPlay.ta_fang_feng_mo(1)
         SPlay.wei_wang_ren_wu()
         SPlay.chu_mo_ren_wu(45, False)
@@ -104,6 +104,6 @@ while True:
 
     else:
         time.sleep(1)
-        SPlay.hui_shou_full()
+        # SPlay.hui_shou_full()
         SPlay.gua_ji(hh=23, mm=58)
-        SPlay.hui_shou_full()
+        # SPlay.hui_shou_full()

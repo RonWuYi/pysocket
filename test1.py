@@ -36,12 +36,20 @@ while True:
         lian_gong(45)
         SPlay.gua_ji(hh=10, mm=0, ss=0)
 
-    elif 100000 < CT < 103000:
-        SPlay.ri_jin_zhu_song_li()
-        SPlay.gua_ji(hh=10, mm=30)
+    # elif 100000 < CT < 103000:
+    #     SPlay.ri_jin_zhu_song_li()
+    #     SPlay.gua_ji(hh=10, mm=30)
+    #
+    # elif 103000 < CT < 111000:
+    #     SPlay.ri_shen_wei(30)
+    #     SPlay.gua_ji(hh=11, mm=10)
 
-    elif 103000 < CT < 111000:
-        SPlay.ri_shen_wei(30)
+    elif 100000 < CT < 104000:
+        SPlay.ri_jin_zhu_song_li()
+        SPlay.gua_ji(hh=10, mm=40)
+
+    elif 104000 < CT < 111000:
+        SPlay.ri_shen_wei(20)
         SPlay.gua_ji(hh=11, mm=10)
 
     elif 111000 < CT < 113500:
@@ -94,12 +102,21 @@ while True:
         SPlay.bang_hui_huo_dong()
         SPlay.gua_ji(hh=21, mm=35)
 
-    elif 213500 < CT < 220000:
-        SPlay.ri_jin_zhu_song_li()
-        SPlay.gua_ji(hh=22)
+    # elif 213500 < CT < 220000:
+    #     SPlay.ri_jin_zhu_song_li()
+    #     SPlay.gua_ji(hh=22)
+    #
+    # elif 220000 < CT < 223000:
+    #     SPlay.ri_shen_wei(90)
+    #     lin_qu_huo_yue_jiang_li()
+    #     SPlay.gua_ji(hh=22, mm=30)
 
-    elif 220000 < CT < 223000:
-        SPlay.ri_shen_wei(90)
+    elif 213500 < CT < 221000:
+        SPlay.ri_jin_zhu_song_li()
+        SPlay.gua_ji(hh=22, mm=10)
+
+    elif 221000 < CT < 223000:
+        SPlay.ri_shen_wei(20)
         lin_qu_huo_yue_jiang_li()
         SPlay.gua_ji(hh=22, mm=30)
 

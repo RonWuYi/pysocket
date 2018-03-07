@@ -6,7 +6,7 @@ from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import re_start
 
-SPlay = AW1(2, 81)
+SPlay = AW1(5, 81)
 # SPlay.tab_qie_huan()
 # customize_init()
 time.sleep(5)
@@ -26,7 +26,7 @@ while True:
                                extra_time=35, ge_su=6)
         SPlay.chuang_tian_guan(180)
         # SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=7, extra_time=30)
+        SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=4, extra_time=30)
         # SPlay.hui_shou_full()
         SPlay.ge_ren_boss(160)
         # SPlay.hui_shou_full()

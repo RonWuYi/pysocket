@@ -1,12 +1,12 @@
 import time
 from test import AW1
 from test import current_date_time
-# from test import customize_init
+from test import customize_init
 from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import re_start
 
-SPlay = AW1(5, 81)
+# SPlay = AW1(5, 81)
 # SPlay.tab_qie_huan()
 # customize_init()
 time.sleep(5)
@@ -18,7 +18,7 @@ while True:
     CT = ((time.localtime()[3] * 10000)
           + (time.localtime()[4] * 100)
           + (time.localtime()[5]))
-
+    customize_init()
     if 1 < CT < 100000:
         SPlay.gong_xun_ren_wu(run_times=10,
                               extra_time=15, ge_su=3)

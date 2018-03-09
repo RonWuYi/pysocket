@@ -1,13 +1,7 @@
 import time
 import pyautogui
-from NewAllWay import AW
-from test import AW1
 from test import _boss_hui_shou
 
-CT = ((time.localtime()[3] * 10000) + (time.localtime()[4] * 100) + (time.localtime()[5]))
-
-SPlay = AW()
-SPlayN = AW1(2)
 time.sleep(5)
 
 

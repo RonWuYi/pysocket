@@ -734,6 +734,13 @@ class AW1(object):
         # can yu huo dong
         time.sleep(2)
         pyautogui.click(508, 596)
+
+        time.sleep(1)
+        pyautogui.rightClick(949, 699)
+
+        time.sleep(1)
+        pyautogui.press('z')
+
         time.sleep(300)
         print "JinZhuSongLi complete at {}".format(current_date_time())
         customize_init()

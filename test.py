@@ -1337,7 +1337,7 @@ def customize_init():
     pyautogui.click(801, 554)
     time.sleep(2)
 
-    for i in range(3):
+    for i in range(2):
         # hui shou tianfumojin
         pyautogui.doubleClick(587, 728)
         time.sleep(1)
@@ -1345,7 +1345,7 @@ def customize_init():
         pyautogui.doubleClick(634, 728)
         time.sleep(1)
 
-    pyautogui.press('esc')
+    _boss_hui_shou()
 
 
 def _go_wei_wang_npc():

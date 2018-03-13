@@ -83,19 +83,19 @@ while True:
         SPlay.ri_jin_zhu_song_li()
         SPlay.gua_ji(hh=17, mm=30)
 
-    elif 173000 < CT < 190000:
+    elif 173000 < CT < 185925:
         SPlay.ri_mo_bai_cheng_zhu()
-        SPlay.gua_ji(hh=19)
+        SPlay.gua_ji(hh=18, mm=59, ss=25)
 
-    elif 190000 < CT < 192000:
+    elif 185925 < CT < 192000:
         SPlay.ri_world_boss()
         SPlay.gua_ji(hh=19, mm=20)
 
-    elif 192000 < CT < 194000:
+    elif 192000 < CT < 193925:
         SPlay.ri_da_ti()
-        SPlay.gua_ji(hh=19, mm=40)
+        SPlay.gua_ji(hh=19, mm=39, ss=25)
 
-    elif 194000 < CT < 200000:
+    elif 193925 < CT < 200000:
         SPlay.ri_ye_zhan_bi_qi()
         SPlay.gua_ji(hh=20)
 

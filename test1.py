@@ -29,7 +29,7 @@ while True:
         SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=4,
                               extra_time=30)
         # SPlay.hui_shou_full()
-        SPlay.ge_ren_boss(160)
+        SPlay.ge_ren_boss(5)
         # SPlay.hui_shou_full()
         SPlay.ta_fang_feng_mo(1)
         SPlay.wei_wang_ren_wu()

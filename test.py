@@ -8,6 +8,7 @@ GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
 fang_kuai_move_value = 56
+ge_ren_boss_time = 19
 
 
 class AW1(object):
@@ -797,13 +798,13 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15) + extra_time)
+                    time.sleep(35 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 1:
-                    time.sleep(50 + (i * 15) + extra_time)
+                    time.sleep(50 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 2:
-                    time.sleep(70 + (i * 15) + extra_time)
+                    time.sleep(70 + (i * ge_ren_boss_time) + extra_time)
                 else:
-                    time.sleep(90 + (i * 15) + extra_time)
+                    time.sleep(90 + (i * ge_ren_boss_time) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
@@ -827,15 +828,15 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15) + extra_time)
+                    time.sleep(35 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 1:
-                    time.sleep(45 + (i * 15) + extra_time)
+                    time.sleep(45 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 2:
-                    time.sleep(55 + (i * 15) + extra_time)
+                    time.sleep(55 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 3:
-                    time.sleep(70 + (i * 15) + extra_time)
+                    time.sleep(70 + (i * ge_ren_boss_time) + extra_time)
                 else:
-                    time.sleep(80 + (i * 15) + extra_time)
+                    time.sleep(80 + (i * ge_ren_boss_time) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)
@@ -859,17 +860,17 @@ class AW1(object):
                 pyautogui.press('z')
                 time.sleep(1)
                 if i == 0:
-                    time.sleep(35 + (i * 15) + extra_time)
+                    time.sleep(35 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 1:
-                    time.sleep(45 + (i * 15) + extra_time)
+                    time.sleep(45 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 2:
-                    time.sleep(60 + (i * 15) + extra_time)
+                    time.sleep(60 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 3:
-                    time.sleep(70 + (i * 15) + extra_time)
+                    time.sleep(70 + (i * ge_ren_boss_time) + extra_time)
                 elif i == 4:
-                    time.sleep(90 + (i * 15) + extra_time)
+                    time.sleep(90 + (i * ge_ren_boss_time) + extra_time)
                 else:
-                    time.sleep(100 + (i * 18) + extra_time)
+                    time.sleep(100 + (i * ge_ren_boss_time) + extra_time)
                 time.sleep(1)
                 _boss_hui_shou()
                 time.sleep(1)

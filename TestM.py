@@ -12,7 +12,7 @@ while True:
     SPlay.ge_ren_boss(160)
     SPlay.ta_fang_feng_mo(1)
     SPlay.wei_wang_ren_wu()
-    SPlay.chu_mo_ren_wu(45, False)
+    SPlay.chu_mo_ren_wu(go_to_true=True, chu_mo_time = 45)
     lian_gong(45)
     time.sleep(1)
     SPlay.gua_ji(hh=23, mm=58)

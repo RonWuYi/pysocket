@@ -10,7 +10,7 @@ while True:
     SPlay.chuang_tian_guan(160)
     SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=7, extra_time=50)
     SPlay.ge_ren_boss(160)
-    SPlay.ta_fang_feng_mo(3)
+    SPlay.ta_fang_feng_mo(1)
     SPlay.wei_wang_ren_wu()
     SPlay.chu_mo_ren_wu(45, False)
     lian_gong(45)

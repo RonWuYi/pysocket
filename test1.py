@@ -5,7 +5,7 @@ from test import customize_init
 from test import lin_qu_huo_yue_jiang_li
 from test import lian_gong
 # from test import re_start
-
+shen_wei_time = 30
 # SPlay = AW1(5, 81)
 # SPlay.tab_qie_huan()
 # customize_init()
@@ -50,7 +50,7 @@ while True:
         SPlay.gua_ji(hh=10, mm=40)
 
     elif 104000 < CT < 111000:
-        SPlay.ri_shen_wei(20)
+        SPlay.ri_shen_wei(shen_wei_time)
         SPlay.gua_ji(hh=11, mm=10)
 
     elif 111000 < CT < 113500:
@@ -117,7 +117,7 @@ while True:
         SPlay.gua_ji(hh=22, mm=10)
 
     elif 221000 < CT < 223000:
-        SPlay.ri_shen_wei(20)
+        SPlay.ri_shen_wei(shen_wei_time)
         lin_qu_huo_yue_jiang_li()
         SPlay.gua_ji(hh=22, mm=30)
 

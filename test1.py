@@ -12,7 +12,7 @@ shen_wei_time = 30
 time.sleep(5)
 
 while True:
-    SPlay = AW1(2, 81)
+    SPlay = AW1(4, 81)
     print "start a new round at {}.".format(current_date_time())
 
     CT = ((time.localtime()[3] * 10000)

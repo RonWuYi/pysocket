@@ -12,7 +12,7 @@ shen_wei_time = 30
 time.sleep(5)
 
 while True:
-    SPlay = AW1(2, 81)
+    SPlay = AW1(4, 81)
     print "start a new round at {}.".format(current_date_time())
 
     CT = ((time.localtime()[3] * 10000)
@@ -26,8 +26,7 @@ while True:
                                extra_time=35, ge_su=6)
         SPlay.chuang_tian_guan(180)
         # SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(fu_ben_time=2, which_one=7,
-                              extra_time=30)
+        SPlay.cai_liao_fu_ben(which_one=7, fu_ben_time=2, extra_time=30)
         # SPlay.hui_shou_full()
         SPlay.ge_ren_boss(5)
         # SPlay.hui_shou_full()

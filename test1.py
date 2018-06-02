@@ -26,7 +26,7 @@ while True:
                                extra_time=30, ge_su=6)
         SPlay.chuang_tian_guan(180)
         # SPlay.hui_shou_full()
-        SPlay.cai_liao_fu_ben(which_one=7, fu_ben_time=2, extra_time=30)
+        SPlay.cai_liao_fu_ben(which_one=3, fu_ben_time=2, extra_time=30)
         # SPlay.hui_shou_full()
         SPlay.ge_ren_boss(5)
         # SPlay.hui_shou_full()

@@ -1,0 +1,14 @@
+WARNING:root:watch out!
+INFO:root:test
+DEBUG:root:debug
+WARNING:root:watch out!
+INFO:root:test
+DEBUG:root:debug
+WARNING:root:watch out!
+INFO:root:test
+DEBUG:root:debug
+INFO:root:42
+WARNING:root:watch out!
+INFO:root:test
+DEBUG:root:debug
+INFO:root:80

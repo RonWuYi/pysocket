@@ -1,7 +1,12 @@
 import pyautogui
 import time
+import logging
+import logging.config
 
 from datetime import datetime as sm
+
+logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging.conf'.format(sm.today()))
+logger = logging.getLogger('simple_example')
 
 pyautogui.PAUSE = 1.5
 GongXunTime = 120

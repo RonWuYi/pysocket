@@ -1,6 +1,6 @@
 import time
 from Package.test import AW1
-from Package.test import current_date_time
+#from Package.test import current_date_time
 from Package.test import customize_init
 from Package.test import lin_qu_huo_yue_jiang_li
 from Package.test import lian_gong
@@ -13,7 +13,7 @@ time.sleep(5)
 
 while True:
     SPlay = AW1(4, 81)
-    print "start a new round at {}.".format(current_date_time())
+    # print "start a new round at {}.".format(current_date_time())
 
     CT = ((time.localtime()[3] * 10000)
           + (time.localtime()[4] * 100)

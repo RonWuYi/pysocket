@@ -1,11 +1,11 @@
-import pyautogui
-import time
-import logging
 import logging.config
-
+import time
+from abc import abstractmethod, ABCMeta
 from datetime import datetime as sm
 
-logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging.conf'.format(sm.today()))
+import pyautogui
+
+logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging{}.conf'.format(sm.today()))
 logger = logging.getLogger('simple_example')
 
 pyautogui.PAUSE = 1.5
@@ -16,7 +16,58 @@ fang_kuai_move_value = 56
 ge_ren_boss_time = 19
 
 
-class AW1(object):
+
+class GONGXUN(object):
+    def gong_xun_ren_wu(self, run_times=10,
+                        wait_time=100, extra_time=0, ge_su=3):
+        logger.info("Start GongXunRenWu at {}".format(current_date_time()))
+        self.GuaJiFlag = False
+        self.CurStatus = 'JinYanGongXun'
+
+        _bao_wu_jie_mian(ge_su)
+        time.sleep(1)
+        pyautogui.click(793, 583)
+
+        for i in range(run_times):
+
+            time.sleep(1)
+            pyautogui.click(622, 527)
+            time.sleep(8)
+
+            # jie shou ren wu
+            pyautogui.click(509, 567)
+            time.sleep(1)
+
+            # qian wang wan cheng ren wu
+            pyautogui.click(509, 567)
+
+            # deng dai wan cheng
+            time.sleep(wait_time+extra_time)
+
+            # dian ji di mian (fang zi wa kuang cuo wo)
+            # click chuan
+            time.sleep(1)
+            pyautogui.click(793, 583)
+
+            # wan cheng ren wu - san bei jiang li
+            time.sleep(2)
+            pyautogui.click(610, 511)
+            time.sleep(1)
+
+            logger.info("GongXunRenWu complete at {}".format(current_date_time()))
+        customize_init()
+        self.GongXunRenWuComplete = True
+
+
+class BASICFUNCTION:
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def BFunction(self):
+        pass
+
+
+class AW1(GONGXUN, BASICFUNCTION):
 
     def __init__(self, current_zhuan_shen, current_level=81):
         self.CurrentLevel = current_level
@@ -62,52 +113,9 @@ class AW1(object):
         pyautogui.keyUp('alt')
         self.GuaJiFlag = False
 
-    def gong_xun_ren_wu(self, run_times=10,
-                        wait_time=100, extra_time=0, ge_su=3):
-        print "Start GongXunRenWu at {}"\
-            .format(current_date_time())
-        self.GuaJiFlag = False
-        self.CurStatus = 'JinYanGongXun'
-
-        _bao_wu_jie_mian(ge_su)
-        time.sleep(1)
-        pyautogui.click(793, 583)
-
-        for i in range(run_times):
-
-            time.sleep(1)
-            pyautogui.click(622, 527)
-            time.sleep(8)
-
-            # jie shou ren wu
-            pyautogui.click(509, 567)
-            time.sleep(1)
-
-            # qian wang wan cheng ren wu
-            pyautogui.click(509, 567)
-
-            # deng dai wan cheng
-            time.sleep(wait_time+extra_time)
-
-            # dian ji di mian (fang zi wa kuang cuo wo)
-            # click chuan
-            time.sleep(1)
-            pyautogui.click(793, 583)
-
-            # wan cheng ren wu - san bei jiang li
-            time.sleep(2)
-            pyautogui.click(610, 511)
-            time.sleep(1)
-
-        print "GongXunRenWu complete at {}"\
-            .format(current_date_time())
-        customize_init()
-        self.GongXunRenWuComplete = True
-
     def jing_ying_ren_wu(self, run_times=10,
                          wait_time=100, extra_time=0, ge_su=4):
-        print "Start JingYingRenWu at {}"\
-            .format(current_date_time())
+        logger.info("Start JingYingRenWu at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'TianFu'
 
@@ -128,12 +136,12 @@ class AW1(object):
             pyautogui.click(613, 510)
             time.sleep(1)
 
-        print "JingYingRenWu complete at {}".format(current_date_time())
+        logger.info("JingYingRenWu complete at {}".format(current_date_time()))
         customize_init()
         self.JingYingRenWuComplete = True
 
     def ta_fang_feng_mo(self, feng_mo_time):
-        print "Start TaFangFengMo at {}".format(current_date_time())
+        logger.info("Start TaFangFengMo at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'TaFangFengMo'
 
@@ -188,12 +196,12 @@ class AW1(object):
             time.sleep(5)
             pyautogui.click(606, 382)
 
-        print "TaFangFengMo Complete at {}".format(current_date_time())
+        logger.info("TaFangFengMo Complete at {}".format(current_date_time()))
         customize_init()
         self.TaFangFengMoComplete = True
 
     def chuang_tian_guan(self, extra_time=0):
-        print "Start ChuangTianGuan at {}".format(current_date_time())
+        logger.info("Start ChuangTianGuan at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'ChuangTianGuan'
 
@@ -224,13 +232,13 @@ class AW1(object):
         else:
             time.sleep(1500 + extra_time)
         pyautogui.click(511, 514)
-        print "ChuangTianGuan Complete at {}".format(current_date_time())
+        logger.info("ChuangTianGuan Complete at {}".format(current_date_time()))
         customize_init()
         self.ChuangTianGuanComplete = True
 
     def cai_liao_fu_ben(self, fu_ben_time=2,
                         which_one=7, basic_time=75, extra_time=0):
-        print "Start CaiLiaoFuBen at {}".format(current_date_time())
+        logger.info("Start CaiLiaoFuBen at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'CaiLiaoFuBen'
         time.sleep(1)
@@ -387,12 +395,12 @@ class AW1(object):
                     pyautogui.click(860, 528)
 
             # self.hui_shou_full()
-        print "CaiLiaoFuBen Complete at {}".format(current_date_time())
+        logger.info("CaiLiaoFuBen Complete at {}".format(current_date_time()))
         customize_init()
         self.CaiLiaoFuBenComplete = True
 
     def wei_wang_ren_wu(self):
-        print "Start WeiWangRenWu at {}".format(current_date_time())
+        logger.info("Start WeiWangRenWu at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'WeiWangRenWu'
 
@@ -508,12 +516,12 @@ class AW1(object):
         time.sleep(2)
 
         pyautogui.press('esc')
-        print "WeiWangRenWu complete at {}".format(current_date_time())
+        logger.info("WeiWangRenWu complete at {}".format(current_date_time()))
         customize_init()
         self.WeiWangRenWuComplete = True
 
     def chu_mo_ren_wu(self, chu_mo_time, go_to_true=True):
-        print "Start ChuMoRenWu at {}".format(current_date_time())
+        logger.info("Start ChuMoRenWu at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'ChuMoRenWu'
 
@@ -545,7 +553,7 @@ class AW1(object):
             pyautogui.click(551, 571)
         time.sleep(1)
         pyautogui.press('esc')
-        print "ChuMoRenWu complete at {}".format(current_date_time())
+        logger.info("ChuMoRenWu complete at {}".format(current_date_time()))
         customize_init()
         self.ChuMoRenWuComplete = True
 
@@ -574,7 +582,7 @@ class AW1(object):
     #     pyautogui.press('esc')
 
     def gua_ji(self, hh, mm=0, ss=0):
-        print "Start Guaji at {}".format(current_date_time())
+        logger.info("Start Guaji at {}".format(current_date_time()))
         self.GuaJiFlag = True
         self.CurStatus = 'GuaJi'
 
@@ -603,25 +611,25 @@ class AW1(object):
         _xiao_chu_jie_mian()
         pyautogui.press('z')
 
-        print "GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss))
+        logger.info("GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss)))
         time.sleep(self._time_diff(hh, mm, ss))
-        print "GuaJi complete at {}".format(current_date_time())
+        logger.info("GuaJi complete at {}".format(current_date_time()))
         customize_init()
 
     # ToDo imporve it
     def wa_kuang(self, wa_kuang_time):
-        print "Start WaKuang at {}".format(current_date_time())
+        logger.info("Start WaKuang at {}".format(current_date_time()))
         self.GuaJiFlag = True
         self.CurStatus = 'WaKuang'
 
         time.sleep(wa_kuang_time*self.Seconds)
         pyautogui.click(1220, 611)
         time.sleep(1)
-        print "WaKuang Complete at {}".format(current_date_time())
+        logger.info("WaKuang Complete at {}".format(current_date_time()))
         customize_init()
 
     def ri_mo_bai_cheng_zhu(self):
-        print "Start MoBaiChengZhu at {}".format(current_date_time())
+        logger.info("Start MoBaiChengZhu at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'MoBaiChengZhu'
 
@@ -649,12 +657,12 @@ class AW1(object):
         pyautogui.press('esc')
         time.sleep(0.5)
         pyautogui.press('r')
-        print "MoBaiChengZhu complete at {}".format(current_date_time())
+        logger.info("MoBaiChengZhu complete at {}".format(current_date_time()))
         customize_init()
         self.MoBaiChengZhuComplete = True
 
     def ri_ye_zhan_bi_qi(self):
-        print "Start YeZhanBiQi at {}".format(current_date_time())
+        logger.info("Start YeZhanBiQi at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'YeZhanBiQi'
 
@@ -664,13 +672,13 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('esc')
         time.sleep(1200)
-        print "YeZhanBiQi complete at {}".format(current_date_time())
+        logger.info("YeZhanBiQi complete at {}".format(current_date_time()))
         customize_init()
         self.YeZhanBiQiComplete = True
 
     # To Do, add pic diff part
     def ri_shen_wei(self, shen_wei_time):
-        print "Start ShenWei at {}".format(current_date_time())
+        logger.info("Start ShenWei at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'ShenWei'
 
@@ -703,12 +711,12 @@ class AW1(object):
         # que ding
         time.sleep(1)
         pyautogui.click(448, 455)
-        print "ShenWei complete at {}".format(current_date_time())
+        logger.info("ShenWei complete at {}".format(current_date_time()))
         customize_init()
         self.ShenWeiComplete = True
 
     def ri_world_boss(self):
-        print "Start WorldBoss at {}".format(current_date_time())
+        logger.info("Start WorldBoss at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'WorldBoss'
 
@@ -726,12 +734,12 @@ class AW1(object):
             pyautogui.click(454, 548)
             time.sleep(1)
         # pyautogui.press('e')
-        print "WorldBoss complete at {}".format(current_date_time())
+        logger.info("WorldBoss complete at {}".format(current_date_time()))
         customize_init()
         self.WorldBossComplete = True
 
     def ri_jin_zhu_song_li(self):
-        print "Start JinZhuSongLi at {}".format(current_date_time())
+        logger.info("Start JinZhuSongLi at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'JinZhuSongLi'
 
@@ -748,11 +756,11 @@ class AW1(object):
         pyautogui.press('z')
 
         time.sleep(300)
-        print "JinZhuSongLi complete at {}".format(current_date_time())
+        logger.info("JinZhuSongLi complete at {}".format(current_date_time()))
         customize_init()
 
     def ge_ren_boss(self, extra_time=0):
-        print "Start GeRenBoss at {}".format(current_date_time())
+        logger.info("Start GeRenBoss at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'GeRenBoss'
 
@@ -880,12 +888,12 @@ class AW1(object):
                 _boss_hui_shou()
                 time.sleep(1)
                 pyautogui.click(859, 533)
-        print "GeRenBoss complete at {}".format(current_date_time())
+        logger.info("GeRenBoss complete at {}".format(current_date_time()))
         customize_init()
         self.GeRenBossiComplete = True
 
     def ri_bi_guan(self):
-        print "Start BiGuan at {}".format(current_date_time())
+        logger.info("Start BiGuan at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'BiGuan'
 
@@ -976,13 +984,13 @@ class AW1(object):
 
         time.sleep(1)
         pyautogui.press('esc')
-        print "BiGuan complete at {}".format(current_date_time())
+        logger.info("BiGuan complete at {}".format(current_date_time()))
         customize_init()
         # flag
         self.BiGuanComplete = True
 
     def ri_guai_wu_gong_cheng(self):
-        print "Start GuaiWuGongCheng at {}".format(current_date_time())
+        logger.info("Start GuaiWuGongCheng at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'GuaiWuGongCheng'
 
@@ -1013,12 +1021,12 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1750)
-        print "GuaiWuGongCheng complete at {}".format(current_date_time())
+        logger.info("GuaiWuGongCheng complete at {}".format(current_date_time()))
         customize_init()
         self.GuaiWuGongChengComplete = True
 
     def ri_suo_yao_ta(self):
-        print "Start RiSuoYaoTa at {}".format(current_date_time())
+        logger.info("Start RiSuoYaoTa at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'RiSuoYaoTa'
 
@@ -1030,13 +1038,13 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(1750)
-        print "RiSuoYaoTa complete at {}".format(current_date_time())
+        logger.info("RiSuoYaoTa complete at {}".format(current_date_time()))
         customize_init()
         self.SuoYaoTaComplete = True
 
     # To Do, improve with pic diff and run times
     def ri_duo_bei_ya_song(self):
-        print "Start RiDuoBeiYaSong at {}".format(current_date_time())
+        logger.info("Start RiDuoBeiYaSong at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'RiDuoBeiYaSong'
 
@@ -1070,22 +1078,22 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(581, 502)
 
-        print "RiDuoBeiYaSong complete at {}".format(current_date_time())
+        logger.info("RiDuoBeiYaSong complete at {}".format(current_date_time()))
         customize_init()
         self.DuoBeiYaSongComplete = True
 
     def ri_san_bei_lian_gong(self, lian_gong_time):
-        print "Start SanBeiLianGong at {}".format(current_date_time())
+        logger.info("Start SanBeiLianGong at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'SanBeiLianGong'
 
         lian_gong(lian_gong_time)
-        print "SanBeiLianGong complete at {}".format(current_date_time())
+        logger.info("SanBeiLianGong complete at {}".format(current_date_time()))
         customize_init()
         self.SanBeiLianGongComplete = True
 
     def ri_jia_lan_shen_dian(self, jia_lan_time):
-        print "Start JiaLanShenDian at {}".format(current_date_time())
+        logger.info("Start JiaLanShenDian at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'JiaLanShenDian'
 
@@ -1099,13 +1107,13 @@ class AW1(object):
         time.sleep(1)
         pyautogui.press('z')
         time.sleep(jia_lan_time)
-        print "JiaLanShenDian complete at {}".format(current_date_time())
+        logger.info("JiaLanShenDian complete at {}".format(current_date_time()))
         customize_init()
         self.JiaLanShenDianComplete = True
 
     # To Do
     def ri_hai_tian_sheng_yan(self):
-        print "Start HaiTianShengYan at {}".format(current_date_time())
+        logger.info("Start HaiTianShengYan at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'HaiTianShengYan'
 
@@ -1119,12 +1127,12 @@ class AW1(object):
         time.sleep(900)
 
         # NPC part and delay part
-        print "HaiTianShengYan complete at {}".format(current_date_time())
+        logger.info("HaiTianShengYan complete at {}".format(current_date_time()))
         customize_init()
         self.HaiTianShengYanComplete = True
 
     def ri_shi_mu(self):
-        print "Start ShiMuMiZhen at {}".format(current_date_time())
+        logger.info("Start ShiMuMiZhen at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'RiShiMuMiZhen'
 
@@ -1138,7 +1146,7 @@ class AW1(object):
         time.sleep(10)
         # ToDo
         # NPC part and delay part
-        print "ShiMuMiZhen complete at {}".format(current_date_time())
+        logger.info("ShiMuMiZhen complete at {}".format(current_date_time()))
         customize_init()
         self.ShiMuMiZhenComplete = True
 
@@ -1233,7 +1241,7 @@ class AW1(object):
         customize_init()
 
     def ri_da_ti(self):
-        print "Start DaTi at {}".format(current_date_time())
+        logger.info("Start DaTi at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'RiDaTi'
 
@@ -1247,12 +1255,12 @@ class AW1(object):
         time.sleep(900)
         # ToDo
         # NPC part and delay part
-        print "DaTi complete at {}".format(current_date_time())
+        logger.info("DaTi complete at {}".format(current_date_time()))
         customize_init()
         self.DaTi = True
 
     def bang_hui_huo_dong(self):
-        print "Start BangHui at {}".format(current_date_time())
+        logger.info("Start BangHui at {}".format(current_date_time()))
         self.GuaJiFlag = False
         self.CurStatus = 'BangHui'
         # self.EventTime += 1
@@ -1274,7 +1282,7 @@ class AW1(object):
         pyautogui.click(508, 621)
         time.sleep(600)
 
-        print "DaTi complete at {}".format(current_date_time())
+        logger.info("DaTi complete at {}".format(current_date_time()))
         customize_init()
         self.DaTi = True
 
@@ -1288,6 +1296,9 @@ class AW1(object):
 
     # To Do
     def mi_jin(self):
+        pass
+
+    def BFunction(self):
         pass
 
 
@@ -1474,7 +1485,7 @@ def _go_to(xx, yy):
 
 
 def lian_gong(lian_gong_time):
-    print "Start LianGong at {}".format(current_date_time())
+    logger.info("Start LianGong at {}".format(current_date_time()))
     _go_gua_ji_npc()
     pyautogui.click(495, 616)
     time.sleep(1)
@@ -1492,7 +1503,7 @@ def lian_gong(lian_gong_time):
     time.sleep(1)
     pyautogui.press('esc')
     time.sleep(lian_gong_time*60)
-    print "LianGong complete at {}".format(current_date_time())
+    logger.info("LianGong complete at {}".format(current_date_time()))
     customize_init()
 
 
@@ -1532,7 +1543,7 @@ def run_time():
     ss = sm.now()
     # put method below
     dd = sm.now()
-    print seconds_change((dd - ss).seconds)
+    logger.info(seconds_change((dd - ss).seconds))
 
 
 # To Do Improve it

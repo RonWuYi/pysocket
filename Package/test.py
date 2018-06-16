@@ -1,9 +1,10 @@
 import logging.config
 import time
-from abc import abstractmethod, ABCMeta
+import pyautogui
+
+#from abc import abstractmethod, ABCMeta
 from datetime import datetime as sm
 
-import pyautogui
 
 logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging{}.conf'.format(sm.today()))
 logger = logging.getLogger('simple_example')
@@ -16,9 +17,53 @@ fang_kuai_move_value = 56
 ge_ren_boss_time = 19
 
 
+class BASICFUNCTIONRW(object):
+    #__metaclass__ = ABCMeta
+    def __init__(self):
+        self.open()
+        self.function()
+        self.clean()
+        self.close()
 
-class GONGXUN(object):
-    def gong_xun_ren_wu(self, run_times=10,
+    @abstractmethod
+    def function(self):
+        pass
+
+    def open(self):
+        pass
+
+    def close(self):
+        pass
+
+    def clean(self):
+        pass
+
+
+class BASICFUNCTIONRC(object):
+    #__metaclass__ = ABCMeta
+
+    def __init__(self):
+        self.open()
+        self.function()
+        self.clean()
+        self.close()
+
+    #@abstractmethod
+    def function(self):
+        pass
+
+    def open(self):
+        pass
+
+    def close(self):
+        pass
+
+    def clean(self):
+        pass
+
+
+class GONGXUN(BASICFUNCTIONRW):
+    def function(self, run_times=10,
                         wait_time=100, extra_time=0, ge_su=3):
         logger.info("Start GongXunRenWu at {}".format(current_date_time()))
         self.GuaJiFlag = False
@@ -59,15 +104,7 @@ class GONGXUN(object):
         self.GongXunRenWuComplete = True
 
 
-class BASICFUNCTION:
-    __metaclass__ = ABCMeta
-
-    @abstractmethod
-    def BFunction(self):
-        pass
-
-
-class AW1(GONGXUN, BASICFUNCTION):
+class AW1(object):
 
     def __init__(self, current_zhuan_shen, current_level=81):
         self.CurrentLevel = current_level

@@ -1,9 +1,8 @@
 import time
 from Package.test import AW1
 #from Package.test import current_date_time
-from Package.test import customize_init
-from Package.test import lin_qu_huo_yue_jiang_li
-from Package.test import lian_gong
+from Package.util import customize_init, lin_qu_huo_yue_jiang_li, lian_gong
+
 # from test import re_start
 shen_wei_time = 30
 # SPlay = AW1(5, 81)

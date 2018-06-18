@@ -1,23 +1,8 @@
 import logging
-import logging.config
 
-logging.config.fileConfig('logging.conf')
+from datetime import datetime as dt
 
-logger = logging.getLogger('simple_example')
-# logger.setLevel(logging.DEBUG)
-#
-# ch = logging.StreamHandler()
-# ch.setLevel(logging.DEBUG)
-#
-# #formatter = logging.Formatter('%(asctimes)s')
-# foratter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s  %(message)s')
-# ch.setFormatter(foratter)
-#
-# logger.addHandler(ch)
-
-logger.debug('debug message')
-logger.info('info message')
-logger.warn('warn message')
-logger.error('error message')
-logger.critical('critical message')
-#                                                                                                                       'logger.critical('critical message')'
+logging.basicConfig(filename='/home/hdc/Downloads/github/pysocket/log/{}.log'.format(str(dt.today())[:16]),level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too1')

@@ -8,7 +8,7 @@ from Package.util import go_feng_mo_npc, huo_dong_jie_mian, xiao_chu_jie_mian, c
     go_gua_ji_npc, current_date_time, bao_wu_shen_dun_jie_mian, bao_wu_jie_mian, go_to, lian_gong, go_chu_mo_npc, \
     seconds_change, boss_hui_shou, yin_xiong_jie_mian
 
-logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging{}.conf'.format(sm.today()))
+logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging.conf')
 logger = logging.getLogger('simple_example')
 
 pyautogui.PAUSE = 1.5

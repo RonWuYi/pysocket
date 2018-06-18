@@ -1,4 +1,3 @@
-import logging
 import logging.config
 import time
 import pyautogui
@@ -9,6 +8,7 @@ from Package.util import go_feng_mo_npc, huo_dong_jie_mian, xiao_chu_jie_mian, c
     seconds_change, boss_hui_shou, yin_xiong_jie_mian
 
 logging.config.fileConfig('C:\\Work\\pysocket\\log\\logging.conf')
+logging.basicConfig(filename='/home/hdc/Downloads/github/pysocket/log/{}.log'.format(str(sm.today())[:16]),level=logging.DEBUG)
 logger = logging.getLogger('simple_example')
 
 pyautogui.PAUSE = 1.5
@@ -25,6 +25,19 @@ class BASIC(object):
         self.GuaJiFlag = True
         self.CurStatus = 'null'
         self.Seconds = 60
+        # self.x, self.y = pyautogui.size()
+        self.Year = str(sm.now())[0:4]
+        self.Month = str(sm.now())[5:7]
+        self.Day = str(sm.now())[8:10]
+
+    def _time_diff(self, hh, mm=0, ss=0):
+        current_time = sm.now()
+        target_times = self.Year+'-'+self.Month+'-'+self.Day+' '+str(hh)+':'+str(mm)+':'+str(ss)+'.0'
+        target_time = sm.strptime(target_times, "%Y-%m-%d %H:%M:%S.%f")
+        if current_time < target_time:
+            return (target_time-current_time).seconds
+        else:
+            return 0
 
 
 class BASICFUNCTIONRW(BASIC):
@@ -1193,7 +1206,166 @@ class RIDATI(BASICFUNCTIONRC):
         self.DaTi = True
 
 
-class AW1(object):
+class BANGHUI(BASICFUNCTIONRC):
+    def function(self):
+        logger.info("Start BangHui at {}".format(current_date_time()))
+        self.GuaJiFlag = False
+        self.CurStatus = 'BangHui'
+        # self.EventTime += 1
+        time.sleep(1)
+
+        # Jin ru huo dong
+        time.sleep(1)
+        pyautogui.click(854, 685)
+
+        time.sleep(1)
+        pyautogui.click(373, 202)
+
+        time.sleep(1)
+        pyautogui.click(503, 561)
+
+        time.sleep(1)
+        pyautogui.click(507, 581)
+        time.sleep(1)
+        pyautogui.click(508, 621)
+        time.sleep(600)
+
+        logger.info("DaTi complete at {}".format(current_date_time()))
+        customize_init()
+        self.DaTi = True
+
+
+class WAKUANG(BASIC):
+    # ToDo imporve it
+    def wa_kuang(self, wa_kuang_time):
+        logger.info("Start WaKuang at {}".format(current_date_time()))
+        self.GuaJiFlag = True
+        self.CurStatus = 'WaKuang'
+
+        time.sleep(wa_kuang_time*self.Seconds)
+        pyautogui.click(1220, 611)
+        time.sleep(1)
+        logger.info("WaKuang Complete at {}".format(current_date_time()))
+        customize_init()
+
+
+class GUAJI(BASIC):
+    def gua_ji(self, hh, mm=0, ss=0):
+        logger.info("Start Guaji at {}".format(current_date_time()))
+        self.GuaJiFlag = True
+        self.CurStatus = 'GuaJi'
+
+        go_gua_ji_npc()
+        time.sleep(1)
+        if self.CurrentLevel > 80:
+            if self.zhuan_shen_level == 0:
+                pyautogui.click(394, 418)
+            elif self.zhuan_shen_level == 1:
+                pyautogui.click(493, 419)
+            elif self.zhuan_shen_level == 2:
+                pyautogui.click(595, 418)
+            elif self.zhuan_shen_level == 3:
+                pyautogui.click(595, 418)
+            elif self.zhuan_shen_level == 4:
+                pyautogui.click(393, 449)
+            else:
+                pyautogui.click(494, 446)
+        else:
+            pyautogui.click(593, 390)
+
+        # sui ji
+        time.sleep(1)
+        pyautogui.click(678, 728)
+        time.sleep(1)
+        xiao_chu_jie_mian()
+        pyautogui.press('z')
+
+        logger.info("GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss)))
+        time.sleep(self._time_diff(hh, mm, ss))
+        logger.info("GuaJi complete at {}".format(current_date_time()))
+        customize_init()
+
+
+class YAOTA(BASIC):
+    def __init__(self, da_time):
+        self.da_time = da_time
+        super(YAOTA, self).__init__()
+    # To Do
+    def gua_suo_yao_ta(self):
+        go_gua_ji_npc()
+        xiao_chu_jie_mian()
+
+        time.sleep(1)
+        pyautogui.click(654, 390)
+
+        if self.zhuan_shen_level == 0:
+            time.sleep(1)
+            pyautogui.click(515, 397)
+        elif 0 < self.zhuan_shen_level <= 2:
+            time.sleep(1)
+            pyautogui.click(515, 426)
+        elif 2 < self.zhuan_shen_level <= 4:
+            time.sleep(1)
+            pyautogui.click(515, 453)
+        elif 4 < self.zhuan_shen_level <= 6:
+            time.sleep(1)
+            pyautogui.click(515, 483)
+        elif 6 < self.zhuan_shen_level <= 8:
+            time.sleep(1)
+            pyautogui.click(515, 511)
+        else:
+            time.sleep(1)
+            pyautogui.click(515, 539)
+        while True:
+            xiao_chu_jie_mian()
+            time.sleep(0.5)
+            pyautogui.press('z')
+            time.sleep(600)
+            pyautogui.click(854, 684)
+            time.sleep(1)
+            pyautogui.click(310, 204)
+            time.sleep(1)
+            for i in range(8):
+                time.sleep(2)
+                pyautogui.doubleClick(197, 271)
+                time.sleep(0.5)
+            pyautogui.press('esc')
+            xiao_chu_jie_mian()
+            time.sleep(360000)
+
+    def da_suo_yao_ta(self):
+        go_gua_ji_npc()
+        xiao_chu_jie_mian()
+
+        time.sleep(1)
+        pyautogui.click(654, 390)
+
+        if self.zhuan_shen_level == 0:
+            time.sleep(1)
+            pyautogui.click(515, 397)
+        elif 0 < self.zhuan_shen_level <= 2:
+            time.sleep(1)
+            pyautogui.click(515, 426)
+        elif 2 < self.zhuan_shen_level <= 4:
+            time.sleep(1)
+            pyautogui.click(515, 453)
+        elif 4 < self.zhuan_shen_level <= 6:
+            time.sleep(1)
+            pyautogui.click(515, 483)
+        elif 6 < self.zhuan_shen_level <= 8:
+            time.sleep(1)
+            pyautogui.click(515, 511)
+        else:
+            time.sleep(1)
+            pyautogui.click(515, 539)
+
+        xiao_chu_jie_mian()
+        pyautogui.press('z')
+        time.sleep(self.Seconds*self.da_time)
+        customize_init()
+
+
+# class AW1(object):
 
     # def __init__(self, current_zhuan_shen, current_level=81):
     #     self.CurrentLevel = current_level
@@ -1233,12 +1405,6 @@ class AW1(object):
     #     self.D = str(sm.now())[8:10]
 
     # useless
-    def tab_qie_huan(self):
-        time.sleep(1)
-        pyautogui.keyDown('alt')
-        pyautogui.press('tab')
-        pyautogui.keyUp('alt')
-        self.GuaJiFlag = False
 
     # def jing_ying_ren_wu(self, run_times=10,
     #                      wait_time=100, extra_time=0, ge_su=4):
@@ -1708,52 +1874,40 @@ class AW1(object):
     #     time.sleep(1)
     #     pyautogui.press('esc')
 
-    def gua_ji(self, hh, mm=0, ss=0):
-        logger.info("Start Guaji at {}".format(current_date_time()))
-        self.GuaJiFlag = True
-        self.CurStatus = 'GuaJi'
-
-        go_gua_ji_npc()
-        time.sleep(1)
-        if self.CurrentLevel > 80:
-            if self.zhuan_shen_level == 0:
-                pyautogui.click(394, 418)
-            elif self.zhuan_shen_level == 1:
-                pyautogui.click(493, 419)
-            elif self.zhuan_shen_level == 2:
-                pyautogui.click(595, 418)
-            elif self.zhuan_shen_level == 3:
-                pyautogui.click(595, 418)
-            elif self.zhuan_shen_level == 4:
-                pyautogui.click(393, 449)
-            else:
-                pyautogui.click(494, 446)
-        else:
-            pyautogui.click(593, 390)
-
-        # sui ji
-        time.sleep(1)
-        pyautogui.click(678, 728)
-        time.sleep(1)
-        xiao_chu_jie_mian()
-        pyautogui.press('z')
-
-        logger.info("GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss)))
-        time.sleep(self._time_diff(hh, mm, ss))
-        logger.info("GuaJi complete at {}".format(current_date_time()))
-        customize_init()
-
-    # ToDo imporve it
-    def wa_kuang(self, wa_kuang_time):
-        logger.info("Start WaKuang at {}".format(current_date_time()))
-        self.GuaJiFlag = True
-        self.CurStatus = 'WaKuang'
-
-        time.sleep(wa_kuang_time*self.Seconds)
-        pyautogui.click(1220, 611)
-        time.sleep(1)
-        logger.info("WaKuang Complete at {}".format(current_date_time()))
-        customize_init()
+    # def gua_ji(self, hh, mm=0, ss=0):
+    #     logger.info("Start Guaji at {}".format(current_date_time()))
+    #     self.GuaJiFlag = True
+    #     self.CurStatus = 'GuaJi'
+    #
+    #     go_gua_ji_npc()
+    #     time.sleep(1)
+    #     if self.CurrentLevel > 80:
+    #         if self.zhuan_shen_level == 0:
+    #             pyautogui.click(394, 418)
+    #         elif self.zhuan_shen_level == 1:
+    #             pyautogui.click(493, 419)
+    #         elif self.zhuan_shen_level == 2:
+    #             pyautogui.click(595, 418)
+    #         elif self.zhuan_shen_level == 3:
+    #             pyautogui.click(595, 418)
+    #         elif self.zhuan_shen_level == 4:
+    #             pyautogui.click(393, 449)
+    #         else:
+    #             pyautogui.click(494, 446)
+    #     else:
+    #         pyautogui.click(593, 390)
+    #
+    #     # sui ji
+    #     time.sleep(1)
+    #     pyautogui.click(678, 728)
+    #     time.sleep(1)
+    #     xiao_chu_jie_mian()
+    #     pyautogui.press('z')
+    #
+    #     logger.info("GuaJi shijian is ", seconds_change(self._time_diff(hh, mm, ss)))
+    #     time.sleep(self._time_diff(hh, mm, ss))
+    #     logger.info("GuaJi complete at {}".format(current_date_time()))
+    #     customize_init()
 
     # ri chang
     # def ri_mo_bai_cheng_zhu(self):
@@ -2278,95 +2432,9 @@ class AW1(object):
     #     customize_init()
     #     self.ShiMuMiZhenComplete = True
 
-    def _time_diff(self, hh, mm=0, ss=0):
-        current_time = sm.now()
-        target_times = self.Y+'-'+self.M+'-'+self.D+' '+str(hh)+':'+str(mm)+':'+str(ss)+'.0'
-        target_time = sm.strptime(target_times, "%Y-%m-%d %H:%M:%S.%f")
-        if current_time < target_time:
-            return (target_time-current_time).seconds
-        else:
-            return 0
-
     # ToDo
-    def da_boss(self):
-        pass
-
-    def _wo_yao_bian_qiang_jie_mian(self):
-        pass
-
-    # To Do
-    def gua_suo_yao_ta(self):
-        go_gua_ji_npc()
-        xiao_chu_jie_mian()
-
-        time.sleep(1)
-        pyautogui.click(654, 390)
-
-        if self.zhuan_shen_level == 0:
-            time.sleep(1)
-            pyautogui.click(515, 397)
-        elif 0 < self.zhuan_shen_level <= 2:
-            time.sleep(1)
-            pyautogui.click(515, 426)
-        elif 2 < self.zhuan_shen_level <= 4:
-            time.sleep(1)
-            pyautogui.click(515, 453)
-        elif 4 < self.zhuan_shen_level <= 6:
-            time.sleep(1)
-            pyautogui.click(515, 483)
-        elif 6 < self.zhuan_shen_level <= 8:
-            time.sleep(1)
-            pyautogui.click(515, 511)
-        else:
-            time.sleep(1)
-            pyautogui.click(515, 539)
-        while True:
-            xiao_chu_jie_mian()
-            time.sleep(0.5)
-            pyautogui.press('z')
-            time.sleep(600)
-            pyautogui.click(854, 684)
-            time.sleep(1)
-            pyautogui.click(310, 204)
-            time.sleep(1)
-            for i in range(8):
-                time.sleep(2)
-                pyautogui.doubleClick(197, 271)
-                time.sleep(0.5)
-            pyautogui.press('esc')
-            xiao_chu_jie_mian()
-            time.sleep(360000)
-
-    def da_suo_yao_ta(self, da_time):
-        go_gua_ji_npc()
-        xiao_chu_jie_mian()
-
-        time.sleep(1)
-        pyautogui.click(654, 390)
-
-        if self.zhuan_shen_level == 0:
-            time.sleep(1)
-            pyautogui.click(515, 397)
-        elif 0 < self.zhuan_shen_level <= 2:
-            time.sleep(1)
-            pyautogui.click(515, 426)
-        elif 2 < self.zhuan_shen_level <= 4:
-            time.sleep(1)
-            pyautogui.click(515, 453)
-        elif 4 < self.zhuan_shen_level <= 6:
-            time.sleep(1)
-            pyautogui.click(515, 483)
-        elif 6 < self.zhuan_shen_level <= 8:
-            time.sleep(1)
-            pyautogui.click(515, 511)
-        else:
-            time.sleep(1)
-            pyautogui.click(515, 539)
-
-        xiao_chu_jie_mian()
-        pyautogui.press('z')
-        time.sleep(self.Seconds*da_time)
-        customize_init()
+    # def da_boss(self):
+    #     pass
 
     # def ri_da_ti(self):
     #     logger.info("Start DaTi at {}".format(current_date_time()))
@@ -2387,44 +2455,11 @@ class AW1(object):
     #     customize_init()
     #     self.DaTi = True
 
-    def ri_bang_hui_huo_dong(self):
-        logger.info("Start BangHui at {}".format(current_date_time()))
-        self.GuaJiFlag = False
-        self.CurStatus = 'BangHui'
-        # self.EventTime += 1
-        time.sleep(1)
-
-        # Jin ru huo dong
-        time.sleep(1)
-        pyautogui.click(854, 685)
-
-        time.sleep(1)
-        pyautogui.click(373, 202)
-
-        time.sleep(1)
-        pyautogui.click(503, 561)
-
-        time.sleep(1)
-        pyautogui.click(507, 581)
-        time.sleep(1)
-        pyautogui.click(508, 621)
-        time.sleep(600)
-
-        logger.info("DaTi complete at {}".format(current_date_time()))
-        customize_init()
-        self.DaTi = True
+    # To Do
 
     # To Do
-    def di_xia_gong_dian(self):
-        pass
 
     # To Do
-    def zu_ma_boss(self):
-        pass
-
-    # To Do
-    def mi_jin(self):
-        pass
 
     # def BFunction(self):
     #     pass

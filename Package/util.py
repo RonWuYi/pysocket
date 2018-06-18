@@ -287,3 +287,27 @@ def cun_ru_cang_ku():
 
 def da_boss():
     pass
+
+
+def _wo_yao_bian_qiang_jie_mian():
+    pass
+
+
+def di_xia_gong_dian():
+    pass
+
+
+def zu_ma_boss():
+    pass
+
+
+def mi_jin():
+    pass
+
+
+def tab_qie_huan():
+    time.sleep(1)
+    pyautogui.keyDown('alt')
+    pyautogui.press('tab')
+    pyautogui.keyUp('alt')
+    #self.GuaJiFlag = False

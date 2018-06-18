@@ -1,10 +1,11 @@
 import time
+
 from datetime import datetime as sm
 
-from Package.test import logger, fang_kuai_move_value
+fang_kuai_move_value = 56
 
 
-def _go_feng_mo_npc():
+def go_feng_mo_npc():
     time.sleep(1)
     pyautogui.click(337, 674)
     time.sleep(1)
@@ -15,14 +16,14 @@ def _go_feng_mo_npc():
     pyautogui.click(892, 220)
 
 
-def _boss_jie_mian():
+def boss_jie_mian():
     # da kai boss jie mian
     time.sleep(1)
     pyautogui.click(715, 188)
     time.sleep(1)
 
 
-def _huo_dong_jie_mian():
+def huo_dong_jie_mian():
     time.sleep(0.5)
     pyautogui.click(951, 714)
     time.sleep(0.5)
@@ -32,7 +33,7 @@ def _huo_dong_jie_mian():
     time.sleep(0.5)
 
 
-def _xiao_chu_jie_mian():
+def xiao_chu_jie_mian():
     time.sleep(0.5)
     pyautogui.click(951, 714, button='right')
     time.sleep(1)
@@ -66,7 +67,7 @@ def customize_init():
     _boss_hui_shou()
 
 
-def _go_wei_wang_npc():
+def go_wei_wang_npc():
     customize_init()
     time.sleep(1)
     pyautogui.click(665, 676)
@@ -75,7 +76,7 @@ def _go_wei_wang_npc():
     time.sleep(2)
 
 
-def _wo_yao_sheng_ji():
+def wo_yao_sheng_ji():
     time.sleep(1)
     pyautogui.click(335, 673)
     time.sleep(1)
@@ -87,7 +88,7 @@ def _wo_yao_sheng_ji():
     time.sleep(1)
 
 
-def _huo_dong_jie_mian_no_click():
+def huo_dong_jie_mian_no_click():
     time.sleep(0.5)
     pyautogui.click(951, 714)
     time.sleep(0.5)
@@ -95,7 +96,7 @@ def _huo_dong_jie_mian_no_click():
     time.sleep(2)
 
 
-def _go_gua_ji_npc():
+def go_gua_ji_npc():
     _xiao_chu_jie_mian()
     time.sleep(1)
     pyautogui.click(570, 677)
@@ -112,7 +113,7 @@ def current_date_time():
 
 
 def lin_qu_huo_yue_jiang_li():
-    _xiao_chu_jie_mian()
+    xiao_chu_jie_mian()
     time.sleep(1)
     pyautogui.click(260, 128)
     for i in range(5):
@@ -126,7 +127,7 @@ def xing_qi_ji():
     return xing_qi.weekday()
 
 
-def _bao_wu_shen_dun_jie_mian():
+def bao_wu_shen_dun_jie_mian():
     # da kai bao wu jie mian
     customize_init()
     time.sleep(1)
@@ -139,9 +140,9 @@ def _bao_wu_shen_dun_jie_mian():
     pyautogui.press('esc')
 
 
-def _bao_wu_jie_mian(level):
+def bao_wu_jie_mian(level):
     # da kai bao wu jie mian
-    _xiao_chu_jie_mian()
+    xiao_chu_jie_mian()
     time.sleep(1)
     pyautogui.click(569, 679)
     if level == 1:
@@ -161,8 +162,8 @@ def _bao_wu_jie_mian(level):
         pyautogui.click(200, 433)
 
 
-def _go_to(xx, yy):
-    _xiao_chu_jie_mian()
+def go_to(xx, yy):
+    xiao_chu_jie_mian()
     # di tu
     time.sleep(1)
     pyautogui.press('m')
@@ -183,8 +184,7 @@ def _go_to(xx, yy):
 
 
 def lian_gong(lian_gong_time):
-    logger.info("Start LianGong at {}".format(current_date_time()))
-    _go_gua_ji_npc()
+    go_gua_ji_npc()
     pyautogui.click(495, 616)
     time.sleep(1)
     pyautogui.press('esc')
@@ -201,12 +201,11 @@ def lian_gong(lian_gong_time):
     time.sleep(1)
     pyautogui.press('esc')
     time.sleep(lian_gong_time*60)
-    logger.info("LianGong complete at {}".format(current_date_time()))
     customize_init()
 
 
 def go_chu_mo_npc():
-    _wo_yao_sheng_ji()
+    wo_yao_sheng_ji()
     pyautogui.click(893, 413)
     time.sleep(11)
 
@@ -223,10 +222,9 @@ def run_time():
     ss = sm.now()
     # put method below
     dd = sm.now()
-    logger.info(seconds_change((dd - ss).seconds))
 
 
-def _boss_hui_shou():
+def boss_hui_shou():
     time.sleep(1)
     pyautogui.click(714, 119)
     time.sleep(1)
@@ -238,7 +236,7 @@ def _boss_hui_shou():
     time.sleep(1)
 
 
-def _yin_xiong_jie_mian(ge_su):
+def yin_xiong_jie_mian(ge_su):
     time.sleep(1)
     pyautogui.click(383, 672)
     time.sleep(1)
@@ -284,7 +282,7 @@ def cun_ru_cang_ku():
         time.sleep(2)
         pyautogui.doubleClick(194, 269)
 
-    _boss_hui_shou()
+    boss_hui_shou()
 
 
 def da_boss():

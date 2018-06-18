@@ -2,7 +2,9 @@ import logging.config
 import time
 import pyautogui
 
-from datetime import datetime as sm
+from Package.renwu import BASICFUNCTIONRW
+from Package.richang import BASICFUNCTIONRC
+#from datetime import datetime as sm
 from Package.util import go_feng_mo_npc, huo_dong_jie_mian, xiao_chu_jie_mian, customize_init, go_wei_wang_npc, \
     go_gua_ji_npc, current_date_time, bao_wu_shen_dun_jie_mian, bao_wu_jie_mian, go_to, lian_gong, go_chu_mo_npc, \
     seconds_change, boss_hui_shou, yin_xiong_jie_mian
@@ -16,109 +18,6 @@ GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
 ge_ren_boss_time = 19
-
-
-class BASIC(object):
-    def __init__(self, current_level = 80, current_zhuan_shen = 4):
-        self.CurrentLevel = current_level
-        self.zhuan_shen_level = current_zhuan_shen
-        self.GuaJiFlag = True
-        self.CurStatus = 'null'
-        self.Seconds = 60
-        # self.x, self.y = pyautogui.size()
-        self.Year = str(sm.now())[0:4]
-        self.Month = str(sm.now())[5:7]
-        self.Day = str(sm.now())[8:10]
-
-    def _time_diff(self, hh, mm=0, ss=0):
-        current_time = sm.now()
-        target_times = self.Year+'-'+self.Month+'-'+self.Day+' '+str(hh)+':'+str(mm)+':'+str(ss)+'.0'
-        target_time = sm.strptime(target_times, "%Y-%m-%d %H:%M:%S.%f")
-        if current_time < target_time:
-            return (target_time-current_time).seconds
-        else:
-            return 0
-
-
-class BASICFUNCTIONRW(BASIC):
-    def __init__(self):
-        super(BASICFUNCTIONRW, self).__init__()
-    # def __init__(self, current_level, current_zhuan_shen):
-        # # pre-define something
-        # self.CurrentLevel = current_level
-        # self.zhuan_shen_level = current_zhuan_shen
-        # self.GuaJiFlag = True
-        # self.CurStatus = 'null'
-        # self.Complete = False
-        # # self.EventTime = 0
-        # self.Seconds = 60
-        # self.GongXunRenWuComplete = False
-        # self.JingYingRenWuComplete = False
-        # self.WeiWangRenWuComplete = False
-        # self.TaFangFengMoComplete = False
-        # self.CaiLiaoFuBenComplete = False
-        # self.ChuMoRenWuComplete = False
-        # self.ChuangTianGuanComplete = False
-        # self.MoBaiChengZhuComplete = False
-        # self.YeZhanBiQiComplete = False
-        # self.ShenWeiComplete = False
-        # self.WorldBossComplete = False
-        # self.JinZhuSongLiComplete = False
-        # self.YeZhanBiQiComplete = False
-        # self.GeRenBossiComplete = False
-        # self.GuaiWuGongChengComplete = False
-        # self.BiGuanComplete = False
-        # self.SuoYaoTaComplete = False
-        # self.DuoBeiYaSongComplete = False
-        # self.HaiTianShengYanComplete = False
-        # self.JiaLanShenDianComplete = False
-        # self.SanBeiLianGongComplete = False
-        # self.ShiMuMiZhenComplete = False
-        # self.DaTi = False
-        # self.x, self.y = pyautogui.size()
-        # self.Y = str(sm.now())[0:4]
-        # self.M = str(sm.now())[5:7]
-        # self.D = str(sm.now())[8:10]
-
-        # do something
-        self.open()
-        self.function()
-        self.clean()
-        self.close()
-
-    def function(self):
-        pass
-
-    def open(self):
-        pass
-
-    def close(self):
-        pass
-
-    def clean(self):
-        pass
-
-
-class BASICFUNCTIONRC(BASIC):
-
-    def __init__(self):
-        super(BASICFUNCTIONRC, self).__init__()
-        self.open()
-        self.function()
-        self.clean()
-        self.close()
-
-    def function(self):
-        pass
-
-    def open(self):
-        pass
-
-    def close(self):
-        pass
-
-    def clean(self):
-        pass
 
 
 class GONGXUN(BASICFUNCTIONRW):
@@ -1284,86 +1183,6 @@ class GUAJI(BASIC):
         time.sleep(self._time_diff(hh, mm, ss))
         logger.info("GuaJi complete at {}".format(current_date_time()))
         customize_init()
-
-
-class YAOTA(BASIC):
-    def __init__(self, da_time):
-        self.da_time = da_time
-        super(YAOTA, self).__init__()
-    # To Do
-    def gua_suo_yao_ta(self):
-        go_gua_ji_npc()
-        xiao_chu_jie_mian()
-
-        time.sleep(1)
-        pyautogui.click(654, 390)
-
-        if self.zhuan_shen_level == 0:
-            time.sleep(1)
-            pyautogui.click(515, 397)
-        elif 0 < self.zhuan_shen_level <= 2:
-            time.sleep(1)
-            pyautogui.click(515, 426)
-        elif 2 < self.zhuan_shen_level <= 4:
-            time.sleep(1)
-            pyautogui.click(515, 453)
-        elif 4 < self.zhuan_shen_level <= 6:
-            time.sleep(1)
-            pyautogui.click(515, 483)
-        elif 6 < self.zhuan_shen_level <= 8:
-            time.sleep(1)
-            pyautogui.click(515, 511)
-        else:
-            time.sleep(1)
-            pyautogui.click(515, 539)
-        while True:
-            xiao_chu_jie_mian()
-            time.sleep(0.5)
-            pyautogui.press('z')
-            time.sleep(600)
-            pyautogui.click(854, 684)
-            time.sleep(1)
-            pyautogui.click(310, 204)
-            time.sleep(1)
-            for i in range(8):
-                time.sleep(2)
-                pyautogui.doubleClick(197, 271)
-                time.sleep(0.5)
-            pyautogui.press('esc')
-            xiao_chu_jie_mian()
-            time.sleep(360000)
-
-    def da_suo_yao_ta(self):
-        go_gua_ji_npc()
-        xiao_chu_jie_mian()
-
-        time.sleep(1)
-        pyautogui.click(654, 390)
-
-        if self.zhuan_shen_level == 0:
-            time.sleep(1)
-            pyautogui.click(515, 397)
-        elif 0 < self.zhuan_shen_level <= 2:
-            time.sleep(1)
-            pyautogui.click(515, 426)
-        elif 2 < self.zhuan_shen_level <= 4:
-            time.sleep(1)
-            pyautogui.click(515, 453)
-        elif 4 < self.zhuan_shen_level <= 6:
-            time.sleep(1)
-            pyautogui.click(515, 483)
-        elif 6 < self.zhuan_shen_level <= 8:
-            time.sleep(1)
-            pyautogui.click(515, 511)
-        else:
-            time.sleep(1)
-            pyautogui.click(515, 539)
-
-        xiao_chu_jie_mian()
-        pyautogui.press('z')
-        time.sleep(self.Seconds*self.da_time)
-        customize_init()
-
 
 # class AW1(object):
 

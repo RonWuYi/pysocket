@@ -1,4 +1,5 @@
 import time
+import pyautogui
 
 from Package.basic import BASIC
 from Package.util import go_gua_ji_npc, xiao_chu_jie_mian, customize_init

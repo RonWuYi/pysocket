@@ -1134,7 +1134,7 @@ class BANGHUI(BASICFUNCTIONRC):
         self.DaTi = True
 
 
-class WAKUANG(BASIC):
+class WAKUANG(BASICFUNCTIONRC):
     # ToDo imporve it
     def wa_kuang(self, wa_kuang_time):
         logger.info("Start WaKuang at {}".format(current_date_time()))
@@ -1148,7 +1148,7 @@ class WAKUANG(BASIC):
         customize_init()
 
 
-class GUAJI(BASIC):
+class GUAJI(BASICFUNCTIONRC):
     def gua_ji(self, hh, mm=0, ss=0):
         logger.info("Start Guaji at {}".format(current_date_time()))
         self.GuaJiFlag = True

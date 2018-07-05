@@ -1505,6 +1505,12 @@ def seconds_change(total_seconds):
     return "%02d:%02d:%02d:%02d" % (d, h, m, s)
 
 
+def tab_qie_huan():
+    time.sleep(1)
+    pyautogui.keyDown('alt')
+    pyautogui.press('tab')
+    pyautogui.keyUp('alt')
+
 # def capture_pic(cur_time):
 #     _huo_dong_jie_mian_no_click()
 #     hwnd = win32gui.GetForegroundWindow()

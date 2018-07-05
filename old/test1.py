@@ -1,15 +1,17 @@
 import time
+
 from old.test import AW1
 from old.test import current_date_time
 from old.test import customize_init
 from old.test import lin_qu_huo_yue_jiang_li
 from old.test import lian_gong
-# from test import re_start
+from old.test import tab_qie_huan
+
 shen_wei_time = 30
-# SPlay = AW1(5, 81)
-# SPlay.tab_qie_huan()
-# customize_init()
-time.sleep(5)
+
+time.sleep(2)
+tab_qie_huan()
+time.sleep(3)
 
 while True:
     SPlay = AW1(4, 81)
@@ -23,7 +25,7 @@ while True:
         SPlay.gong_xun_ren_wu(run_times=10,
                               extra_time=15, ge_su=3)
         SPlay.jing_ying_ren_wu(run_times=10,
-                               extra_time=30, ge_su=6)
+                               extra_time=7, ge_su=6)
         SPlay.chuang_tian_guan(180)
         # SPlay.hui_shou_full()
         SPlay.cai_liao_fu_ben(which_one=3, fu_ben_time=2, extra_time=30)

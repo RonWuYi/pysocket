@@ -1557,8 +1557,17 @@ def _yin_xiong_jie_mian(ge_su):
     elif ge_su == 5:
         pyautogui.click(197, (317+fang_kuai_move_value*2))
         time.sleep(1)
-    else:
+    elif ge_su == 6:
         pyautogui.click(197, (317+fang_kuai_move_value*3))
+        time.sleep(1)
+    elif ge_su == 7:
+        pyautogui.click(197, (317+fang_kuai_move_value*4))
+        time.sleep(1)
+    elif ge_su == 8:
+        pyautogui.click(197, (317+fang_kuai_move_value*5))
+        time.sleep(1)
+    else:
+        pyautogui.click(197, (317+fang_kuai_move_value*6))
         time.sleep(1)
 
     pyautogui.click(628, 206)

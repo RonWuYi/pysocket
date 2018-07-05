@@ -1535,7 +1535,8 @@ def _boss_hui_shou():
     time.sleep(1)
     pyautogui.click(714, 119)
     time.sleep(1)
-    pyautogui.click(597, 197)
+    # new add after added xin fa
+    pyautogui.click(660, 200)
     time.sleep(1)
     pyautogui.click(719, 617)
     time.sleep(1)

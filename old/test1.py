@@ -22,10 +22,10 @@ while True:
           + (time.localtime()[5]))
     customize_init()
     if 1 < CT < 100000:
-        SPlay.gong_xun_ren_wu(run_times=10,
-                              extra_time=15, ge_su=3)
+        # SPlay.gong_xun_ren_wu(run_times=10,
+        #                       extra_time=15, ge_su=3)
         SPlay.jing_ying_ren_wu(run_times=10,
-                               extra_time=7, ge_su=6)
+                               extra_time=7, ge_su=7)
         SPlay.chuang_tian_guan(180)
         # SPlay.hui_shou_full()
         SPlay.cai_liao_fu_ben(which_one=3, fu_ben_time=2, extra_time=30)

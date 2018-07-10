@@ -1582,16 +1582,19 @@ def _yin_xiong_jie_mian(ge_su):
 
 def re_start(sleep_time):
     time.sleep(1)
-    pyautogui.click(1008,  13)
+    pyautogui.click(1008,  14)
 
-    time.sleep(1)
-    pyautogui.click(477, 457)
+    time.sleep(3)
+    pyautogui.click(481, 454)
 
-    time.sleep(5)
+    time.sleep(10)
 
-    time.sleep(1)
-    pyautogui.click(366, 288)
+    pyautogui.click(360, 286)
     time.sleep(sleep_time)
+
+    pyautogui.click(798, 236)
+    time.sleep(2)
+
 
 
 def cun_ru_cang_ku():

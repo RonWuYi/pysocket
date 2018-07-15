@@ -336,6 +336,44 @@ def cun_ru_cang_ku():
     _boss_hui_shou()
 
 
+def qi_fu():
+    time.sleep(1)
+    pyautogui.click(324, 132)
+
+    time.sleep(1)
+    pyautogui.click(359, 607)
+
+    time.sleep(1)
+    pyautogui.click(665, 609)
+
+    _xiao_chu_jie_mian()
+
+
+def lan_yue_da_ren():
+    time.sleep(1)
+    pyautogui.click(508, 140)
+
+    time.sleep(1)
+    pyautogui.click(514, 549)
+
+    time.sleep(1)
+
+    _xiao_chu_jie_mian()
+
+# To Do
+def da_ka():
+    time.sleep(1)
+    pyautogui.click(442, 137)
+
+    time.sleep(1)
+    pyautogui.click(359, 607)
+
+    time.sleep(1)
+    pyautogui.click(665, 609)
+
+    _xiao_chu_jie_mian()
+
+
 # To Do
 def da_boss():
     pass

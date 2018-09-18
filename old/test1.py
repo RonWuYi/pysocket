@@ -1,11 +1,11 @@
 import time
 
 from old.test import AW1
-from old.test import current_date_time
-from old.test import customize_init
-from old.test import lin_qu_huo_yue_jiang_li
-from old.test import lian_gong
-from old.test import tab_qie_huan
+from old.util import current_date_time
+from old.util import customize_init
+from old.util import lin_qu_huo_yue_jiang_li
+from old.util import lian_gong
+from old.util import tab_qie_huan
 
 shen_wei_time = 30
 

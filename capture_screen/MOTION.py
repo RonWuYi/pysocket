@@ -6,9 +6,9 @@ from PIL import ImageGrab, Image, ImageChops, ImageStat
 
 
 class HST_MOTION():
-"""
-based on python3
-"""
+    """
+    based on python3
+    """
     def __init__(self, savetime):
         self.file_path = "C:\\test"
         # self.PictureList = []

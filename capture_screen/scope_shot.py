@@ -1,5 +1,7 @@
 import win32gui
 import ctypes
+import time
+
 from PIL import ImageGrab
 
 
@@ -10,6 +12,7 @@ rect = RECT()
 HWND = win32gui.GetForegroundWindow()
 ctypes.windll.user32.GetWindowRect(HWND, ctypes.byref(rect))
 
-coordinate = (rect.left+2, rect.top+2, rect.right-2, rect.bottom-2)
+time.sleep(2)
+coordinate = (rect.left+319, rect.top+201, rect.right-319, rect.bottom-179)
 pic = ImageGrab.grab(coordinate)
-pic.save("C:\\test\\xixi1.png", quality = 100)
+pic.save("C:\\Work\\pysocket\\capture_screen\\xixi55.png", quality = 100)

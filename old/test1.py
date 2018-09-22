@@ -1,7 +1,7 @@
 import time
 
 from old.test import AW1
-from old.util import current_date_time
+from old.util import *
 from old.util import customize_init
 from old.util import lin_qu_huo_yue_jiang_li
 from old.util import lian_gong
@@ -22,6 +22,12 @@ while True:
           + (time.localtime()[5]))
     customize_init()
     if 1 < CT < 100000:
+        qi_fu()
+        time.sleep(1)
+        fu_li_da_ting()
+        time.sleep(1)
+        lan_yue_da_ren()
+        time.sleep(1)
         SPlay.gong_xun_ren_wu(run_times=10,
                               extra_time=15, ge_su=3)
         SPlay.jing_ying_ren_wu(run_times=10,

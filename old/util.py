@@ -52,7 +52,8 @@ def customize_init():
     _xiao_chu_jie_mian()
     pyautogui.press('b')
     time.sleep(0.5)
-    pyautogui.click(625, 611)
+    # zhuang bei hui shou jie mian
+    pyautogui.click(623, 630)
     time.sleep(0.5)
     pyautogui.click(521, 410)
     time.sleep(1)
@@ -338,7 +339,7 @@ def cun_ru_cang_ku():
 
 def qi_fu():
     time.sleep(1)
-    pyautogui.click(324, 132)
+    pyautogui.click(915, 602)
 
     time.sleep(1)
     pyautogui.click(359, 607)
@@ -360,16 +361,43 @@ def lan_yue_da_ren():
 
     _xiao_chu_jie_mian()
 
-# To Do
-def da_ka():
+def fu_li_da_ting():
     time.sleep(1)
-    pyautogui.click(442, 137)
+    pyautogui.click(214, 207)
 
     time.sleep(1)
-    pyautogui.click(359, 607)
+    pyautogui.click(810, 556)
+
+    # time.sleep(1)
+    # # zuo bian
+    # pyautogui.click(212, 208)
+
+
+    time.sleep(1)
+    # zuo bian
+    pyautogui.click(212, 254)
+
+    time.sleep(1)
+    pyautogui.click(586, 458)
+
+    time.sleep(1)
+    pyautogui.click(810, 573)
+
+    time.sleep(1)
+    # zuo bian
+    pyautogui.click(212, 303)
+
+    # time.sleep(1)
+    # pyautogui.click(586, 459)
+
+    time.sleep(1)
+    pyautogui.click(819, 444)
 
     time.sleep(1)
     pyautogui.click(665, 609)
+
+    time.sleep(1)
+    pyautogui.click(820, 446)
 
     _xiao_chu_jie_mian()
 

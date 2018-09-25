@@ -125,7 +125,7 @@ def current_date_time():
 def lin_qu_huo_yue_jiang_li():
     _xiao_chu_jie_mian()
     time.sleep(1)
-    pyautogui.click(260, 128)
+    pyautogui.click(261, 138)
     for i in range(5):
         time.sleep(1)
         pyautogui.click(766, (373+i*57))
@@ -362,6 +362,8 @@ def lan_yue_da_ren():
     _xiao_chu_jie_mian()
 
 def fu_li_da_ting():
+    time.sleep(1)
+    pyautogui.click(443, 140)
     time.sleep(1)
     pyautogui.click(214, 207)
 

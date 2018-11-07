@@ -1,5 +1,3 @@
-import time
-
 from old.test import AW1
 from old.util import *
 from old.util import customize_init
@@ -37,9 +35,10 @@ while True:
         SPlay.ge_ren_boss(5)
         # SPlay.hui_shou_full()
         SPlay.ta_fang_feng_mo(3)
-        lin_qu_huo_yue_jiang_li()
+        sui_shi_ya_biao()
         SPlay.wei_wang_ren_wu()
         SPlay.chu_mo_ren_wu(45, False)
+        lin_qu_huo_yue_jiang_li()
         lian_gong(45)
         SPlay.gua_ji(hh=10, mm=0, ss=0)
         time.sleep(1)

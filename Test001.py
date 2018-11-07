@@ -1,11 +1,6 @@
-import time
-
 from old.test import AW1
 from old.util import *
-from old.util import customize_init
-from old.util import lin_qu_huo_yue_jiang_li
-from old.util import lian_gong
-from old.util import tab_qie_huan
+
 
 shen_wei_time = 30
 
@@ -13,6 +8,7 @@ time.sleep(2)
 tab_qie_huan()
 time.sleep(3)
 
+sui_shi_ya_biao()
 while True:
     SPlay = AW1(4, 81)
     print "start a new round at {}.".format(current_date_time())

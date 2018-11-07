@@ -404,6 +404,74 @@ def fu_li_da_ting():
     _xiao_chu_jie_mian()
 
 
-# To Do
-def da_boss():
-    pass
+# def sui_shi_ya_biao():
+#     pass
+
+def sui_shi_ya_biao(run_times=3,
+                    wait_time=20, ge_su=3):
+    print "Start yabiao at {}"\
+        .format(current_date_time())
+    # self.GuaJiFlag = False
+    # self.CurStatus = 'JinYanGongXun'
+
+    for i in range(run_times):
+        _bao_wu_jie_mian(ge_su)
+
+        # NPC
+        time.sleep(1)
+        pyautogui.click(793, 550)
+
+        # Jie qu
+        time.sleep(1)
+        pyautogui.click(509, 581)
+
+        # shua chu
+        time.sleep(1)
+        pyautogui.click(412, 545)
+
+        # shua xin
+        time.sleep(1)
+        pyautogui.click(650, 551)
+
+        # Hu Song
+        time.sleep(wait_time)
+        pyautogui.click(936, 549)
+
+        time.sleep(1)
+        pyautogui.click(512, 453)
+
+        if i == 0:
+            time.sleep(55)
+        else:
+            time.sleep(160)
+    # for i in range(run_times):
+    #
+    #     time.sleep(1)
+    #     pyautogui.click(622, 527)
+    #     time.sleep(8)
+    #
+    #     # jie shou ren wu
+    #     pyautogui.click(509, 567)
+    #     time.sleep(1)
+    #
+    #     # qian wang wan cheng ren wu
+    #     pyautogui.click(509, 567)
+    #
+    #     # deng dai wan cheng
+    #     time.sleep(wait_time+extra_time)
+    #
+    #     # dian ji di mian (fang zi wa kuang cuo wo)
+    #     # click chuan
+    #     time.sleep(1)
+    #     pyautogui.click(793, 583)
+    #
+    #     # wan cheng ren wu - san bei jiang li
+    #     time.sleep(2)
+    #     pyautogui.click(610, 511)
+    #     time.sleep(1)
+
+    # print "GongXunRenWu complete at {}"\
+    #     .format(current_date_time())
+    # customize_init()
+    # self.GongXunRenWuComplete = True
+

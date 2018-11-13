@@ -58,10 +58,13 @@ def customize_init():
     pyautogui.click(521, 410)
     time.sleep(1)
     # hui shou kuangshi
-    pyautogui.click(602, 555)
+    pyautogui.click(427, 558)
     time.sleep(2)
     # hui shou zhuang bei
-    pyautogui.click(801, 554)
+    pyautogui.click(631, 558)
+    time.sleep(2)
+    # hui shou zhuang bei
+    pyautogui.click(956, 558)
     time.sleep(2)
 
     # for i in range(2):
@@ -70,6 +73,20 @@ def customize_init():
     time.sleep(1)
     # hui shou xueyu
     pyautogui.doubleClick(634, 728)
+    time.sleep(1)
+    # for i in range(2):
+    # hui shou tianfumojin
+    pyautogui.doubleClick(546, 728)
+    time.sleep(1)
+    # hui shou xueyu
+    pyautogui.doubleClick(498, 728)
+    time.sleep(1)
+
+    # hui shou tianfumojin
+    pyautogui.doubleClick(455, 728)
+    time.sleep(1)
+    # hui shou xueyu
+    pyautogui.doubleClick(407, 728)
     time.sleep(1)
 
     _boss_hui_shou()

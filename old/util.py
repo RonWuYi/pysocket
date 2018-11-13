@@ -175,19 +175,19 @@ def _bao_wu_jie_mian(level):
     pyautogui.click(569, 679)
     if level == 1:
         time.sleep(1)
-        pyautogui.click(200, 217)
+        pyautogui.click(198, 209)
     elif level == 2:
         time.sleep(1)
-        pyautogui.click(200, (217+(level-1)*54))
+        pyautogui.click(198, (209+(level-1)*54))
     elif level == 3:
         time.sleep(1)
-        pyautogui.click(200, (217+(level-1)*54))
+        pyautogui.click(198, (209+(level-1)*54))
     elif level == 4:
         time.sleep(1)
-        pyautogui.click(200, (217+(level-1)*54))
+        pyautogui.click(198, (209+(level-1)*54))
     else:
         time.sleep(1)
-        pyautogui.click(200, 433)
+        pyautogui.click(198, 433)
 
 
 def _go_to(xx, yy):

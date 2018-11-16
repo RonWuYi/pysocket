@@ -6,4 +6,4 @@ time.sleep(2)
 
 while True:
     SPlay = AW1(4, 81)
-    SPlay.ta_fang_feng_mo(3)
+    AW1.jue_xing()

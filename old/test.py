@@ -17,6 +17,7 @@ from old.util import _huo_dong_jie_mian
 from old.util import _go_gua_ji_npc
 from old.util import seconds_change
 from old.util import _bao_wu_jie_mian
+from old.util import get_ren_jie_mian
 
 
 pyautogui.PAUSE = 1.5
@@ -1314,3 +1315,21 @@ class AW1(object):
     # To Do
     def mi_jin(self):
         pass
+
+    @staticmethod
+    def jue_xing():
+        # Jin ru huo dong
+        time.sleep(1)
+        get_ren_jie_mian(4)
+
+        time.sleep(1)
+        pyautogui.click(704, 343)
+
+        time.sleep(1)
+        pyautogui.click(422, 252)
+
+        time.sleep(1)
+        pyautogui.click(720, 619)
+
+        time.sleep(120)
+

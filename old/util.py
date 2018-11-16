@@ -8,6 +8,7 @@ GongXunTime = 120
 JinYinTime = 160
 cai_liao_move_value = 30
 fang_kuai_move_value = 56
+get_ren_fang_kuai_move_value = 42
 ge_ren_boss_time = 19
 
 
@@ -491,4 +492,39 @@ def sui_shi_ya_biao(run_times=3,
     #     .format(current_date_time())
     # customize_init()
     # self.GongXunRenWuComplete = True
+
+def get_ren_jie_mian(ge_su):
+    time.sleep(1)
+    pyautogui.click(339, 674)
+    time.sleep(1)
+    if ge_su == 1:
+        pyautogui.click(197, 209)
+        time.sleep(1)
+    elif ge_su == 2:
+        pyautogui.click(197, (209+get_ren_fang_kuai_move_value*(ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 3:
+        pyautogui.click(197, (209+get_ren_fang_kuai_move_value*(ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 4:
+        pyautogui.click(197, (209+get_ren_fang_kuai_move_value*(ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 5:
+        pyautogui.click(197, (209+get_ren_fang_kuai_move_value*(ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 6:
+        pyautogui.click(197, (209+fang_kuai_move_value*(ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 7:
+        pyautogui.click(197, (209 + fang_kuai_move_value * (ge_su-1)))
+        time.sleep(1)
+    elif ge_su == 8:
+        pyautogui.click(197, (209 + fang_kuai_move_value * (ge_su-1)))
+        time.sleep(1)
+    else:
+        pyautogui.click(197, (209+fang_kuai_move_value*9))
+        time.sleep(1)
+
+    pyautogui.click(628, 206)
+    time.sleep(1)
 

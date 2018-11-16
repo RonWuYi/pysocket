@@ -96,6 +96,7 @@ while True:
         SPlay.gua_ji(hh=19, mm=39, ss=25)
 
     elif 193925 < CT < 200000:
+        time.sleep(60)
         SPlay.ri_ye_zhan_bi_qi()
         SPlay.gua_ji(hh=20)
 

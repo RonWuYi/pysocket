@@ -37,7 +37,7 @@ while True:
         SPlay.ta_fang_feng_mo(3)
         sui_shi_ya_biao()
         SPlay.wei_wang_ren_wu()
-        SPlay.chu_mo_ren_wu(45, False)
+        SPlay.chu_mo_ren_wu(25, False)
         lin_qu_huo_yue_jiang_li()
         lian_gong(45)
         SPlay.gua_ji(hh=10, mm=0, ss=0)

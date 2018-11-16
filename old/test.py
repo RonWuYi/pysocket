@@ -152,6 +152,10 @@ class AW1(object):
         for jj in range(feng_mo_time):
             go_feng_mo_npc()
             time.sleep(6)
+            # lin qu jiang li
+            time.sleep(5)
+            pyautogui.click(606, 382)
+            go_feng_mo_npc()
             # jin ru feng mo gu
             time.sleep(1)
             pyautogui.click(506, 592)

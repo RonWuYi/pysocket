@@ -89,7 +89,7 @@ def customize_init():
     pyautogui.doubleClick(407, 728)
     time.sleep(1)
 
-    _boss_hui_shou()
+    # _boss_hui_shou()
 
 
 def _go_wei_wang_npc():

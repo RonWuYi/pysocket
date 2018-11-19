@@ -1328,8 +1328,26 @@ class AW1(object):
         time.sleep(1)
         pyautogui.click(422, 252)
 
+
+
+        time.sleep(1)
+        pyautogui.click(824, 166)
         time.sleep(1)
         pyautogui.click(720, 619)
 
-        time.sleep(120)
+        time.sleep(1)
+        pyautogui.click(338, 675)
+        time.sleep(1)
+        pyautogui.click(380, 672)
+        time.sleep(1)
+        pyautogui.click(366, 383)
+
+        for i in range(200):
+            time.sleep(1)
+            pyautogui.click(250, 612)
+            time.sleep(1)
+            pyautogui.click(591, 611)
+            time.sleep(1)
+            pyautogui.click(589, 728)
+        #time.sleep(600)
 

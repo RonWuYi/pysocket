@@ -1,12 +1,18 @@
+import threading
+
 from old.test import AW1
 from old.util import *
+
 
 shen_wei_time = 30
 
 
-class running(object):
+class running(threading.Thread):
+    def __init__(self, vip):
+        threading.Thread.__init__(self)
+        self.vip = vip
 
-    def mainrun(self):
+    def run(self):
         time.sleep(2)
         tab_qie_huan()
         time.sleep(3)
@@ -37,13 +43,14 @@ class running(object):
                 SPlay.ta_fang_feng_mo(3)
                 sui_shi_ya_biao()
                 SPlay.wei_wang_ren_wu()
-                SPlay.chu_mo_ren_wu(25, False)
+                SPlay.chu_mo_ren_wu(5, False)
                 lin_qu_huo_yue_jiang_li()
                 lian_gong(45)
+                AW1.jue_xing()
                 SPlay.gua_ji(hh=10, mm=0, ss=0)
                 time.sleep(1)
                 fu_li_da_ting()
-                AW1.jue_xing()
+
 
 
             elif 100000 < CT < 104000:
@@ -131,5 +138,5 @@ class running(object):
                 # SPlay.hui_shou_full()
 
 if __name__ == '__main__':
-    run = running()
-    run.mainrun()
+    run = running(True)
+    run.start()

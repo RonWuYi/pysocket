@@ -7,8 +7,9 @@ print d.weekday()
 
 
 print d
-# from time import time, localtime, strftime
-#
-# x=localtime(time())
-#
-# print strftime("%a",x)
+from time import time, localtime, strftime
+
+x=localtime(time())
+
+print strftime("%a",x)
+print strftime("%A",x)

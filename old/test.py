@@ -95,8 +95,12 @@ class AW1(object):
             pyautogui.click(509, 567)
             time.sleep(1)
 
+            # # qian wang wan cheng ren wu
+            # pyautogui.click(509, 567)
+
+            # VIP only
             # qian wang wan cheng ren wu
-            pyautogui.click(509, 567)
+            pyautogui.click(579, 568)
 
             # deng dai wan cheng
             time.sleep(wait_time+extra_time)
@@ -129,7 +133,10 @@ class AW1(object):
             time.sleep(1)
             pyautogui.click(509, 567)
             time.sleep(1)
-            pyautogui.click(509, 567)
+            # pyautogui.click(509, 567)
+            # VIP only
+            # qian wang wan cheng ren wu
+            pyautogui.click(579, 568)
             time.sleep(wait_time+extra_time)
 
             time.sleep(1)

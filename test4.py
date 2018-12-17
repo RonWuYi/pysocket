@@ -18,6 +18,10 @@ def gua_suo_yao_ta():
 
     _boss_hui_shou()
 
+def shu():
+    # time.sleep(2)
+    pyautogui.doubleClick(362, 730)
+
 while True:
-    gua_suo_yao_ta()
-    time.sleep(1100)
+    shu()
+    # time.sleep(1100)

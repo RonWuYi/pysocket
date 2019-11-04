@@ -3,7 +3,7 @@ import datetime
 from datetime import timedelta
 
 d = datetime.datetime.now() + timedelta(days=1)
-print d.weekday()
+# print d.weekday()
 
 
 print d

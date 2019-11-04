@@ -6,8 +6,12 @@ while True:
     try:
         x,y = pyautogui.position()
         pos="Position:"+str(x).rjust(4)+','+str(y).rjust(4)
-        print(pos)
+        print pos
         time.sleep(2)
+        pyautogui.moveTo(x,y)
+        pyautogui.click(x, y)
+
+        time.sleep(0.5)
         pyautogui.doubleClick(x, y)
     except KeyboardInterrupt:
         print("Done")

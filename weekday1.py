@@ -1,14 +1,10 @@
-from datetime import datetime
-import time
+import os
+import sys
+import pathlib
 
-
-print(type(datetime.now()))
-print str(datetime.now())[11:13]
-
-
-print(time.localtime())
-# for x in time.localtime():
-#     print(x)
-print("~~~~~~~~~~~~~~~~~~~~~~~~")
-print(time.localtime()[3])
-print(time.localtime()[4])
+for i in sys.path:
+    print(i)
+print("################################################")
+sys.path.insert(1, os.path.join(pathlib.Path(os.path.dirname(__file__)).parents[0], "LeetCode"))
+for i in sys.path:
+    print(i)

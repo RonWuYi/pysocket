@@ -22,6 +22,7 @@ class b(threading.Thread):
             time.sleep(5)
 
 if __name__ == '__main__':
+    print("hello world")
     # import threading
     # import time
     #
